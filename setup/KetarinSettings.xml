@@ -932,6 +932,8 @@ string varCScript = "";
 varCScript = app.Variables.ReplaceAllInString("{cscript}").Trim();
 
 Ketarin.Forms.LogDialog.Log(app,"cscript='" + varCScript + "'");
+Ketarin.Forms.LogDialog.Log(app,"If cscript is set to 1, checksums will be calculated but the package won't be pushed.");
+Ketarin.Forms.LogDialog.Log(app,"If cscript is set to 2, checksums will be calculated AND the package will be pushed.");
 
 // determine whether we run this by checking cscript exists AND is 1 or 2
 if ((varCScript == "1") || (varCScript == "2"))
@@ -943,13 +945,9 @@ if ((varCScript == "1") || (varCScript == "2"))
     string varChecksum = app.Variables.ReplaceAllInString("{checksum}");
     string varChecksumx64 = app.Variables.ReplaceAllInString("{checksumx64}");
     string varChecksum64File = app.Variables.ReplaceAllInString("{url64}");
-    // string varChecksum64basefile = app.Variables.ReplaceAllInString("{url64:basefile}");
-    string varChecksum64ext = app.Variables.ReplaceAllInString("{url64:ext}");
     string varSaveDir = app.Variables.ReplaceAllInString("{saveDir}");
 
     // custom variables used in this script
-    string saveFileName64 = System.String.Concat(varAppname, "_64_", varVersion, ".", varChecksum64ext);
-    string savePath64 = System.IO.Path.Combine(varSaveDir, saveFileName64);
     // equivalent to ketarin variable "{file}"
     string savePath = app.PreviousLocation;
     string pkgPath = System.IO.Path.Combine(varChocoPkgOutput, varAppname, varVersion);
@@ -1017,12 +1015,16 @@ if ((varCScript == "1") || (varCScript == "2"))
     }
 
     // Get Checksum for 64bit file if url64 exists
-    if (varChecksum64File != "{url64}" &amp;&amp; !System.String.IsNullOrEmpty(varChecksum64File))
+    if (varChecksum64File != "{url64}" &amp;&amp; varChecksum64File != "\"\""  &amp;&amp; !System.String.IsNullOrEmpty(varChecksum64File))
     {
         // TODO: verify and validate URI checksum64file points to a downloadable file
 
-        Ketarin.Forms.LogDialog.Log(app, "Downloading '" + varChecksum64File + "' to '" + savePath64 + "'.");
+        // string varChecksum64basefile = app.Variables.ReplaceAllInString("{url64:basefile}");
+        string varChecksum64ext = app.Variables.ReplaceAllInString("{url64:ext}");
+        string saveFileName64 = System.String.Concat(varAppname, "_64_", varVersion, ".", varChecksum64ext);
+        string savePath64 = System.IO.Path.Combine(varSaveDir, saveFileName64);
         // we must download the file to calculate checksum ... may as well save it
+        Ketarin.Forms.LogDialog.Log(app, "Downloading '" + varChecksum64File + "' to '" + savePath64 + "'.");
         System.Net.WebClient webClient = new System.Net.WebClient();
         webClient.DownloadFile(varChecksum64File, savePath64);
 
