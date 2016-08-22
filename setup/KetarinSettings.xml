@@ -23,7 +23,7 @@
           <string>MainForm/Size</string>
         </key>
         <value>
-          <string>System.Drawing.Size:2329,476</string>
+          <string>System.Drawing.Size:1046,476</string>
         </value>
       </item>
       <item>
@@ -31,7 +31,7 @@
           <string>MainForm/Location</string>
         </key>
         <value>
-          <string>System.Drawing.Point:-6,1300</string>
+          <string>System.Drawing.Point:203,77</string>
         </value>
       </item>
       <item>
@@ -127,7 +127,7 @@
           <string>olvJobs/Target:Width</string>
         </key>
         <value>
-          <string>System.Int32:152</string>
+          <string>System.Int32:0</string>
         </value>
       </item>
       <item>
@@ -239,61 +239,8 @@
           <string>PreUpdateCommand</string>
         </key>
         <value>
-          <string>System.String:# Script version: 1.3.0.0
-#
-# Changelog
-#   evaluate custom variables rather than using variables' CachedContent
-#
-# Requires:
-#  chocolateypackageupdater
-#  &gt;=ketarin-1.8.5
-#
-# To configure Ketarin: 
-#   1. Copy this file
-#   2. Navigate to: Ketarin &gt;&gt; File &gt;&gt; Settings &gt;&gt; Commands tab
-#   3a. &gt;&gt; Before updating an application
-#   3b. &gt;&gt; Command &gt;&gt; Powershell script
-#   3c. Remove any existing text and paste this file into text area
-
-# Package variables to be checked for content
-$vars = "version","url","url64","checksum","checksumx64","packageGuid","nopush"
-$hash = @{}
-
-# Build hash using $vars for $hash.keys and corresponding content, if any, to $hash.values
-foreach ($var in $vars) {
-  if ($app.variables.ContainsKey($var)) {
-    #$hash[$var] = $app.variables.item($var).cachedcontent
-    $hash[$var] = $app.variables.ReplaceAllInString("{$var}")
-  } else {
-    $hash[$var] = "{$var}"
-  }
-  Write-Host "`$hash[$var] is: $($hash[$var])"
-}
-
-Write-Host @"
-Running: 
-chocopkgup $($hash["nopush"]) ``
-           --packagename=$app ``
-           --version=`"$($hash["version"])`" ``
-           --url=`"$($hash["url"])`" ``
-           --urlx64=`"$($hash["url64"])`" ``
-           --checksum=`"$($hash["checksum"])`" ``
-           --c64=`"$($hash["checksumx64"])`" ``
-           --pg=`"$($hash["packageguid"])`" ``
-           --debug
-"@
-
-# Using corresponding hash values of keys from $vars, set parameters of 
-# https://chocolatey.org/packages/chocolateypackageupdater
-chocopkgup $hash["nopush"] `
-           --packagename=$app `
-           --version="$($hash["version"])" `
-           --url="$($hash["url"])" `
-           --urlx64="$($hash["url64"])" `
-           --checksum="$($hash["checksum"])" `
-           --c64="$($hash["checksumx64"])" `
-           --pg="$($hash["packageguid"])" `
-           --debug</string>
+          <string>System.String:REM https://chocolatey.org/packages/chocolateypackageupdater
+chocopkgup {nopush} {force} --pf="{autoPackagesFolder}" --packagename="{appname}" --version="{version}" --url="{url}" --urlx64="{url64}" --checksum="{checksum}" --c64="{checksumx64}" --debug</string>
         </value>
       </item>
       <item>
@@ -301,7 +248,7 @@ chocopkgup $hash["nopush"] `
           <string>PreUpdateCommandType</string>
         </key>
         <value>
-          <string>System.String:PowerShell</string>
+          <string>System.String:Batch</string>
         </value>
       </item>
       <item>
@@ -333,14 +280,6 @@ chocopkgup $hash["nopush"] `
     &lt;/key&gt;
     &lt;value&gt;
       &lt;string&gt;{url:regex:(?&amp;lt;=//)([\w-]+\.)*(?=[\w-]+\.[\w-]+(?=/))}&lt;/string&gt;
-    &lt;/value&gt;
-  &lt;/item&gt;
-  &lt;item&gt;
-    &lt;key&gt;
-      &lt;string&gt;packageGuid&lt;/string&gt;
-    &lt;/key&gt;
-    &lt;value&gt;
-      &lt;string&gt;{packageGuid}&lt;/string&gt;
     &lt;/value&gt;
   &lt;/item&gt;
   &lt;item&gt;
@@ -421,14 +360,6 @@ chocopkgup $hash["nopush"] `
     &lt;/key&gt;
     &lt;value&gt;
       &lt;string&gt;{url:regex:(?&amp;lt;=//[\w-]+\.)*[\w-]+\.[\w-]+(?=/)}&lt;/string&gt;
-    &lt;/value&gt;
-  &lt;/item&gt;
-  &lt;item&gt;
-    &lt;key&gt;
-      &lt;string&gt;checksum64file&lt;/string&gt;
-    &lt;/key&gt;
-    &lt;value&gt;
-      &lt;string&gt;{checksum64file}&lt;/string&gt;
     &lt;/value&gt;
   &lt;/item&gt;
   &lt;item&gt;
@@ -639,7 +570,7 @@ chocopkgup $hash["nopush"] `
           <string>SetPlaceholderDialog/Size</string>
         </key>
         <value>
-          <string>System.Drawing.Size:397,147</string>
+          <string>System.Drawing.Size:699,157</string>
         </value>
       </item>
       <item>
@@ -647,7 +578,7 @@ chocopkgup $hash["nopush"] `
           <string>SetPlaceholderDialog/Location</string>
         </key>
         <value>
-          <string>System.Drawing.Point:1118,929</string>
+          <string>System.Drawing.Point:0,0</string>
         </value>
       </item>
       <item>
@@ -671,7 +602,7 @@ chocopkgup $hash["nopush"] `
           <string>EditVariablesDialog/Location</string>
         </key>
         <value>
-          <string>System.Drawing.Point:-11,212</string>
+          <string>System.Drawing.Point:66,65</string>
         </value>
       </item>
       <item>
@@ -711,7 +642,7 @@ chocopkgup $hash["nopush"] `
           <string>LogDialog/Size</string>
         </key>
         <value>
-          <string>System.Drawing.Size:1825,423</string>
+          <string>System.Drawing.Size:1143,423</string>
         </value>
       </item>
       <item>
@@ -719,7 +650,7 @@ chocopkgup $hash["nopush"] `
           <string>LogDialog/Location</string>
         </key>
         <value>
-          <string>System.Drawing.Point:-7,747</string>
+          <string>System.Drawing.Point:116,360</string>
         </value>
       </item>
       <item>
@@ -984,190 +915,229 @@ chocopkgup $hash["nopush"] `
         </key>
         <value>
           <string>System.String:////////////////////////////////////////////////////////////////////////////////////////
-/// version 6.8.0.0
-/// 
-/// Changelog: Calc SHA256 sums
-/// Ticket: https://github.com/dtgm/chocolatey-packages/issues/196
-/// 
-
+/// version ? Lots of changes
+///
+/// Changelog:
+///  - Allow for non-versioned output folder paths
+///  - Logging!
+///  - Call choco directly, expected to be at the default location.
+///
 // REQUIRES:
 // global vars: saveDir=corresponds to download location of installer file
 // app vars: nopush, checksum64file=corresponds to 64 bit install file
 // file vars: same as specified by chocopkgup
 
 // get package variable 'cscript'
-string varCScript = app.Variables.ReplaceAllInString("{cscript}");
+string varCScript = "";
+varCScript = app.Variables.ReplaceAllInString("{cscript}").Trim();
+
+Ketarin.Forms.LogDialog.Log(app,"cscript='" + varCScript + "'");
 
 // determine whether we run this by checking cscript exists AND is 1 or 2
-if ((varCScript == "1") || (varCScript == "2")) {
+if ((varCScript == "1") || (varCScript == "2"))
+{
+    // ketarin variables we pass for this script to use
+    string varAppname = app.Variables.ReplaceAllInString("{appname}");
+    string varVersion = app.Variables.ReplaceAllInString("{version}");
+    string varChocoPkgOutput = System.IO.Path.Combine(app.Variables.ReplaceAllInString("{autoPackagesFolder}"), "_output");
+    string varChecksum = app.Variables.ReplaceAllInString("{checksum}");
+    string varChecksumx64 = app.Variables.ReplaceAllInString("{checksumx64}");
+    string varChecksum64File = app.Variables.ReplaceAllInString("{url64}");
+    // string varChecksum64basefile = app.Variables.ReplaceAllInString("{url64:basefile}");
+    string varChecksum64ext = app.Variables.ReplaceAllInString("{url64:ext}");
+    string varSaveDir = app.Variables.ReplaceAllInString("{saveDir}");
 
-// ketarin variables we pass for this script to use
-string varAppname = app.Variables.ReplaceAllInString("{appname}");
-string varVersion = app.Variables.ReplaceAllInString("{version}");
-string varChocoPkgOutput = app.Variables.ReplaceAllInString("{chocoPkgOut}");
-string varChecksum = app.Variables.ReplaceAllInString("{checksum}");
-string varChecksumx64 = app.Variables.ReplaceAllInString("{checksumx64}");
-string varChecksum64File = app.Variables.ReplaceAllInString("{checksum64file}");
-// string varChecksum64basefile = app.Variables.ReplaceAllInString("{checksum64file:basefile}");
-string varChecksum64ext = app.Variables.ReplaceAllInString("{checksum64file:ext}");
-string varSaveDir = app.Variables.ReplaceAllInString("{saveDir}");
-
-// custom variables used in this script
-string saveFileName64 = String.Concat(varAppname, "_64_", varVersion, ".", varChecksum64ext);
-string savePath64 = Path.Combine(varSaveDir, saveFileName64);
-// equivalent to ketarin variable "{file}"
-string savePath = app.PreviousLocation;
-string pkgPath = Path.Combine(varChocoPkgOutput, varAppname, varVersion);
-string fileNameNuspec = String.Concat(varAppname, ".nuspec");
-string fileUriNuspec = Path.Combine(pkgPath, fileNameNuspec);
-string fileNameNupkg = String.Concat(varAppname, ".", varVersion, ".nupkg");
-string fileUriNupkg = Path.Combine(pkgPath, fileNameNupkg);
-
-/* DEBUG
-  MessageBox.Show(varSaveDir + System.Environment.NewLine
-                  + saveFileName64 + System.Environment.NewLine
-                  + savePath64);*/
-
-// do not re-push package if package already created
-DateTime today = DateTime.Today;
-DateTime pkgCreateDate = File.GetCreationTime(pkgPath);
-if (today &gt; pkgCreateDate) {
-	return;
-}
-
-// if package variable 'checksum' does not exist or is null
-if (varChecksum == "{checksum}") {
-  // calculate SHA256 from {url}  Note we are leveraging ketarin's downloaded copy
-  System.IO.FileStream fileSha = new System.IO.FileStream(savePath, System.IO.FileMode.Open);
-  System.Security.Cryptography.SHA256 sha256 = new System.Security.Cryptography.SHA256Managed();
-  byte[] retValSha = sha256.ComputeHash(fileSha);
-  fileSha.Close();
-
-  // build string from byte value
-  System.Text.StringBuilder sbSha = new System.Text.StringBuilder();
-  for (int i = 0; i &lt; retValSha.Length; i++) {
-    sbSha.Append(retValSha[i].ToString("x2"));
-  }
-  
-  // find $pkgPath -iname "*.nuspec" -o -iname "*.ps1" -exec sed -i 's/'$sbSha'/{checksum}/g' '{}' \;
-  string replaceChecksum = sbSha.ToString();
-  //MessageBox.Show(replaceChecksum);
-  List&lt;string&gt; fileList = new List&lt;string&gt;(Directory.GetFiles(pkgPath, "*.ps1", SearchOption.AllDirectories));
-  string[] filesNuspec = Directory.GetFiles(pkgPath, "*.nuspec", SearchOption.AllDirectories);
-  fileList.AddRange(filesNuspec);
-  string[] files = fileList.ToArray();
-  foreach (string file in files) {
-    try {
-      string contents = File.ReadAllText(file);
-      //MessageBox.Show(contents);
-      contents = contents.Replace("{checksum}", replaceChecksum);
-      //MessageBox.Show(contents);
-      // Make files writable
-      // File.SetAttributes(file, FileAttributes.Normal);
-      File.WriteAllText(file, contents);
-    } catch (Exception ex) {
-      Console.WriteLine(ex.Message);
+    // custom variables used in this script
+    string saveFileName64 = System.String.Concat(varAppname, "_64_", varVersion, ".", varChecksum64ext);
+    string savePath64 = System.IO.Path.Combine(varSaveDir, saveFileName64);
+    // equivalent to ketarin variable "{file}"
+    string savePath = app.PreviousLocation;
+    string pkgPath = System.IO.Path.Combine(varChocoPkgOutput, varAppname, varVersion);
+    if (!System.IO.Directory.Exists(pkgPath))
+    {
+        pkgPath = System.IO.Path.Combine(varChocoPkgOutput, varAppname);
+        Ketarin.Forms.LogDialog.Log(app,"Using the output folder without a version");
     }
-  }
-}
 
-// only get checksum if checksumx64 does NOT exist and 'checksum64file' DOES exists  
-if (varChecksumx64 == "{checksumx64}" &amp;&amp; varChecksum64File != "{checksum64file}") {
-  // TODO: verify and validate URI checksum64file points to a downloadable file
-  
-  // we must download the file to calculate checksum ... may as well save it
-  System.Net.WebClient webClient = new System.Net.WebClient();
-  webClient.DownloadFile(varChecksum64File, savePath64);
+    Ketarin.Forms.LogDialog.Log(app, "Using package file at " + pkgPath);
 
-  // calculate SHA256 from file of url pointed to by 'checksum64file'
-  System.IO.FileStream file64Sha = new System.IO.FileStream(savePath64, System.IO.FileMode.Open);
-  System.Security.Cryptography.SHA256 sha256_64 = new System.Security.Cryptography.SHA256Managed();
-  byte[] retVal64Sha = sha256_64.ComputeHash(file64Sha);
-  file64Sha.Close();
+    string fileNameNuspec = System.String.Concat(varAppname, ".nuspec");
+    string fileUriNuspec = System.IO.Path.Combine(pkgPath, fileNameNuspec);
+    string fileNameNupkg = System.String.Concat(varAppname, ".", varVersion, ".nupkg");
+    string fileUriNupkg = System.IO.Path.Combine(pkgPath, fileNameNupkg);
 
-  // build string from byte value
-  System.Text.StringBuilder sb64Sha = new System.Text.StringBuilder();
-  for (int i = 0; i &lt; retVal64Sha.Length; i++) {
-    sb64Sha.Append(retVal64Sha[i].ToString("x2"));
-  }
-  
-  // find $pkgPath -iname "*.nuspec" -o -iname "*.ps1" -exec sed -i 's/'$sb64Sha'/{checksumx64}/g' '{}' \;
-  // Note chocopkgup will strip 1 set of curly braces so {{checksum}} becomes {checksum}
-  string replace64Checksum = sb64Sha.ToString();
-  //MessageBox.Show(replace64Checksum);
-  List&lt;string&gt; fileList = new List&lt;string&gt;(Directory.GetFiles(pkgPath, "*.ps1", SearchOption.AllDirectories));
-  string[] filesNuspec = Directory.GetFiles(pkgPath, "*.nuspec", SearchOption.AllDirectories);
-  fileList.AddRange(filesNuspec);
-  string[] files = fileList.ToArray();
-  foreach (string file in files) {
-    try {
-      string contents = File.ReadAllText(file);
-      //MessageBox.Show(contents);
-      contents = contents.Replace("{checksumx64}", replace64Checksum);
-      //MessageBox.Show(contents);
-      File.WriteAllText(file, contents);
-    } catch (Exception ex) {
-      Console.WriteLine(ex.Message);
+    //MessageBox.Show("pkgPath=" + pkgPath + System.Environment.NewLine
+    //                  + "savePath=" + savePath);
+
+    // do not re-push package if package already created
+    System.DateTime today = System.DateTime.Today;
+    System.DateTime pkgCreateDate = System.IO.File.GetCreationTime(pkgPath);
+    if (today &gt; pkgCreateDate)
+    {
+        return;
     }
-  }
-}
 
-// attempt to fix chocopkgup failure when faced with letters in version variable
-// ...what was I thinking? no, seriously.
-/*
-int checkBeta = varVersion.Split('-').Length;
-if ( checkBeta == 2) {
-  string strPre = varVersion.Split('-')[1];
-  string strReplace = String.Concat(strPre, "&lt;/version&gt;");
-   string strCheck = String.Concat(".", DateTime.Now.ToString("yyyyMMdd"), "&lt;/version&gt;");
-   string[] fileNuspec = Directory.GetFiles(pkgPath, "*.nuspec", SearchOption.AllDirectories);
-  foreach (string file in fileNuspec) {
-    string contents = File.ReadAllText(file);
-    contents = contents.Replace(strCheck, strReplace);
-    File.WriteAllText(file, contents);
-  }
-}
-*/
+    // calculate SHA256 from {url}  Note we are leveraging ketarin's downloaded copy
+    System.IO.FileStream fileSha = new System.IO.FileStream(savePath, System.IO.FileMode.Open);
+    System.Security.Cryptography.SHA256 sha256 = new System.Security.Cryptography.SHA256Managed();
+    byte[] retValSha = sha256.ComputeHash(fileSha);
+    fileSha.Close();
 
-// delete existing nupkg made by chocopkgup; we leverage chocopkgup to create the structure/files in destination  
-System.Diagnostics.Process process1 = new System.Diagnostics.Process();
-System.Diagnostics.ProcessStartInfo proc1 = new System.Diagnostics.ProcessStartInfo();
-proc1.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-proc1.UseShellExecute = true;
-proc1.WorkingDirectory = pkgPath;
-proc1.FileName = "cmd.exe";
-proc1.Arguments = "/c "+"del /f " + fileUriNupkg;
-process1.StartInfo = proc1;
-process1.Start();
+    // build string from byte value
+    System.Text.StringBuilder sbSha = new System.Text.StringBuilder();
+    for (int i = 0; i &lt; retValSha.Length; i++)
+    {
+        sbSha.Append(retValSha[i].ToString("x2"));
+    }
 
-// create a new nupkg
-System.Diagnostics.Process process2 = new System.Diagnostics.Process();
-System.Diagnostics.ProcessStartInfo proc2 = new System.Diagnostics.ProcessStartInfo();
-proc2.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-proc2.UseShellExecute = true;
-proc2.WorkingDirectory = pkgPath;
-proc2.FileName = "cmd.exe";
-proc2.Arguments = "/c "+"choco pack "+fileUriNuspec+" -d";
-process2.StartInfo = proc2;
-process2.Start();
+    // find $pkgPath -iname "*.nuspec" -o -iname "*.ps1" -exec sed -i 's/'$sbSha'/{checksum}/g' '{}' \;
+    string replaceChecksum = sbSha.ToString();
+    Ketarin.Forms.LogDialog.Log(app, "Checksum for url is " + replaceChecksum);
+    //MessageBox.Show(replaceChecksum);
+    System.Collections.Generic.List&lt;string&gt; pkgFileList = new System.Collections.Generic.List&lt;string&gt;(System.IO.Directory.GetFiles(pkgPath, "*.ps1", System.IO.SearchOption.AllDirectories));
+    string[] filesNuspec = System.IO.Directory.GetFiles(pkgPath, "*.nuspec", System.IO.SearchOption.AllDirectories);
+    pkgFileList.AddRange(filesNuspec);
+    string[] files = pkgFileList.ToArray();
+    foreach (string file in files)
+    {
+        try
+        {
+            string contents = System.IO.File.ReadAllText(file);
+            //MessageBox.Show(contents);
+            contents = contents.Replace("{checksum}", replaceChecksum);
+            //MessageBox.Show(contents);
+            // Make files writable
+            // File.SetAttributes(file, FileAttributes.Normal);
+            System.IO.File.WriteAllText(file, contents);
+        }
+        catch (System.Exception ex)
+        {
+            System.Console.WriteLine(ex.Message);
+        }
+    }
 
-// push the nupkg
-if (varCScript == "2") {
-  System.Diagnostics.Process process3 = new System.Diagnostics.Process();
-  System.Diagnostics.ProcessStartInfo proc3 = new System.Diagnostics.ProcessStartInfo();
-  proc3.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-  proc3.UseShellExecute = true;
-  proc3.WorkingDirectory = pkgPath;
-  proc3.FileName = "cmd.exe";
-  // find nupkg in pkgPath
-  string[] pushPkg = Directory.GetFiles(pkgPath, "*.nupkg", SearchOption.TopDirectoryOnly);
-  foreach (String file in pushPkg) {
-    proc3.Arguments = "/c "+"cpush " + file + " -d";
-  }
-  process3.StartInfo = proc3;
-  System.Threading.Thread.Sleep(2000);
-  process3.Start();
-}
+    // Get Checksum for 64bit file if url64 exists
+    if (varChecksum64File != "{url64}" &amp;&amp; !System.String.IsNullOrEmpty(varChecksum64File))
+    {
+        // TODO: verify and validate URI checksum64file points to a downloadable file
+
+        Ketarin.Forms.LogDialog.Log(app, "Downloading '" + varChecksum64File + "' to '" + savePath64 + "'.");
+        // we must download the file to calculate checksum ... may as well save it
+        System.Net.WebClient webClient = new System.Net.WebClient();
+        webClient.DownloadFile(varChecksum64File, savePath64);
+
+        // calculate SHA256 from file of url pointed to by 'checksum64file'
+        System.IO.FileStream file64Sha = new System.IO.FileStream(savePath64, System.IO.FileMode.Open);
+        System.Security.Cryptography.SHA256 sha256_64 = new System.Security.Cryptography.SHA256Managed();
+        byte[] retVal64Sha = sha256_64.ComputeHash(file64Sha);
+        file64Sha.Close();
+
+        // build string from byte value
+        System.Text.StringBuilder sb64Sha = new System.Text.StringBuilder();
+        for (int i = 0; i &lt; retVal64Sha.Length; i++)
+        {
+            sb64Sha.Append(retVal64Sha[i].ToString("x2"));
+        }
+
+        // find $pkgPath -iname "*.nuspec" -o -iname "*.ps1" -exec sed -i 's/'$sb64Sha'/{checksumx64}/g' '{}' \;
+        // Note chocopkgup will strip 1 set of curly braces so {{checksum}} becomes {checksum}
+        string replace64Checksum = sb64Sha.ToString();
+        Ketarin.Forms.LogDialog.Log(app, "Checksum for url64 is " + replace64Checksum);
+        foreach (string file in files)
+        {
+            try
+            {
+                string contents = System.IO.File.ReadAllText(file);
+                //MessageBox.Show(contents);
+                contents = contents.Replace("{checksumx64}", replace64Checksum);
+                //MessageBox.Show(contents);
+                System.IO.File.WriteAllText(file, contents);
+            }
+            catch (System.Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
+            }
+        }
+    }
+
+    // delete existing nupkg made by chocopkgup; we leverage chocopkgup to create the structure/files in destination
+    Ketarin.Forms.LogDialog.Log(app, "Deleting the existing nupkg before repacking at " + fileUriNupkg);
+    System.Diagnostics.Process process1 = new System.Diagnostics.Process();
+    System.Diagnostics.ProcessStartInfo proc1 = new System.Diagnostics.ProcessStartInfo();
+    proc1.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+    proc1.UseShellExecute = true;
+    proc1.WorkingDirectory = pkgPath;
+    proc1.FileName = "cmd.exe";
+    proc1.Arguments = "/c " + "del /f " + fileUriNupkg;
+    process1.StartInfo = proc1;
+    process1.Start();
+    process1.WaitForExit(30000);
+
+    // create a new nupkg
+    Ketarin.Forms.LogDialog.Log(app, "Packing up the package, this time with checksums");
+    System.Diagnostics.Process process2 = new System.Diagnostics.Process();
+    System.Diagnostics.ProcessStartInfo proc2 = new System.Diagnostics.ProcessStartInfo();
+    proc2.WindowStyle = System.Diagnostics.ProcessWindowStyle.Minimized;
+    proc2.UseShellExecute = false;
+    proc2.WorkingDirectory = pkgPath;
+    proc2.FileName = "C:\\ProgramData\\Chocolatey\\bin\\choco.exe";
+    proc2.Arguments = "pack " + fileUriNuspec;
+    proc2.RedirectStandardOutput = true;
+    proc2.RedirectStandardError = true;
+    proc2.CreateNoWindow = true;
+    process2.StartInfo = proc2;
+    process2.OutputDataReceived += (s, e) => { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
+    process2.ErrorDataReceived += (s, e) => { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
+    process2.EnableRaisingEvents = true;
+    process2.Start();
+    process2.BeginErrorReadLine();
+    process2.BeginOutputReadLine();
+    process2.WaitForExit(30000);
+
+    process2.StartInfo = proc2;
+    process2.Start();
+
+    // push the nupkg
+    if (varCScript == "2")
+    {
+        System.Threading.Thread.Sleep(2000);
+        System.Int32 exitCode = -1;
+        Ketarin.Forms.LogDialog.Log(app, "Pushing the package");
+        System.Diagnostics.Process process3 = new System.Diagnostics.Process();
+        System.Diagnostics.ProcessStartInfo proc3 = new System.Diagnostics.ProcessStartInfo();
+        proc3.WindowStyle = System.Diagnostics.ProcessWindowStyle.Minimized;
+        proc3.UseShellExecute = false;
+        proc3.WorkingDirectory = pkgPath;
+        proc3.FileName = "C:\\ProgramData\\Chocolatey\\bin\\choco.exe";
+        // find nupkg in pkgPath
+        string[] pushPkg = System.IO.Directory.GetFiles(pkgPath, "*.nupkg", System.IO.SearchOption.TopDirectoryOnly);
+
+        foreach (System.String file in pushPkg)
+        {
+            Ketarin.Forms.LogDialog.Log(app, "Pushing " + file + " to dot org");
+            proc3.Arguments = "push " + file;
+        }
+        proc3.RedirectStandardOutput = true;
+        proc3.RedirectStandardError = true;
+        proc3.CreateNoWindow = true;
+        process3.StartInfo = proc3;
+        process3.OutputDataReceived += (s, e) => { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
+        process3.ErrorDataReceived += (s, e) => { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
+        process3.EnableRaisingEvents = true;
+        process3.Start();
+        process3.BeginErrorReadLine();
+        process3.BeginOutputReadLine();
+        System.Boolean exited = process3.WaitForExit(120000);
+        if (exited)
+        {
+            exitCode = process3.ExitCode;
+        }
+        if (exitCode != 0)
+        {
+            throw new System.Exception("Push did not finish successfully. See the log for details.");
+            Ketarin.Forms.LogDialog.Log(app, "This is a failure. However Ketarin doesn't error on post updates.");
+        }
+    }
 }</string>
         </value>
       </item>
@@ -1210,7 +1180,7 @@ if (varCScript == "2") {
     &lt;LastFileDate xsi:nil="true" /&gt;
     &lt;IgnoreFileInformation&gt;false&lt;/IgnoreFileInformation&gt;
     &lt;DownloadBeta&gt;Default&lt;/DownloadBeta&gt;
-    
+
     &lt;CheckForUpdatesOnly&gt;false&lt;/CheckForUpdatesOnly&gt;
     &lt;VariableChangeIndicator /&gt;
     &lt;HashVariable /&gt;
@@ -1370,11 +1340,11 @@ if (varCScript == "2") {
     &lt;ExecutePreCommandType&gt;Batch&lt;/ExecutePreCommandType&gt;
     &lt;Category /&gt;
     &lt;SourceType&gt;FixedUrl&lt;/SourceType&gt;
-    
+
     &lt;DeletePreviousFile&gt;false&lt;/DeletePreviousFile&gt;
     &lt;Enabled&gt;true&lt;/Enabled&gt;
     &lt;FileHippoId /&gt;
-    
+
     &lt;TargetPath&gt;{saveDir}\{appname}_{version}.{url:ext}&lt;/TargetPath&gt;
     &lt;FixedDownloadUrl&gt;{url}&lt;/FixedDownloadUrl&gt;
     &lt;Name&gt;x &lt;/Name&gt;
@@ -2490,9 +2460,11 @@ if (varCScript == "2") {
   </Settings>
   <GlobalVariables>
     <Variable Name="7z" Content="7z.exe" />
-    <Variable Name="saveDir" Content="c:\chocolatey-automatic" />
+    <Variable Name="saveDir" Content="c:\chocolatey-auto-save" />
+    <Variable Name="autoPackagesFolder" Content="c:\ketarin\chocolatey-packages-template\automatic" />
+    <Variable Name="nopush" Content="--nopush" />
+    <Variable Name="cscript" Content="2" />
     <Variable Name="null" Content="null" />
-    <Variable Name="chocoPkgOut" Content="C:\code\chocolatey-packages\automatic\_output" />
     <Variable Name="ie32" Content="Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)" />
     <Variable Name="ie64" Content="Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Win64; x64; Trident/4.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Media Center PC 5.0; SLCC1; Tablet PC 2.0; .NET4.0C)" />
     <Variable Name="firefox" Content="Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.10) Gecko/20100914 Firefox/3.6.10" />
@@ -2500,15 +2472,19 @@ if (varCScript == "2") {
     <Variable Name="chrome" Content="Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3" />
     <Variable Name="wget" Content="wget/1.9+cvs-stable+(red+hat+modified)" />
     <Variable Name="curl" Content="pycurl/7.18.2" />
-    <Variable Name="cscript" Content="2" />
+    <Variable Name="checksum" Content="{checksum}" />
+    <Variable Name="checksumx64" Content="{checksumx64}" />
+    <Variable Name="packageGuid" Content="{packageGuid}" />
+    <Variable Name="url64" Content="{url64}" />
+    <Variable Name="force" Content=" " />
   </GlobalVariables>
   <CodeSnippets>
     <Snippet Guid="7158800B-A188-4CAB-927C-31AA36FDD049" Name="chocopkgup" Type="1">chocopkgup {nopush} --packagename={appname} --version={version} --pg="{packageGuid}" --url="{preupdate-url}" --urlx64="{url64}" --packagepath="{file}" --checksum="{checksum}" --c64="{checksumx64}" --debug</Snippet>
     <Snippet Guid="BB8AF683-DA06-4C20-8434-9F854C46B961" Name="cs" Type="0">////////////////////////////////////////////////////////////////////////////////////////
 /// version 6.5
-/// 
+///
 /// FIX: do not re-push package if package already created
-/// 
+///
 
 // REQUIRES:
 // global vars: workdir=corresponds to download location of installer file
@@ -2518,7 +2494,7 @@ string varCScript = app.Variables.ReplaceAllInString("{cscript}");
 if ((varCScript == "1") || (varCScript == "2")) {
 string varAppname = app.Variables.ReplaceAllInString("{appname}");
 string varVersion = app.Variables.ReplaceAllInString("{version}");
-string varChocoPkgOutput = app.Variables.ReplaceAllInString("{chocoPkgOutput}");
+string varChocoPkgOutput = System.IO.Path.Combine(app.Variables.ReplaceAllInString("{autoPackagesFolder}"), "_output");
 string varChecksum = app.Variables.ReplaceAllInString("{checksum}");
 string varChecksumx64 = app.Variables.ReplaceAllInString("{checksumx64}");
 string varChecksum64File = app.Variables.ReplaceAllInString("{checksum64file}");
@@ -2530,6 +2506,9 @@ string saveFileName64 = String.Concat(varChecksum64basefile, ".", varChecksum64e
 //string savePath = app.PreviousLocation;
 string savePath = app.PreviousLocation;
 string pkgPath = Path.Combine(varChocoPkgOutput, varAppname, varVersion);
+if (!System.IO.Directory.Exists(pkgPath)) {
+  pkgPath = Path.Combine(varChocoPkgOutput, varAppname);
+}
 string fileNameNuspec = String.Concat(varAppname, ".nuspec");
 string fileUriNuspec = Path.Combine(pkgPath, fileNameNuspec);
 string fileNameNupkg = String.Concat(varAppname, ".", varVersion, ".nupkg");
@@ -2554,7 +2533,7 @@ if (varChecksum == "{checksum}") {
   for (int i = 0; i &lt; retValSha1.Length; i++) {
     sbSha1.Append(retValSha1[i].ToString("x2"));
   }
-     
+
   string replaceChecksum = sbSha1.ToString();
   List&lt;string&gt; fileList = new List&lt;string&gt;(Directory.GetFiles(pkgPath, "*.ps1", SearchOption.AllDirectories));
   string[] filesNuspec = Directory.GetFiles(pkgPath, "*.nuspec", SearchOption.AllDirectories);
@@ -2590,7 +2569,7 @@ if (varChecksumx64 == "{checksumx64}" &amp;&amp; varChecksum64File != "{checksum
   for (int i = 0; i &lt; retVal64Sha1.Length; i++) {
     sb64Sha1.Append(retVal64Sha1[i].ToString("x2"));
   }
-     
+
   string replace64Checksum = sb64Sha1.ToString();
   List&lt;string&gt; fileList = new List&lt;string&gt;(Directory.GetFiles(pkgPath, "*.ps1", SearchOption.AllDirectories));
   string[] filesNuspec = Directory.GetFiles(pkgPath, "*.nuspec", SearchOption.AllDirectories);
@@ -2620,7 +2599,7 @@ if ( checkBeta == 2) {
   }
 }
 
-// delete existing nupkg made by chocopkgup; we leverage chocopkgup to create the structure/files in destination  
+// delete existing nupkg made by chocopkgup; we leverage chocopkgup to create the structure/files in destination
 System.Diagnostics.Process process1 = new System.Diagnostics.Process();
 System.Diagnostics.ProcessStartInfo proc1 = new System.Diagnostics.ProcessStartInfo();
 proc1.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
