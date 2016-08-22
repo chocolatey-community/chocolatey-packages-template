@@ -2461,7 +2461,7 @@ if ((varCScript == "1") || (varCScript == "2"))
   <GlobalVariables>
     <Variable Name="7z" Content="7z.exe" />
     <Variable Name="saveDir" Content="c:\chocolatey-auto-save" />
-    <Variable Name="autoPackagesFolder" Content="c:\ketarin\chocolatey-packages-template\automatic" />
+    <Variable Name="autoPackagesFolder" Content="c:\code\chocolatey-packages\automatic" />
     <Variable Name="nopush" Content="--nopush" />
     <Variable Name="cscript" Content="2" />
     <Variable Name="null" Content="null" />
