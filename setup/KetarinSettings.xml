@@ -1086,8 +1086,8 @@ if ((varCScript == "1") || (varCScript == "2"))
     proc2.RedirectStandardError = true;
     proc2.CreateNoWindow = true;
     process2.StartInfo = proc2;
-    process2.OutputDataReceived += (s, e) => { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
-    process2.ErrorDataReceived += (s, e) => { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
+    process2.OutputDataReceived += (s, e) =&gt; { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
+    process2.ErrorDataReceived += (s, e) =&gt; { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
     process2.EnableRaisingEvents = true;
     process2.Start();
     process2.BeginErrorReadLine();
@@ -1121,8 +1121,8 @@ if ((varCScript == "1") || (varCScript == "2"))
         proc3.RedirectStandardError = true;
         proc3.CreateNoWindow = true;
         process3.StartInfo = proc3;
-        process3.OutputDataReceived += (s, e) => { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
-        process3.ErrorDataReceived += (s, e) => { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
+        process3.OutputDataReceived += (s, e) =&gt; { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
+        process3.ErrorDataReceived += (s, e) =&gt; { if (e != null) Ketarin.Forms.LogDialog.Log(app, e.Data); };
         process3.EnableRaisingEvents = true;
         process3.Start();
         process3.BeginErrorReadLine();
