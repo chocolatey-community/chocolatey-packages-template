@@ -1,0 +1,71 @@
+version: '{build}'
+max_jobs: 1
+image: WMF 5
+clone_depth: 5
+branches:
+  only:
+  - master
+#build:
+#  verbosity: minimal
+
+environment:
+  # Github credentials - used to save result to gist and to commit pushed packages to the git repository
+  github_user: YOUR_USER_NAME_HERE
+  github_pass:
+    secure: YOUR_PASSWORD_OR_2FA_AUTH_TOKEN_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+  github_user_repo: 'YOUR_REPO_USERNAME/YOUR_REPO_REPOSITORY_NAME' #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
+
+  # Email credentials - for error notifications
+  mail_user: YOUR_EMAIL_ACCOUNT
+  mail_pass:
+    secure: YOUR_EMAIL_PASSWORD_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+  mail_server: smtp.gmail.com
+  mail_port: 587
+  mail_enablessl: true
+
+  # ID of the gist used to save run results
+  gist_id: YOUR_GIST_ID_CREATE_GIST_SAVE_ID_HERE
+
+  # Chocolatey API key - to push updated packages
+  api_key:
+    secure: YOUR_CHOCO_API_KEY_HERE_ENCRYPTED_STRING # https://ci.appveyor.com/tools/encrypt
+
+init:
+- git config --global user.email "chocolatey@realdimensions.net"
+- git config --global user.name "Chocolatey"
+
+install:
+- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+- ps: $PSVersionTable
+- SET PATH=C:\Ruby21-x64\bin;%PATH%
+- ruby -v
+- gem install gist --no-ri --no-rdoc
+- "ruby -e \"require 'gist'; Gist.login! username: ENV['github_user'], password: ENV['github_pass'] if ENV['github_user'] \""
+- ps: |
+    "machine github.com", "login $Env:github_user", "password $Env:github_pass" | Out-File ~/_netrc -Encoding ascii
+    Install-PackageProvider -Name NuGet -Force
+    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+    Install-Module au -Scope CurrentUser
+    Get-Module au -ListAvailable | select Name, Version
+
+build_script:
+- ps: |
+    if ($Env:APPVEYOR_REPO_COMMIT_AUTHOR -eq 'Chocolatey') {
+        "Build triggered by appveyor commit, aborting"
+    } else {
+        .\ops\update_all.ps1
+    }
+
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+artifacts:
+- path: update_info.xml
+- path: gist.md
+
+notifications:
+- provider: Email
+  to: $(mail_user)
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: true
