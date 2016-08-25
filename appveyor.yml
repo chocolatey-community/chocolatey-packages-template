@@ -53,7 +53,7 @@ build_script:
     if ($Env:APPVEYOR_REPO_COMMIT_AUTHOR -eq 'Chocolatey') {
         "Build triggered by appveyor commit, aborting"
     } else {
-        .\ops\update_all.ps1
+        .\au\update_all.ps1
     }
 
 #on_finish:
