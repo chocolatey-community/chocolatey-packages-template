@@ -2,11 +2,14 @@
 
 ### Ketarin/ChocolateyPackageUpdater Automatic Packaging
 
-* Review `setup.ps1` to ensure all items are set appropriately. Uncomment/change anything you need to now.
-* Run `setup.ps1`
+* Review `ketarin_setup.ps1` to ensure all items are set appropriately. Uncomment/change anything you need to now.
+* Run `ketarin_setup.ps1`
 * Open ketarin after installing it, open the settings and import `KetarinSettings.xml`.
 
 ### Automatic Updater (AU)
+
+* Review `au_setup.ps1` to ensure all items are set appropriately. Uncomment/change anything you need to now.
+* Run `au_setup.ps1`
 
 #### Set up AppVeyor for packaging
 * Go to AppVeyor and sign up/sign in. https://ci.appveyor.com/
