@@ -1,7 +1,7 @@
 param($Name = $null)
 cd $PSScriptRoot
 
-ls au\*.ps1 | % { . $_ }
+ls scripts\*.ps1 | % { . $_ }
 
 # used when running locally
 if (Test-Path update_vars.ps1) { . ./update_vars.ps1 }
