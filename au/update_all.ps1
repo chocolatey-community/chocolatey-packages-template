@@ -40,7 +40,7 @@ $options = @{
     }
 }
 
-updateall -Name $Name -Options $options | ft
+Update-AUPackages -Name $Name -Options $options | ft
 $global:updateall = Import-CliXML $PSScriptRoot\update_info.xml
 
 #Uncomment to fail the build on AppVeyor on any package error
