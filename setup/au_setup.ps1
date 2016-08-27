@@ -25,7 +25,7 @@
 # Chocolatey API key - to push updated packages
 `$env:api_key         = 'YOUR_CHOCO_API_KEY_HERE'
 
-# ID of the gist used to save run results
+# ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
 `$env:gist_id         = 'YOUR_GIST_ID_CREATE_GIST_SAVE_ID_HERE'
 "@ | Out-File $PSScriptRoot\..\au\update_vars.ps1 -NoClobber
 

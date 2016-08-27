@@ -29,7 +29,7 @@ environment:
   mail_port: 587
   mail_enablessl: true
 
-  # ID of the gist used to save run results
+  # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
   gist_id: YOUR_GIST_ID_CREATE_GIST_SAVE_ID_HERE
 
   # Chocolatey API key - to push updated packages
