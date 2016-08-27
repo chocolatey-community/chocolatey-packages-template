@@ -6,4 +6,4 @@
 
 ### AutomaticUpdater
 
-Nothing to do here, jobs run automatically by AppVeyor on commit.
+Nothing to do here, jobs run automatically by AppVeyor on commit and on a schedule that you've set up in AppVeyor.

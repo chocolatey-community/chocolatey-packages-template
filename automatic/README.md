@@ -11,6 +11,14 @@ The following packages implement this strategy of auto updates:
 * 1password
 * git.install
 
+There is also an _output folder where the automatic packaging files with tokens to do token replacment and output package files with actual values in this folder. This folder is necessary for chocopkgup to do its work. You can decide whether to commit this set of folders or not. We recommend committing it as it makes it easier to do one off fixes and contributors to submit fixes for a package.
+
 ### Automatic Updater (AU)
 
-TBD
+AU works with packages without automatic package tokens necessary. So you can treat the packages as normal.
+
+**NOTE:** Ensure when you are creating packages for AU, you don't use `--auto` as the packaging files should be normal packages. AU doesn't need the tokens to do replacement.
+
+The following packages implement this strategy of auto updates:
+
+* TBD
