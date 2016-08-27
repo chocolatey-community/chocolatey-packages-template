@@ -70,7 +70,7 @@ function Save-Gist {
     "Saving results to gist"
     if (!(gcm gist.bat -ea 0)) { "ERROR: No gist.bat found. Install it using:  'gem install gist'"; return }
 
-    $log = gc gist.md.ps1 -Raw | Expand-PoshString
+    $log = gc $PSScriptRoot\..\gist.md.ps1 -Raw | Expand-PoshString
     $log | Out-File gist.md
 
     $params = @( "--filename 'Update-AUPackages.md'")

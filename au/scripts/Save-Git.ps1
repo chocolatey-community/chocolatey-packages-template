@@ -1,6 +1,6 @@
 function Save-Git() {
     $pushed = $Info.result.pushed
-    if (!$Info.pushed) { "Git: no package is pushed to chocolatey, skipping"; return }
+    if (!$Info.pushed) { "Git: no package is pushed to Chocolatey community feed, skipping"; return }
 
     ""
     "Executing git pull"
