@@ -43,6 +43,33 @@ AU may have a few more setup steps, but it provides more in the process of being
 
 So for best visibility, enjoying the ease of using AppVeyor, and for a nice report of results, we recommend AU over Ketarin. You also don't need to deal with templates as AU works directly with the xml/ps1 files to do replacement.
 
+### Adapting your current source repository to this source repository template
+
+You want to bring in all of your packages into the proper folders. We suggest using some sort of diffing tool to look at the differences between your current solution and this solution and then making adjustments to it. Pay special attention to the setup folder.
+
+1. Bring over the following files to your package source repository:
+ * `au\*.*`
+ * `automatic\README.md`
+ * `icons\README.md`
+ * `ketarin\README.md`
+ * `ketarin\_KetarinChocolateyTemplate.xml`
+ * `manual\README.md`
+ * `ops\*.*`
+ * `setup\*.*`
+ * `appveyor.yml`
+1. Inspect the following file and add the differences:
+ * `.gitignore`
+
+### Use Both Methodologies
+
+The way this source repository is designed, you can use both AU and Ketarin/ChocolateyPackageUpdater together. This is especially helpful when migrating existing packages from one methodology to the other.
+
+### Migrating existing Ketarin packages to AU
+
+1. Add an update.ps1 to the package folder and determine how to update the package using [AU's instructions](https://github.com/majkinetor/au#creating-the-package-updater-script).
+1. Remove the ketarin.xml file from the ketarin folder.
+1. Ensure you also remove the package job from Ketarin itself as it doesn't automatically remove.
+
 ### Special Notes
 
 #### Ketarin
