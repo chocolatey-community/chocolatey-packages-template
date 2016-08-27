@@ -240,10 +240,7 @@
         </key>
         <value>
           <string>System.String:REM https://chocolatey.org/packages/chocolateypackageupdater
-SET URL={url}
-IF '%URL%'=='' SET URL={preupdate-url}
-IF '%URL%'=='{url}' SET URL={preupdate-url}
-chocopkgup {nopush} {force} --pf="{autoPackagesFolder}" --packagename="{appname}" --version="{version}" --url="%URL%" --urlx64="{url64}" --checksum="{checksum}" --c64="{checksumx64}" --debug</string>
+chocopkgup {nopush} {force} --pf="{autoPackagesFolder}" --packagename="{appname}" --version="{version}" --url="{preupdate-url}" --urlx64="{url64}" --checksum="{checksum}" --c64="{checksumx64}" --debug</string>
         </value>
       </item>
       <item>
