@@ -41,10 +41,21 @@ if ($PSVersionTable.PSVersion -lt $(New-Object System.Version("5.0.0.0"))) {
 }
 
 choco install ruby -y
-refreshenv # You need the Chocolatey profile installed for this to work properly (Choco v0.9.10.0+).
-gem install gist --no-ri --no-rdoc
+$refreshenv = Get-Command refreshenv -ea SilentlyContinue
+if ($refreshenv -ne $null -and $refreshenv.CommandType -ne 'Application') {
+  refreshenv # You need the Chocolatey profile installed for this to work properly (Choco v0.9.10.0+).
+} else {
+  Write-Warning "We detected that you do not have the Chocolatey PowerShell profile installed, which is necessary for 'refreshenv' to work in PowerShell."
+}
+
+$gem = Get-Command gem -ea SilentlyContinue
+if ($gem -eq $null) {
+  Write-Warning "You will need to close and reopen your shell, then run 'gem install gist --no-ri --no-rdoc'"
+} else {
+  gem install gist --no-ri --no-rdoc
+}
 
 Install-PackageProvider -Name NuGet -Force
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 Install-Module au -Scope AllUsers
-#Get-Module au -ListAvailable | select Name, Version
+Get-Module au -ListAvailable | select Name, Version
