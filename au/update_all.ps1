@@ -9,22 +9,23 @@ if (Test-Path update_vars.ps1) { . ./update_vars.ps1 }
 $options = @{
     Timeout = $env:au_timeout
     Push    = $true
-    Threads = $env:au_threads 10
+    Threads = $env:au_threads
+    Force   = $false
 
     Mail = if ($env:mail_user) {
+            $enableSsl = $true
+            if ($env:mail_enablessl -eq 'false') {
+                $enableSsl = $false
+            }
+
             @{
                 To        = $env:mail_user
                 Server    = $env:mail_server
                 UserName  = $env:mail_user
                 Password  = $env:mail_pass
                 Port      = $env:mail_port
-                EnableSsl = $true
+                EnableSsl = $enableSsl
             }
-
-            if ($env:mail_enablessl -eq 'false') {
-                Mail.EnableSsl = $false
-            }
-
            } else {}
 
     Gist_ID = $Env:Gist_ID
@@ -38,6 +39,14 @@ $options = @{
         Save-Gist
         Save-Git
     }
+}
+
+if ($env:au_push -eq 'false') {
+  $options.Push = $false
+}
+
+if ($env:au_force -eq 'true') {
+  $options.Force = $true
 }
 
 Update-AUPackages -Name $Name -Options $options | ft

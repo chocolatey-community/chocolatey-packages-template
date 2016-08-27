@@ -7,6 +7,8 @@
 # Job parameters
 `$env:au_timeout      = '100'
 `$env:au_threads      = '10'
+`$env:au_push         = 'true'
+`$env:au_force        = 'false'
 
 # Github credentials - used to save result to gist and to commit pushed packages to the git repository
 `$env:github_user     = 'YOUR_USER_NAME_HERE'

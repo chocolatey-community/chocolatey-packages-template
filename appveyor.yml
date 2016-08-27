@@ -12,6 +12,8 @@ environment:
   # au job parameters
   au_timeout: 100
   au_threads: 10
+  au_push: true
+  au_force: false
 
   # Github credentials - used to save result to gist and to commit pushed packages to the git repository
   github_user: YOUR_USER_NAME_HERE
