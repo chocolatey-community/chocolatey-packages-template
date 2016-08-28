@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>html-tidy</id>
     <title>HTML Tidy with HTML5 support</title>
-    <version>5.2.0.20160708</version>
+    <version>5.1.2</version>
     <authors>HTACG</authors>
     <owners>Miodrag Milić</owners>
     <summary>Tidy is a console application for Mac OS X, Linux, Windows, UNIX, and more. It corrects and cleans up HTML and XML documents by fixing markup errors and upgrading legacy code to modern standards</summary>

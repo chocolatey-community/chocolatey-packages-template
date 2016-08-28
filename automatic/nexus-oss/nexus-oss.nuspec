@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>nexus-oss</id>
     <title>Nexus Repository Manager OSS</title>
-    <version>2.12.0</version>
+    <version>2.10.2</version>
     <authors>Sonatype</authors>
     <owners>Miodrag Milić</owners>
     <summary>Repository to manage software components required for development, deployment, and provisioning</summary>
