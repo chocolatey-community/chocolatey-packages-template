@@ -21,4 +21,5 @@ AU works with packages without automatic package tokens necessary. So you can tr
 
 The following packages implement this strategy of auto updates:
 
-* TBD
+* html-tidy
+* nexus-oss
