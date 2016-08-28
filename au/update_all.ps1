@@ -49,7 +49,7 @@ if ($env:au_force -eq 'true') {
   $options.Force = $true
 }
 
-cd $PSScriptRoot/..
+cd $PSScriptRoot/../automatic
 
 Update-AUPackages -Name $Name -Options $options | ft
 $global:updateall = Import-CliXML $PSScriptRoot\..\update_info.xml
