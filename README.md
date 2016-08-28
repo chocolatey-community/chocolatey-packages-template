@@ -1,3 +1,14 @@
+# Chocolatey Packages
+
+~~~
+<!-- EDIT ME-->
+
+[![](https://ci.appveyor.com/api/projects/status/9ipva7kgjigug2rn?svg=true)](https://ci.appveyor.com/project/YOUR_GITHUB_USERNAME_HERE/chocolatey-packages)
+[Update status](https://gist.github.com/YOUR_GITHUB_USERNAME_HERE/YOUR_GIST_ID)
+
+<!-- REMOVE THE squiggles "~" surrounding this (this should not be a code block) -->
+~~~
+
 ## Chocolatey Packages Template
 
 This contains Chocolatey packages, both manually and automatically maintained.
@@ -29,13 +40,17 @@ For setting up your own automatic package repository, please see [Automatic Pack
 
 #### AU
 
-* PowerShell v3+.
+* PowerShell v4+. It will be v3+ once [au #17](https://github.com/majkinetor/au/issues/17) is implemented.
 * The [AU module](https://chocolatey.org/packages/au).
 * Ruby (and the gist gem) for publishing GitHub Gists.
 
 ### Getting started
 
-1. Head into the `setup` folder and perform the proper steps for your choice of setup.
+1. Fork this repository and rename it to `chocolatey-packages` (on GitHub - go into Settings, Repository name and rename).
+1. Clone the repository locally.
+1. Head into the `setup` folder and perform the proper steps for your choice of setup (or both if you plan to use both methods).
+1. Edit this README. Update the badges at the top.
+
 
 ### Recommendation on Auto Packaging
 

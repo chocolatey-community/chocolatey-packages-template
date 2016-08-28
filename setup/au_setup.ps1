@@ -11,9 +11,9 @@
 `$env:au_force        = 'false'
 
 # Github credentials - used to save result to gist and to commit pushed packages to the git repository
-`$env:github_user     = 'YOUR_USER_NAME_HERE'
+`$env:github_user     = 'YOUR_GITHUB_USERNAME_HERE'
 `$env:github_pass     = 'YOUR_PASSWORD_OR_2FA_AUTH_TOKEN_HERE'
-`$env:github_user_repo= 'username/repository'  #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
+`$env:github_user_repo= 'YOUR_GITHUB_USERNAME_HERE/chocolatey-packages'  #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
 
 # Email credentials - for error notifications
 `$env:mail_user       = 'YOUR_EMAIL_ACCOUNT'
