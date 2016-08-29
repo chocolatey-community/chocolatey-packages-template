@@ -11,7 +11,7 @@ function Save-Git() {
     $pushed | % { git add $_.PackageName }
     git commit -m "UPDATE BOT: $($Info.pushed) packages updated
 
-    [skip-ci]"
+    [skip ci]"
 
     "Pushing git changes"
     git push
