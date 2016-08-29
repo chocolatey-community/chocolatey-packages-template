@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>ssdt15</id>
+        <version>14.0.60812.00</version>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+		<owners>Mike Cole</owners>
+        <title>Microsoft SQL Server Data Tools for Visual Studio 2015</title>
+        <authors>Microsoft Corporation</authors>
+        <projectUrl>https://msdn.microsoft.com/en-us/mt186501.aspx</projectUrl>
+		<copyright>Copyright Microsoft Corporation. All rights reserved.</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>SQL Server Data Tools SSDT Visual Studio 2015 admin</tags>
+		<summary>This update addresses product defects for SQL Server projects, database deployments, and database tools.</summary>
+		<description>This update addresses product defects for SQL Server projects, database deployments, and database tools.</description>
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/ssdt15/logo.png</iconUrl>
+		<releaseNotes>https://msdn.microsoft.com/en-us/library/mt674925.aspx</releaseNotes>
+		<licenseUrl>https://msdn.microsoft.com/en-us/library/mt706449.aspx</licenseUrl>
+    </metadata>
+</package>

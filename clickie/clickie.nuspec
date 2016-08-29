@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>clickie</id>
+        <version>1.2.1.20160810</version>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <owners>Mike Cole</owners>
+		<title>Clickie</title>
+        <authors>David Defoort</authors>
+        <projectUrl>http://www.defoort.com/en/clickie</projectUrl>
+		<copyright>Copyright © 1999-2016 David Defoort</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>context-menu admin</tags>
+		<summary>Clickie is a handy utility that will add 2 new features to the context menu (right click) of Windows Explorer: Copy Path Name and Open MS-DOS Prompt.</summary>
+		<description>Clickie is a handy utility that will add 2 new features to the context menu (right click) of Windows Explorer: Copy Path Name and Open MS-DOS Prompt.</description>
+        <dependencies>
+            <dependency id="autoit.commandline" />
+        </dependencies>
+    </metadata>
+</package>

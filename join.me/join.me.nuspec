@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>join.me</id>
+        <version>2.15.5.302500</version>
+        <title>join.me</title>
+        <authors>LogMeIn, Inc.</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/join.me/license.txt</licenseUrl>
+        <projectUrl>https://www.join.me/</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/join.me/logo.png</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>A drop-dead simple online meeting and screen sharing service from LogMeIn, join.me is used by millions of people and hundreds of thousands of businesses for everything from online meetings, to ad hoc show and tell collaboration.</description>
+        <summary />
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/tree/master/join.me</packageSourceUrl>
+        <copyright>Copyright 2010-2016, Inc.</copyright>
+        <tags>viewer remote meeting admin</tags>
+    </metadata>
+</package>

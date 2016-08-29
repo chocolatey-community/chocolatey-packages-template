@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>azuredatafactorytools15</id>
+        <version>0.9.3425.200</version>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+		<owners>Mike Cole</owners>
+        <title>Microsoft Azure DataFactory Tools for Visual Studio 2015</title>
+        <authors>Microsoft Corporation</authors>
+        <projectUrl>https://visualstudiogallery.msdn.microsoft.com/371a4cf9-0093-40fa-b7dd-be3c74f49005</projectUrl>
+		<copyright>Copyright Microsoft Corporation. All rights reserved.</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>VisualStudio2015 Azure AzureDataFactory admin</tags>
+		<summary>An integrated development environment for Data Factory application development.</summary>
+		<description>An integrated development environment for Data Factory application development.</description>
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/azuredatafactorytools15/logo.png</iconUrl>
+    </metadata>
+</package>
