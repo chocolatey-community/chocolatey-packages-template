@@ -8,7 +8,7 @@
     <owners>Mike Cole</owners>
     <licenseUrl>https://plex.tv/legal#tabs-21</licenseUrl>
     <projectUrl>http://plex.tv/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/plexmediaserver/Plex.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/plexmediaserver.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Plex Media Server works with the family of Plex apps, as well as other DLNA clients to make your PC-connected media accessible from all of your devices.</description>
     <summary>Plex Media Server - Stream media from your PC to all your devices.</summary>
