@@ -6,15 +6,15 @@
     <title>Office365ProPlus</title>
     <authors>Microsoft</authors>
     <owners>Mike Cole</owners>
-    <licenseUrl>http://windows.microsoft.com/en-us/windows-live/microsoft-services-agreement</licenseUrl>
+    <licenseUrl>https://technet.microsoft.com/en-us/library/gg982959.aspx</licenseUrl>
     <projectUrl>http://office.microsoft.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Get the latest versions of your familiar Office programs, such as Word, Excel and PowerPoint, and more, all in one convenient subscription. This will download and silently install the entire Office 365 2013 Professional Plus edition. A license is required and you will be prompted to enter your account information upon first launching the software after install.</description>
     <summary>Office365ProPlus</summary>
     <releaseNotes />
     <copyright />
-    <tags>Office365ProPlus Office 365 2013 Professional Plus</tags>
-	<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/Office365ProPlus/logo.png</iconUrl>
+    <tags>Office365ProPlus Office MSOffice MicrosoftOffice admin</tags>
+	<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/office365proplus.png</iconUrl>
 	<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
   </metadata>
 </package>
