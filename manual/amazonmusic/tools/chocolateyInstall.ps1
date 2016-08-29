@@ -12,6 +12,6 @@ $packageArgs = @{
 Get-ChocolateyWebFile @packageArgs
 
 write-host "Installing `'$fileFullPath`'"
-$installArgs = "--unattendedmodeui none"
+$installArgs = '--unattendedmodeui none'
 start-process $fileFullPath $installArgs
 Set-PowerShellExitCode 0
