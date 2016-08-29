@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>teamcitytraynotifier</id>
-        <version>9.1</version>
+        <version>9.1.0.20160829</version>
 		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
 		<owners>Mike Cole</owners>
         <title>JetBrains TeamCity Tray Notifier</title>
@@ -13,6 +13,6 @@
         <tags>teamcity admin</tags>
 		<summary>The Windows Tray Notifier is a utility which allows monitoring the status of the specific build configurations in the system tray via popup alerts and status icons.</summary>
 		<description>The Windows Tray Notifier is a utility which allows monitoring the status of the specific build configurations in the system tray via popup alerts and status icons.</description>
-		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/teamcitytraynotifier/logo.png</iconUrl>		
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/teamcitytraynotifier.png</iconUrl>	
     </metadata>
 </package>
