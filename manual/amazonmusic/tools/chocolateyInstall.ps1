@@ -1,5 +1,5 @@
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileFullPath = Join-Path $toolsDir 'AmazonMusicInstaller.exe'
+$fileFullPath = "Join-Path $toolsDir 'AmazonMusicInstaller.exe'"
 
 $packageArgs = @{
   packageName    = 'amazonmusic'
@@ -11,7 +11,5 @@ $packageArgs = @{
 
 Get-ChocolateyWebFile @packageArgs
 
-write-host "Installing `'$fileFullPath`'"
 $installArgs = '--unattendedmodeui none'
 start-process $fileFullPath $installArgs
-Set-PowerShellExitCode 0
