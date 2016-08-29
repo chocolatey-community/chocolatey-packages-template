@@ -14,5 +14,6 @@
 		<summary>An integrated development environment for Data Factory application development.</summary>
 		<description>An integrated development environment for Data Factory application development.</description>
 		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/azuredatafactorytools15.png</iconUrl>
+		<licenseUrl>https://visualstudiogallery.msdn.microsoft.com/site/371a4cf9-0093-40fa-b7dd-be3c74f49005/eula?licenseType=None</licenseUrl>
     </metadata>
 </package>
