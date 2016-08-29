@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>microsoftazurestorageexplorer</id>
-        <version>0.8.3</version>
+        <version>0.8.3.20160829</version>
 		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
 		<owners>Mike Cole</owners>
         <title>Microsoft Azure Storage Explorer</title>
@@ -13,6 +13,7 @@
         <tags>azure admin</tags>
 		<summary>Easily work with Azure Storage - from any platform, anywhere.</summary>
 		<description>Microsoft Azure Storage Explorer (Preview) is a standalone app from Microsoft that allows you to easily work with Azure Storage data on Windows, macOS and Linux.</description>
-		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/microsoftazurestorageexplorer/logo.png</iconUrl>		
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/blob/master/icons/microsoftazurestorageexplorer.png</iconUrl>
+		<releaseNotes>http://storageexplorer.com/releasenotes.html</releaseNotes>
     </metadata>
 </package>
