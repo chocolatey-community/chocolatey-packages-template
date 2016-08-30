@@ -16,5 +16,8 @@
 		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/ssdt15.png</iconUrl>
 		<releaseNotes>https://msdn.microsoft.com/en-us/library/mt674925.aspx</releaseNotes>
 		<licenseUrl>https://msdn.microsoft.com/en-us/library/mt706449.aspx</licenseUrl>
+		<dependencies>
+            <dependency id="KB2919355" version="1.0.20160719" />
+        </dependencies>
     </metadata>
 </package>
