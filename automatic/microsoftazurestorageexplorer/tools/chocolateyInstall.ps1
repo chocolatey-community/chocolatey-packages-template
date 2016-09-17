@@ -1,3 +1,5 @@
+$checksum = '14AB9B659DBB14D88759B0F9CD39926FFF0D21E778014D1EB22FAA7C0EEAACB1'
+
 $packageArgs = @{
   packageName   = 'microsoftazurestorageexplorer'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -6,7 +8,7 @@ $packageArgs = @{
   silentArgs    = '/VERYSILENT'
   validExitCodes= @(0)
   softwareName  = 'microsoftazurestorageexplorer*'
-  checksum      = '14AB9B659DBB14D88759B0F9CD39926FFF0D21E778014D1EB22FAA7C0EEAACB1'
+  checksum      = $checksum
   checksumType  = 'sha256'
 }
 

@@ -7,8 +7,7 @@ $filename = 'StorageExplorer.exe'
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]downloadUrl\s*=\s*)('.*')" = "`$1'$($Latest.URL)'"
-            "(^[$]checksum\s*=\s*)('.*')"    = "`$1'$($Latest.Checksum)'"
+            "(^[$]checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum)'"
         }
      }
 }
@@ -25,7 +24,8 @@ function global:au_GetLatest {
     Invoke-WebRequest $url -OutFile $temp_file
     $checksum = $(Get-FileHash $temp_file -Algorithm SHA256 | Select-Object -ExpandProperty Hash)
 
-    $Latest = @{ URL = $url; Checksum = $checksum; Version = $version }
+    $Latest = @{ Checksum = $checksum; Version = $version }
+    Write-Host $Latest
     return $Latest
 }
 
