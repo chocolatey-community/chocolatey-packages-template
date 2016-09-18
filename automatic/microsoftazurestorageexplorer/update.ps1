@@ -28,4 +28,4 @@ function global:au_GetLatest {
     return $Latest
 }
 
-update -ChecksumFor 32
+update
