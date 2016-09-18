@@ -25,7 +25,6 @@ function global:au_GetLatest {
     $checksum = $(Get-FileHash $temp_file -Algorithm SHA256 | Select-Object -ExpandProperty Hash)
 
     $Latest = @{ Checksum = $checksum; Version = $version }
-    Write-Host $Latest
     return $Latest
 }
 
