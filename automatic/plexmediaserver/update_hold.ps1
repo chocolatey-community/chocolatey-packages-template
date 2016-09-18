@@ -1,13 +1,12 @@
 import-module au
 
-$homepage = 'http://storageexplorer.com'
-$url = 'http://go.microsoft.com/fwlink/?LinkId=708343'
-$filename = 'StorageExplorer.exe'
+$homepage = 'https://www.plex.tv/downloads/'
 
 function global:au_SearchReplace {
     @{
-        'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum)'"
+        'tools\chocolateyInstall.ps1' = @{
+            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
+            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum)'"
         }
      }
 }
