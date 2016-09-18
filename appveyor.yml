@@ -56,7 +56,8 @@ install:
     Get-Module au -ListAvailable | select Name, Version
 
 build_script:
-- ps: .\au\update_all.ps1
+- ps: .\automatic\microsoftazurestorageexplorer\update.ps1
+#- ps: .\au\update_all.ps1
 
 #on_finish:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
