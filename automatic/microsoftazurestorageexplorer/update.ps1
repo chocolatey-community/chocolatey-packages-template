@@ -13,8 +13,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+    Write-Host 'Start'
     $homepage_content = Invoke-WebRequest -Uri $homepage
-
+    Write-Host 'Context downloaded'
     # Get Version
     $homepage_content -match '(Version \d+.\d+.\d+)'
     $version = $matches[1] -replace "Version ", ""
