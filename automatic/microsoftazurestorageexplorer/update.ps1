@@ -12,7 +12,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $homepage_content = Invoke-WebRequest -UseBasicParsing -Uri $homepage
+    $homepage_content = Invoke-WebRequest -Uri $homepage
 
     # Get Version
     $homepage_content -match '(Version \d+.\d+.\d+)'
