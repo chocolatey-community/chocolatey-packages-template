@@ -12,7 +12,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $homepage_content = Invoke-WebRequest -Uri $homepage
+    $homepage_content = Invoke-WebRequest -UseBasicParsing -Uri $homepage
 
     # Get Version
     $homepage_content -match '(Version \d+.\d+.\d+)'
@@ -22,4 +22,4 @@ function global:au_GetLatest {
     return $Latest
 }
 
-update -ChecksumFor 32
+update -NoCheckUrl -ChecksumFor 32
