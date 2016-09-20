@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName   = 'join.me'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-  fileType      = 'msi'
-  url           = 'https://www.join.me/Download.aspx?installer=win'
-  silentArgs    = '/quiet'
+  fileType      = 'exe'
+  url           = 'https://www.join.me/Download.aspx'
+  silentArgs    = '/VERYSILENT'
   validExitCodes= @(0)
   softwareName  = 'join.me*'
   checksum      = $checksum
