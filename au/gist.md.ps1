@@ -32,21 +32,21 @@ $(
 
     if ($Info.pushed) {
         md_title Pushed
-        md_table $Info.result.pushed -Columns 'PackageName', 'Updated', 'Pushed', 'RemoteVersion', 'NuspecVersion'
+        md_table $Info.result.pushed -Columns 'Name', 'Updated', 'Pushed', 'RemoteVersion', 'NuspecVersion'
     }
 
     if ($Info.error_count.total) {
         md_title Errors
-        md_table $Info.result.errors -Columns 'PackageName', 'NuspecVersion', 'Error'
+        md_table $Info.result.errors -Columns 'Name', 'NuspecVersion', 'Error'
         $Info.result.errors | % {
-            md_title $_.PackageName -Level 3
+            md_title $_.Name -Level 3
             md_code "$($_.Error)"
         }
     }
 
     if ($Info.result.ok) {
         md_title OK
-        md_table $Info.result.ok -Columns 'PackageName', 'Updated', 'Pushed', 'RemoteVersion', 'NuspecVersion'
+        md_table $Info.result.ok -Columns 'Name', 'Updated', 'Pushed', 'RemoteVersion', 'NuspecVersion'
         $Info.result.ok | % {
             md_title $_.PackageName -Level 3
             md_code $_.Result
