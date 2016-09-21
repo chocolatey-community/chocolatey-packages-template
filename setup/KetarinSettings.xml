@@ -240,7 +240,7 @@
         </key>
         <value>
           <string>System.String:REM https://chocolatey.org/packages/chocolateypackageupdater
-chocopkgup {nopush} {force} --pf="{autoPackagesFolder}" --packagename="{appname}" --version="{version}" --url="{preupdate-url}" --urlx64="{url64}" --checksum="{checksum}" --c64="{checksumx64}" --debug</string>
+chocopkgup {nopush} {force} --pf="{autoPackagesFolder}" --packagename="{appname}" --version="{version}" --url="{preupdate-url}" --urlx64="{url64}" --checksum="{checksum}" --ct="{checksumType}" --c64="{checksumx64}" --ct64="{checksumTypex64}" --debug</string>
         </value>
       </item>
       <item>
@@ -2475,10 +2475,12 @@ if ((varCScript == "1") || (varCScript == "2"))
     <Variable Name="wget" Content="wget/1.9+cvs-stable+(red+hat+modified)" />
     <Variable Name="curl" Content="pycurl/7.18.2" />
     <Variable Name="checksum" Content="{checksum}" />
+    <Variable Name="checksumType" Content="SHA256" />
     <Variable Name="checksumx64" Content="{checksumx64}" />
+    <Variable Name="checksumTypex64" Content="SHA256" />
     <Variable Name="packageGuid" Content="{packageGuid}" />
     <Variable Name="url64" Content="{url64}" />
-    <Variable Name="force" Content=" " />
+    <Variable Name="force" Content="" />
   </GlobalVariables>
   <SetupLists />
 </Ketarin>
