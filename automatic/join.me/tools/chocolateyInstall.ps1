@@ -1,11 +1,11 @@
-﻿$checksum = 'CFA50618FD3719C0C46A898939663095E44A477FAA7E9A4151BCD3B579C727E6'
+﻿$checksum = '87370ca1c100461e332150673412e7befaf1bb9ecb13ef7daec6dfb1ad064bf2'
 
 $packageArgs = @{
   packageName   = 'join.me'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-  fileType      = 'exe'
+  fileType      = 'msi'
   url           = 'https://www.join.me/Download.aspx'
-  silentArgs    = '/VERYSILENT'
+  silentArgs    = '/quiet'
   validExitCodes= @(0)
   softwareName  = 'join.me*'
   checksum      = $checksum
