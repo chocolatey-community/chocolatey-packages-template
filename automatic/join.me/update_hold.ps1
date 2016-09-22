@@ -57,8 +57,10 @@ function global:au_GetLatest {
     $version = Get-MsiDatabaseVersion $temp_file
     Write-Host $version
 
-    $Latest = @{ URL = $url; Version = $version }
+    $checksum = $(Get-FileHash $temp_file -Algorithm SHA256 | Select-Object -ExpandProperty Hash)
+    Write-Host $checksum
+    $Latest = @{ Version = $version; Checksum32 = $checksum }
     return $Latest
 }
 
-update -NoCheckUrl -ChecksumFor 32
+update -NoCheckUrl -ChecksumFor none -NoCheckChocoVersion
