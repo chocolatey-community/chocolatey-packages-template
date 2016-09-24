@@ -24,5 +24,5 @@ obj
 ketarin/soluto.xml
 *.stackdump
 update_vars.ps1
-gist.md
 update_info.xml
+Update-AUPacakges.md

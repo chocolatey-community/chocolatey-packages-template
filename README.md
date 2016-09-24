@@ -40,9 +40,8 @@ For setting up your own automatic package repository, please see [Automatic Pack
 
 #### AU
 
-* PowerShell v4+. It will be v3+ once [au #17](https://github.com/majkinetor/au/issues/17) is implemented.
+* PowerShell v4+.
 * The [AU module](https://chocolatey.org/packages/au).
-* Ruby (and the gist gem) for publishing GitHub Gists.
 
 ### Getting started
 
