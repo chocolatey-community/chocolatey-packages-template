@@ -16,7 +16,6 @@ $Options = [ordered]@{
         Path = "$PSScriptRoot\Update-AUPacakges.md"         #Path where to save the report
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_UserRepo          #  Markdown: shows user info in upper right corner
-            NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
             UserMessage = ''                                #  Markdown, Text: Custom user message to show
         }
     }
