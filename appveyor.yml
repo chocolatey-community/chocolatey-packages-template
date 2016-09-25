@@ -9,17 +9,17 @@ branches:
 #  verbosity: minimal
 
 environment:
-  #Set au version to use or omit to use the latest. Specify branch name to use development version from Github
+  # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
   au_version:
   au_push: true
 
-  #Github token to commit pushed packages to repository
+  # Github token to commit pushed packages to repository
   github_user_repo: {github_user}/{repository}
   github_api_key:
     secure: YOUR_GITHUB_API_KEY_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
 
 
-  #Mail credentials - for error notifications
+  # Mail credentials - for error notifications
   mail_user:
     secure: YOUR_EMAIL_ACCOUNT_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
   mail_pass:
@@ -28,10 +28,11 @@ environment:
   mail_port: 587
   mail_enablessl: true
 
-  #ID of the gist used to save run results
+  # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
+  # Optional, leave empty to create anonymous gist
   gist_id:
 
-  #Chocolatey API key - to push updated packages
+  # Chocolatey API key - to push updated packages
   api_key:
     secure: YOUR_CHOCO_API_KEY_HERE_ENCRYPTED_STRING # https://ci.appveyor.com/tools/encrypt
 
@@ -58,7 +59,7 @@ install:
         Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
         $params = @{ Name = 'au' }
-        if ( $Env:au_version -ne $null ) { $params.Version = $Env:au_version }
+        if ( $Env:au_version -ne $null ) { $params.MinimumVersion = $Env:au_version }
         Install-Module @params
 
         Get-Module au -ListAvailable | select Name, Version
