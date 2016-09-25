@@ -1,5 +1,4 @@
-# AU template: https://raw.githubusercontent.com/majkinetor/au/master/update_all_default.ps1
-#    env vars: https://raw.githubusercontent.com/majkinetor/au/master/update_vars_default.ps1
+# AU Packages Template: https://github.com/majkinetor/au-packages-template
 
 param($Name = $null)
 
@@ -16,6 +15,7 @@ $Options = [ordered]@{
         Path = "$PSScriptRoot\Update-AUPacakges.md"         #Path where to save the report
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_UserRepo          #  Markdown: shows user info in upper right corner
+            NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
             UserMessage = ''                                #  Markdown, Text: Custom user message to show
         }
     }
@@ -33,17 +33,17 @@ $Options = [ordered]@{
 
     RunInfo = @{
         Exclude = 'password', 'apikey'                      #Option keys which contain those words will be removed
-        Path    = "$PSScriptRoot\update_info.xml"           #Path where to save run info
+        Path    = "$PSScriptRoot\update_info.xml"           #Path where to save the run info
     }
 
     Mail = if ($Env:mail_user) {
             @{
                 To          = $Env:mail_user
-                Server      = 'smtp.gmail.com'
+                Server      = $Env:mail_server
                 UserName    = $Env:mail_user
                 Password    = $Env:mail_pass
-                Port        = 587
-                EnableSsl   = $true
+                Port        = $Env:mail_port
+                EnableSsl   = $Env:enable_ssl
                 Attachments = "$PSScriptRoot\update_info.xml"
                 UserMessage = ''
                 SendAlways  = $false                        #Send notifications every time
@@ -51,8 +51,7 @@ $Options = [ordered]@{
            } else {}
 }
 
-$global:au_NoPlugins = $false                              #Quickly enable or disable plugins here
-$global:au_Root      = "$PSScriptRoot\..\automatic"        #Path to the AU packages
+$global:au_Root = "$PSScriptRoot"                           #Path to the AU packages
 $info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
