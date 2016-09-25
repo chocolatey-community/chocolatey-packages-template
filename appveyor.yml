@@ -1,6 +1,7 @@
 version: '{build}'
 max_jobs: 1
 image: WMF 5
+clone_depth: 5
 branches:
   only:
   - master
@@ -18,11 +19,14 @@ environment:
     secure: YOUR_GITHUB_API_KEY_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
 
 
-  #Gmail credentials - for error notifications
+  #Mail credentials - for error notifications
   mail_user:
     secure: YOUR_EMAIL_ACCOUNT_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
   mail_pass:
     secure: YOUR_EMAIL_PASSWORD_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+  mail_server: smtp.gmail.com
+  mail_port: 587
+  mail_enablessl: true
 
   #ID of the gist used to save run results
   gist_id:
@@ -33,7 +37,7 @@ environment:
 
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
-- git config --global user.name  "Chocolatey AU"
+- git config --global user.name  "Chocolatey"
 - git config --global core.safecrlf false
 
 install:
