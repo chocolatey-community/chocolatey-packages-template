@@ -28,7 +28,11 @@ $options = @{
             }
            } else {}
 
-    Gist_ID = $Env:Gist_ID
+    Gist = @{
+        Id          = $Env:gist_id                          #Your gist id or leave empty for anonymous
+        ApiKey      = $Env:github_api_key                   #Your github api key
+        Path        = "$PSScriptRoot\Update-AUPacakges.md"  #List of files to add to gist
+    }
 
     Script = {
         param($Phase, $Info)
