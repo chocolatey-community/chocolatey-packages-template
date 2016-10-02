@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>screenhero</id>
-    <version>2.3.600.0</version>
+    <version>2.3.600.20161002</version>
     <title>Screenhero</title>
     <authors>Screenhero</authors>
     <owners>Mike Cole</owners>
@@ -11,8 +11,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Screenhero was born out of our own need to work with each other remotely, and we realized that the existing screensharing tools are meant for presentation, not collaboration. We took our experience building iTeleport, a top-selling remote desktop app for iOS and Mac, and built Screenhero from scratch. We've rethought the entire collaboration and real-time sharing experience from the ground up. We want Screenhero to make every one of our users feel like heroes.</description>
     <summary>Screen sharing for collaboration in teams</summary>
-    <tags>screen share screenshare remote</tags>
+    <tags>screen share screenshare remote admin</tags>
 	<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
 	<copyright>Copyright (C) 2016 Screenhero, Inc.</copyright>
+	<licenseUrl>https://screenhero.com/terms.html</licenseUrl>
   </metadata>
 </package>
