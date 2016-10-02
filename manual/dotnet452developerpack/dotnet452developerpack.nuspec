@@ -14,5 +14,8 @@
         <description>The .NET Framework 4.5.2 Developer Pack installs the multi-targeting pack for .NET Framework 4.5.2. Developers can build applications targeting the .NET Framework 4.5.2 using either Visual Studio 2013, Visual Studio 2012 or third party IDEs. You need to download the web installer instead of this package if you intend to redistribute .NET Framework 4.5.2.</description>
         <summary>Microsoft .NET Framework 4.5.2 Developer Pack for Windows Vista SP2, Windows 7 SP1, Windows 8, Windows 8.1, Windows Server 2008 SP2 Windows Server 2008 R2 SP1, Windows Server 2012 and Windows Server 2012 R2</summary>
         <tags>microsoft dotnet .net admin</tags>
+		<dependencies>
+            <dependency id="DotNet4.5.2" version="4.5.2.20140902" />
+        </dependencies>
     </metadata>
 </package>
