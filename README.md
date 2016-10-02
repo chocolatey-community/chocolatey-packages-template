@@ -34,9 +34,8 @@ For setting up your own automatic package repository, please see [Automatic Pack
 
 #### AU
 
-* PowerShell v4+. It will be v3+ once [au #17](https://github.com/majkinetor/au/issues/17) is implemented.
+* PowerShell v4+.
 * The [AU module](https://chocolatey.org/packages/au).
-* Ruby (and the gist gem) for publishing GitHub Gists.
 
 ### Getting started
 
@@ -48,7 +47,7 @@ For setting up your own automatic package repository, please see [Automatic Pack
 
 ### Recommendation on Auto Packaging
 
-AU may have a few more setup steps, but it provides more in the process of being completely automated, sending emails when things go wrong, and providing a nice report at the end. It doesn't have a bolt-on feeling to it that you see with Ketarin / ChocolateyPackageUdater, however the one thing it does lack in comparison is no visual feedback to seeing how searches for installers may be found. Other than that, it provides errors when things go wrong, where Ketarin doesn't consider anything that happens during "before run"/"post run updates" (where chocopkgup and checksumming occur) to be an error, even if those scripts error.
+AU provides more in the process of being completely automated, sending emails when things go wrong, and providing a nice report at the end. It doesn't have a bolt-on feeling to it that you see with Ketarin / ChocolateyPackageUdater, however the one thing it does lack in comparison is no visual feedback to seeing how searches for installers may be found. Other than that, it provides errors when things go wrong, where Ketarin doesn't consider anything that happens during "before run"/"post run updates" (where chocopkgup and checksumming occur) to be an error, even if those scripts error.
 
 So for best visibility, enjoying the ease of using AppVeyor, and for a nice report of results, we recommend AU over Ketarin. You also don't need to deal with templates as AU works directly with the xml/ps1 files to do replacement.
 
