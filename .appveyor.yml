@@ -1,3 +1,5 @@
+# AU template: https://github.com/majkinetor/au-packages-template
+
 version: '{build}'
 max_jobs: 1
 image: WMF 5
@@ -38,7 +40,7 @@ environment:
 
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
-- git config --global user.name  "Chocolatey"
+- git config --global user.name "Chocolatey"
 - git config --global core.safecrlf false
 
 install:
@@ -67,14 +69,19 @@ install:
 
 build_script:
 - ps: |
-    ./au/update_all.ps1
+    if ( ($Env:APPVEYOR_REPO_COMMIT_MESSAGE -match '\[AU (.+?)\]') -and
+         ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and
+         ($Env:APPVEYOR_FORCED_BUILD -ne 'true')
+    ) { $forced = $Matches[1] }
 
-#on_finish:
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+    ./update_all.ps1 -ForcedPackages $forced
+
+    7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 
 artifacts:
-- path: au/update_info.xml
-- path: au/Update-AUPackages.md
+- path: update_info.xml
+- path: Update-AUPackages.md
+- path: au_temp.zip
 
 notifications:
 - provider: Email
@@ -83,3 +90,5 @@ notifications:
   on_build_failure: true
   on_build_status_changed: true
 
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
