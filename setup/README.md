@@ -24,7 +24,7 @@
 * Set up an appveyor job - https://ci.appveyor.com/projects/new
 * Select your repository to create a new job.
 * Go to settings ensure the following items are set (these items cannot be configured in the yaml):
-  * In Build Schedule, we want to run this three times a day - set it like this: `5 */6 * * * *`. This ensures it runs at 06:05, 12:05, and 18:05.
+  * In Build Schedule, we want to run this three times a day - set it like this: `5 */6 * * *`. This ensures it runs at 06:05, 12:05, and 18:05.
   * "Ensure Skip branches without `appveyor.yml`" is checked.
   * "Enable secure variables in Pull Requests from the same repository only" is checked.
   * Click Save.
