@@ -21,7 +21,6 @@ Stickies will never support animated dancing figures, or play "Greensleeves". Th
         <summary>Post-It functionality for your Windows desktop</summary>
         <tags>notes admin</tags>
         <dependencies>
-            <dependency id="autoit.commandline" version="3.3.14.2" />
             <dependency id="vcredist2008" version="9.0.30729.6161" />
         </dependencies>
     </metadata>
