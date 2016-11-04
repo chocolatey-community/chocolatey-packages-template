@@ -1,4 +1,4 @@
-﻿$checksum = '8df3ae7d4c6d6d60fc5a8688f85a66b571476103f8ba492f08547bcf933cca28'
+﻿$checksum = '029F918A29B2B311711788E8A477C8DE529C11D7DBA3CAF99CBBDE5A983EFDAD'
 
 $packageArgs = @{
   packageName   = 'steam'
