@@ -8,7 +8,7 @@
     <owners>Peter Jahn</owners>
     <licenseUrl>http://evernote.com/eula/</licenseUrl>
     <projectUrl>http://evernote.com/evernote/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/join.me/Evernote.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/Evernote.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>WRITE: From short lists to lengthy research, no matter what form your writing takes, Evernote keeps you focused on moving those ideas from inspiration to completion.
 
