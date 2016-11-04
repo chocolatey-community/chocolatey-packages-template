@@ -17,7 +17,6 @@ You can choose to use one or both of the different methods currently supported i
 
 ### Folder Structure
 
-* au - The scripts for running Automatic Updater (AU) are here.
 * automatic - where automatic packaging and packages are kept. These are packages that are automatically maintained using either [AU](https://chocolatey.org/packages/au) or [Ketarin](https://chocolatey.org/packages/ketarin)/[ChocolateyPackageUpdater](https://chocolatey.org/packages/chocolateypackageupdater) combo.
 * icons - Where you keep icon files for the packages. This is done to reduce issues when packages themselves move around.
 * ketarin - where ketarin jobs (aka applications or searches) exported as XML are kept. This is done to allow ease of contribution.
@@ -43,6 +42,8 @@ For setting up your own automatic package repository, please see [Automatic Pack
 * PowerShell v4+.
 * The [AU module](https://chocolatey.org/packages/au).
 
+For daily operations check out the AU packages [template README](https://github.com/majkinetor/au-packages-template/blob/master/README.md).
+
 ### Getting started
 
 1. Fork this repository and rename it to `chocolatey-packages` (on GitHub - go into Settings, Repository name and rename).
@@ -62,7 +63,6 @@ So for best visibility, enjoying the ease of using AppVeyor, and for a nice repo
 You want to bring in all of your packages into the proper folders. We suggest using some sort of diffing tool to look at the differences between your current solution and this solution and then making adjustments to it. Pay special attention to the setup folder.
 
 1. Bring over the following files to your package source repository:
- * `au\*.*`
  * `automatic\README.md`
  * `icons\README.md`
  * `ketarin\README.md`
@@ -70,7 +70,7 @@ You want to bring in all of your packages into the proper folders. We suggest us
  * `manual\README.md`
  * `ops\*.*`
  * `setup\*.*`
- * `appveyor.yml`
+ * `.appveyor.yml`
 1. Inspect the following file and add the differences:
  * `.gitignore`
 
