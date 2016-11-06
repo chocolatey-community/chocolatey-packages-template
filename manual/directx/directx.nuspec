@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>directx</id>
+    <version>9.0.8122.16421</version>
+	<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <title>DirectX</title>
+    <authors>Microsoft</authors>
+    <owners>Thai Phan, Mike Cole</owners>
+    <licenseUrl>http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <projectUrl>http://www.microsoft.com</projectUrl>
+	<copyright>Copyright Microsoft Corporation. All rights reserved.</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>DirectX is a collection of APIs for handling tasks related to games and videos.</description>
+    <tags>microsoft directx games gaming opengl admin</tags>
+	<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/directx9.png</iconUrl>
+  </metadata>
+</package>
