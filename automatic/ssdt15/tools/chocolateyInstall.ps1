@@ -1,5 +1,5 @@
-$checksum = 'C287010E7AEF0D4AB00960FA6B6308DAE5514A7172DA539F7CD7A4176A7C6327'
-$url = 'https://download.microsoft.com/download/D/9/9/D994CE20-DE0D-494B-BAA0-C3FC20E5E989/Dev14/EN/SSDTSetup.exe'
+$checksum = 'b9cad935be8613aa02c5251d32b05433a2dadf2284d03eb4afa8ca4f81e9036c'
+$url = 'https://go.microsoft.com/fwlink/?LinkID=832313'
 
 (Get-WmiObject -Class Win32_OperatingSystem).Version -match "(?<Major>\d+).(?<Minor>\d+).(?<Build>\d+)" | Out-Null
  
