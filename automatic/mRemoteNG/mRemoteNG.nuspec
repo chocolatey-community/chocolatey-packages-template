@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>mRemoteNG</id>
+        <version>1.72</version>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+		<owners>Geert Serneels, Mike Cole</owners>
+        <title>mRemoteNG</title>
+        <authors>Riley McArdle</authors>
+        <projectUrl>http://www.mremoteng.org/</projectUrl>
+		<copyright>Copyright 2016 mRemoteNG</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags> mRemote mRemoteNG RDP Remote Desktop VNC SSH Telnet admin</tags>
+		<summary>mRemoteNG is a fork of mRemote, an open source, tabbed, multi-protocol, remote connections manager.</summary>
+		<description>mRemoteNG is a fork of mRemote, an open source, tabbed, multi-protocol, remote connections manager. mRemoteNG adds bug fixes and new features to mRemote.
+
+It allows you to view all of your remote connections in a simple yet powerful tabbed interface.
+
+mRemoteNG supports the following protocols:
+* RDP (Remote Desktop/Terminal Server)
+* VNC (Virtual Network Computing)
+* ICA (Citrix Independent Computing Architecture)
+* SSH (Secure Shell)
+* Telnet (TELecommunication NETwork)
+* HTTP/HTTPS (Hypertext Transfer Protocol)
+* rlogin
+* Raw Socket Connections</description>
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/nremoteng.jpg</iconUrl>
+		<releaseNotes>https://github.com/mRemoteNG/mRemoteNG/releases</releaseNotes>
+		<licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html</licenseUrl>
+    </metadata>
+</package>
