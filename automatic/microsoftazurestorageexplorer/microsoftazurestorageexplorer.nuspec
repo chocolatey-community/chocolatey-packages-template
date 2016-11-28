@@ -16,4 +16,7 @@
 		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/blob/master/icons/microsoftazurestorageexplorer.png</iconUrl>
 		<releaseNotes>http://storageexplorer.com/releasenotes.html</releaseNotes>
     </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>

@@ -15,4 +15,7 @@
 		<description>Amazon Music for PC gives you the most convenient way to access Prime Music on your computer.</description>
 		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/blob/master/icons/amazonmusic.png</iconUrl>
     </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>

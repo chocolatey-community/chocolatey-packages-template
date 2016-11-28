@@ -29,4 +29,7 @@ mRemoteNG supports the following protocols:
 		<releaseNotes>https://github.com/mRemoteNG/mRemoteNG/releases</releaseNotes>
 		<licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html</licenseUrl>
     </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>

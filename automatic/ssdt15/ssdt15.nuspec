@@ -20,4 +20,7 @@
             <dependency id="KB2919355" version="1.0.20160719" />
         </dependencies>
     </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>

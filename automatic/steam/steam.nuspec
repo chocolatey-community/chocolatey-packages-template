@@ -1,20 +1,23 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-  <metadata>
-    <id>steam</id>
-    <version>2.10.91.9101</version>
-    <title>Steam</title>
-    <authors>Steam Corporation</authors>
-    <owners>Brian Mengo, Mike Cole</owners>
-    <licenseUrl>http://store.steampowered.com/subscriber_agreement/</licenseUrl>
-    <projectUrl>http://store.steampowered.com/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/steam.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The ultimate entertainment platform. Play, connect, create and more.</description>
-    <summary></summary>
-    <releaseNotes />
-    <copyright>Copyright Valve Corporation</copyright>
-    <tags>steam games gaming admin</tags>
-	<packageSourceUrl>https://github.com/mikecole/chocolatey-packages/</packageSourceUrl>
-  </metadata>
+	<metadata>
+		<id>steam</id>
+		<version>2.10.91.9101</version>
+		<title>Steam</title>
+		<authors>Steam Corporation</authors>
+		<owners>Brian Mengo, Mike Cole</owners>
+		<licenseUrl>http://store.steampowered.com/subscriber_agreement/</licenseUrl>
+		<projectUrl>http://store.steampowered.com/</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/steam.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>The ultimate entertainment platform. Play, connect, create and more.</description>
+		<summary></summary>
+		<releaseNotes />
+		<copyright>Copyright Valve Corporation</copyright>
+		<tags>steam games gaming admin</tags>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages/</packageSourceUrl>
+	</metadata>
+  	<files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>
