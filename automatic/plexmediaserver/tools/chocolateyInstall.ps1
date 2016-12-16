@@ -1,5 +1,5 @@
-$checksum = '56f80a31efb27510eec1711ee0270b7d84ce07aaf619921b51b3364aa31416cb'
-$url = 'https://downloads.plex.tv/plex-media-server/1.3.2.3112-1751929/Plex-Media-Server-1.3.2.3112-1751929.exe'
+$checksum = '9e55ab5e25304117c479a42cb7262ac30bb023e1e3577f46ccf6efaed5eace7d'
+$url = 'https://downloads.plex.tv/plex-media-server/1.3.3.3148-b38628e/Plex-Media-Server-1.3.3.3148-b38628e.exe'
 
 $packageArgs = @{
   packageName   = 'plexmediaserver'
