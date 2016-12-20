@@ -3,7 +3,8 @@
 version: '{build}'
 max_jobs: 1
 image: WMF 5
-clone_depth: 5
+# History plugin requires complete log
+#clone_depth: 5
 branches:
   only:
   - master
@@ -14,6 +15,8 @@ environment:
   # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
   au_version:
   au_push: true
+  # Force test: use 1 to test all, or N to split testing into N groups
+  au_test_groups: 1
 
   # Github token to commit pushed packages to repository
   github_user_repo: {github_user}/{repository}
@@ -34,6 +37,9 @@ environment:
   # Optional, leave empty to create anonymous gist
   gist_id:
 
+  # Force test: gist id for test results
+  gist_id_test:
+
   # Chocolatey API key - to push updated packages
   api_key:
     secure: YOUR_CHOCO_API_KEY_HERE_ENCRYPTED_STRING # https://ci.appveyor.com/tools/encrypt
@@ -51,10 +57,20 @@ install:
     git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 
+- ps: |
+    "Build info"
+    '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
+    '  {0,-20} {1}' -f 'FORCED BUILD:'   , ($Env:APPVEYOR_FORCED_BUILD    -eq 'true')
+    '  {0,-20} {1}' -f 'RE BUILD:'       , ($Env:APPVEYOR_RE_BUILD        -eq 'true')
+
 build_script:
 - ps: |
+    $ErrorActionPreference = 'Continue'
+
+    if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
+
     if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
-        switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE) 
+        switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
         {
             '\[AU (.+?)\]'   { $forced = $Matches[1] }
 
