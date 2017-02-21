@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>project64</id>
+    <version>2.3.2</version>
+    <packageSourceUrl>https://github.com/scowalt/chocolatey-packages</packageSourceUrl>
+    <owners>scowalt</owners>
+
+    <title>Project64</title>
+    <authors>Project64 contributors</authors>
+    <projectUrl>http://www.pj64-emu.com/</projectUrl>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/f/f2/Project_64_logo.png</iconUrl>
+    <licenseUrl>https://github.com/project64/project64/blob/master/licence.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/project64/project64</projectSourceUrl>
+    <docsUrl>https://github.com/project64/project64/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/project64/project64/issues</bugTrackerUrl>
+    <tags>project64 n64 nintendo 64 admin</tags>
+    <summary>N64 Emulator</summary>
+    <description>Project64 is a Nintendo 64 emulator written in the programming language C for the operating system Windows.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
