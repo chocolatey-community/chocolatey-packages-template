@@ -1,4 +1,4 @@
 ﻿$configFile = (Join-Path $(Split-Path -parent $MyInvocation.MyCommand.Definition) 'configuration.xml')
-Install-ChocolateyPackage 'officeClickToRun' 'exe' "/extract:$env:temp\office /log:$env:temp\officeInstall.log /quiet /norestart" 'https://download.microsoft.com/download/6/2/3/6230F7A2-D8A9-478B-AC5C-57091B632FCF/officedeploymenttool_x86_4827-1000.exe' -checksum '0FA68B23374EE75B99C062AE81BFC8C99B7D6CAD4282915F95CA9968FB3DD0A8' -checksumType 'sha256'
+Install-ChocolateyPackage 'officeClickToRun' 'exe' "/extract:$env:temp\office /log:$env:temp\officeInstall.log /quiet /norestart" 'https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_8008-3601.exe' -checksum 'A7F8CD73AD61EDDB42303E7D2A0D4F4080B8330267E7B6AD63C17F12926F04DD' -checksumType 'sha256'
 Install-ChocolateyInstallPackage 'officeClickToRun' 'exe' "/download $configFile" "$env:temp\office\setup.exe"
 Install-ChocolateyInstallPackage 'officeClickToRun' 'exe' "/configure $configFile" "$env:temp\office\setup.exe"
