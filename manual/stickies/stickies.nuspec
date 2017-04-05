@@ -23,5 +23,7 @@ Stickies will never support animated dancing figures, or play "Greensleeves". Th
         <dependencies>
             <dependency id="vcredist2008" version="9.0.30729.6161" />
         </dependencies>
+		<releaseNotes>http://www.zhornsoftware.co.uk/stickies/versions.html</releaseNotes>
+		<docsUrl>http://www.zhornsoftware.co.uk/stickies/faq.html</docsUrl>
     </metadata>
 </package>
