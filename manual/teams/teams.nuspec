@@ -15,5 +15,6 @@
 		<description>Meet Microsoft Teams, the new chat-based workspace in Office 365.</description>
 		<releaseNotes></releaseNotes>
 		<docsUrl>https://support.office.com/en-us/teams</docsUrl>
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/teams.png</iconUrl>
     </metadata>
 </package>
