@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>teams</id>
+        <version>1.0.0</version>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <owners>Mike Cole</owners>
+		<title>Microsoft Teams</title>
+        <authors>Microsoft Corporation</authors>
+        <projectUrl>https://teams.microsoft.com/downloads</projectUrl>
+		<copyright>Copyright © 2017 Microsoft Corporation</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>chat communicator admin</tags>
+		<summary>See content and chat history anytime in team chat or in private chat. Schedule small group or team meetings. Post an email in the thread to keep the team in the loop. Search for public teams to collaborate on shared projects.</summary>
+		<description>Meet Microsoft Teams, the new chat-based workspace in Office 365.</description>
+		<releaseNotes></releaseNotes>
+		<docsUrl>https://support.office.com/en-us/teams</docsUrl>
+    </metadata>
+</package>
