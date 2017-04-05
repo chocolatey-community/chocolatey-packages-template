@@ -3,11 +3,7 @@ import-module au
 $url = 'https://www.join.me/Download.aspx?installer=win&webdownload=true'
 
 function global:au_SearchReplace {
-    @{
-        'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-        }
-     }
+
 }
 
 function global:au_GetLatest {
@@ -43,7 +39,7 @@ function global:au_GetLatest {
 
     $checksum = $(Get-FileHash $temp_file -Algorithm SHA256 | Select-Object -ExpandProperty Hash)
     Write-Host $checksum
-    $Latest = @{ Version = $version; Checksum32 = $checksum }
+    $Latest = @{ Version = $version }
     return $Latest
 }
 
