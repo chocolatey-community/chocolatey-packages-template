@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>imgburn</id>
+        <version>2.5.8.1</version>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <owners>Mike Cole</owners>
+		<title>ImgBurn</title>
+        <authors>Lightning UK</authors>
+		<licenseUrl>http://www.imgburn.com/index.php?act=terms</licenseUrl>
+		<projectUrl>http://www.imgburn.com/</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>imgburn admin burn cd dvd blu-ray bluray hd</tags>
+		<description>ImgBurn is a lightweight CD / DVD / HD DVD / Blu-ray burning application that everyone should have in their toolkit!</description>
+		<summary>Lightweight CD / DVD burning application</summary>
+		<releaseNotes>http://www.imgburn.com/index.php?act=changelog</releaseNotes>
+		<copyright>Lightning UK</copyright>
+		<docsUrl>http://www.imgburn.com/index.php?act=guides</docsUrl>
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/imgburn.png</iconUrl>
+    </metadata>
+</package>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>sublimetext2</id>
+        <version>2.0.2.2222</version>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <owners>Mike Cole</owners>
+		<title>Sublime Text 2</title>
+        <authors>Jon Skinner</authors>
+        <projectUrl>https://sublimetext.com/2</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags> sublime text editor admin</tags>
+		<summary>Sublime Text 2 is a sophisticated text editor for code, html and prose. You'll love the slick user interface and extraordinary features.</summary>
+		<description>Sublime Text 2 is a sophisticated text editor for code, html and prose. You'll love the slick user interface and extraordinary features. Sublime Text may be downloaded and evaluated for free, however a license must be purchased for continued use.
+    This brings the Sublime Text portable version to your system</description>
+		<releaseNotes></releaseNotes>
+		<docsUrl>https://www.sublimetext.com/docs/2/</docsUrl>
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/sublimetext2.png</iconUrl>
+		<licenseUrl>http://www.sublimetext.com/eula</licenseUrl>
+    </metadata>
+</package>
