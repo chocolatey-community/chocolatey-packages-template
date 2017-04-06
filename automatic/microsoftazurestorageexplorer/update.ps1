@@ -1,6 +1,5 @@
 import-module au
 
-$homepage = 'http://storageexplorer.com'
 $url = 'http://go.microsoft.com/fwlink/?LinkId=708343'
 
 function global:au_SearchReplace {
@@ -12,11 +11,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $homepage_content = Invoke-WebRequest -UseBasicParsing -Uri $homepage
+    $temp_file = $env:TEMP + '\StorageExplorer.exe'
+    Invoke-WebRequest $url -OutFile $temp_file
+    Write-Host $temp_file
 
-    # Get Version
-    $homepage_content -match '(Version \d+.\d+.\d+)'| Out-Null
-    $version = $matches[1] -replace "Version ", ""
+    $version = ([version](dir $temp_file).VersionInfo.ProductVersion)
+    Write-Host $version
+
 
     $Latest = @{ URL = $url; Version = $version }
     return $Latest
