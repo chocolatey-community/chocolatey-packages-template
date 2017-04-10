@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>zoom</id>
-        <version>4.0.25958.0306</version>
+        <version>4.0.29183.0407</version>
 		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
 		<owners>Mike Cole, Kyle McNally</owners>
         <title>Zoom Client for Meetings</title>
