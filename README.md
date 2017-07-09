@@ -33,7 +33,7 @@ For setting up your own automatic package repository, please see [Automatic Pack
 
 #### AU
 
-* PowerShell v4+.
+* PowerShell v5+.
 * The [AU module](https://chocolatey.org/packages/au).
 
 For daily operations check out the AU packages [template README](https://github.com/majkinetor/au-packages-template/blob/master/README.md).

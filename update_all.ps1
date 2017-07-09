@@ -17,14 +17,23 @@ $Options = [ordered]@{
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
             NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
-            UserMessage = ''                                #  Markdown, Text: Custom user message to show
+            UserMessage = "[History](#update-history)"       #  Markdown, Text: Custom user message to show
+            NoIcons     = $false                            #  Markdown: don't show icon
+            IconSize    = 32                                #  Markdown: icon size
+            Title       = ''                                #  Markdown, Text: TItle of the report, by default 'Update-AUPackages'
         }
+    }
+
+    History = @{
+        Lines = 30                                          #Number of lines to show
+        Github_UserRepo = $Env:github_user_repo             #User repo to be link to commits
+        Path = "$PSScriptRoot\Update-History.md"            #Path where to save history
     }
 
     Gist = @{
         Id     = $Env:gist_id                               #Your gist id; leave empty for new private or anonymous gist
         ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
-        Path   = "$PSScriptRoot\Update-AUPackages.md"       #List of files to add to the gist
+        Path   = "$PSScriptRoot\Update-AUPackages.md", "$PSScriptRoot\Update-History.md"       #List of files to add to the gist
     }
 
     Git = @{
