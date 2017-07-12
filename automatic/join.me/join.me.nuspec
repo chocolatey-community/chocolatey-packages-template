@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>join.me</id>
-        <version>3.1.0.4731</version>
+        <version>3.2.1.5233</version>
         <title>join.me</title>
         <authors>LogMeIn, Inc.</authors>
         <owners>Mike Cole</owners>
