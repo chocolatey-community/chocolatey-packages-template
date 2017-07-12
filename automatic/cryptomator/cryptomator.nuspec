@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>cryptomator</id>
-    <version>1.2.3.20170618</version>
+    <version>1.3.0</version>
     <title>Cryptomator</title>
     <authors>The Cryptomator Contributors</authors>
     <owners>Stu Mace</owners>
@@ -39,17 +39,19 @@
 
 For more information on the security details visit [cryptomator.org](https://cryptomator.org/architecture/).</description>
     <summary>Multi-platform transparent client-side encryption of your files in the cloud.</summary>
-    <releaseNotes>#Improvements
-
- - Fixed system error 53/67 that rarely occurred on some Windows systems, because of a missing registry value
- - Saved password can now be forgotten by deselecting the checkbox
- - WebDAV server keeps running after unlocking a vault even if mounting fails
- - Log files don't contain debug-level information per default anymore, added debug mode in settings</releaseNotes>
+    <releaseNotes>https://github.com/cryptomator/cryptomator/releases</releaseNotes>
     <copyright>2016 The Cryptomator Contributors (cryptomator.org)</copyright>
     <tags>cryptomator admin</tags>
     <projectSourceUrl>https://github.com/cryptomator/cryptomator</projectSourceUrl>
-    <packageSourceUrl>https://github.com/scowalt/chocolatey-cryptomator</packageSourceUrl>
+    <packageSourceUrl>https://github.com/scowalt/chocolatey-packages/tree/master/automatic/cryptomator</packageSourceUrl>
     <docsUrl>https://github.com/cryptomator/cryptomator/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/cryptomator/cryptomator/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
+    </dependencies>
   </metadata>
+
+  <files>
+    <file src="tools\**\*" target="tools" />
+  </files>
 </package>
