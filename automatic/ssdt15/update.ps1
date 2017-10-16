@@ -21,16 +21,17 @@ function global:au_GetLatest {
 	}
 	$doc=$ie.Document
 
-	$elements=$doc.GetElementsByTagName("p") | where {$_.innerText -like "*Version:*"}
+	$link=$doc.GetElementsByTagName("a") | where {$_.innerText -like "*Download SSDT for Visual Studio 2015*"}
+	Write-Host $link.href
 
-	$version = $elements.innerHTML.Replace("Version: ", "").Trim()
+	$temp_file = $env:TEMP + '\SSDTSetup.exe'
+	Invoke-WebRequest $link.href -OutFile $temp_file
+	Write-Host $temp_file
+
+	$version = (Get-Command $temp_file).Version
 	Write-Host $version
 
-	$elements=$doc.GetElementsByTagName("a") | where {$_.innerText -like "*Download SQL Server Data Tools*"}
-	$url = $elements.href.Trim()
-	Write-Host $url
-
-    $Latest = @{ URL = $url; Version = $version }
+    $Latest = @{ URL = $link.href; Version = $version }
     return $Latest
 }
 
