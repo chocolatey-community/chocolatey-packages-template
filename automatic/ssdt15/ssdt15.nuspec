@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>ssdt15</id>
-        <version>14.0.61021.0</version>
+        <version>14.0.61709.290</version>
 		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
 		<owners>Mike Cole</owners>
         <title>Microsoft SQL Server Data Tools for Visual Studio 2015 </title>
