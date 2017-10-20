@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>ssdt11</id>
+        <version>1.0.0.0</version>
+		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+		<owners>Mike Cole</owners>
+        <title>Microsoft SQL Server Data Tools for Visual Studio 2017</title>
+        <authors>Microsoft Corporation</authors>
+        <projectUrl>https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/</projectUrl>
+		<copyright>Copyright Microsoft Corporation. All rights reserved.</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>SQL Server Data Tools SSDT Visual Studio 2017 admin</tags>
+		<summary>This update addresses product defects for SQL Server projects, database deployments, and database tools.</summary>
+		<description>This update addresses product defects for SQL Server projects, database deployments, and database tools.</description>
+		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/ssdt15.png</iconUrl>
+		<releaseNotes>https://msdn.microsoft.com/en-us/library/mt674925.aspx</releaseNotes>
+		<licenseUrl>https://docs.microsoft.com/en-us/sql/ssdt/sql-server-data-tools-license-terms-vs2017</licenseUrl>
+		<dependencies>
+            <dependency id="KB2919355" version="1.0.20160719" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
