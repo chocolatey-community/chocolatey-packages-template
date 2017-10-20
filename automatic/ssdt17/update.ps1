@@ -16,10 +16,10 @@ function global:au_GetLatest {
 
     $notes_content = Invoke-WebRequest -Uri $notes_url
 
-    $link = $notes_content.ParsedHtml.getElementsByTagName("a") | where {$_.innerText -like "*Download SSDT for Visual Studio 2015*"}
+    $link = $notes_content.ParsedHtml.getElementsByTagName("a") | where {$_.innerText -like "*Download SSDT for Visual Studio 2017*"}
     Write-Host $link.href
 
-	$temp_file = $env:TEMP + '\SSDTSetup.exe'
+	$temp_file = $env:TEMP + '\SSDT-Setup-ENU.exe'
 	Invoke-WebRequest $link.href -OutFile $temp_file
 	Write-Host $temp_file
 
