@@ -1,4 +1,4 @@
-﻿$checksum = 'deec3194aa144b92fa3c4dcf0ea674cf11db87c92b51ce5166b9c91205baa611'
+﻿$checksum = '148d3c2a917eef8972f2ac1d6c7243f8add4232d58f6e5109f18829a74274329'
 
 $packageArgs = @{
   packageName   = 'screenhero'
