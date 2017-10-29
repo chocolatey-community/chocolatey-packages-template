@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Listary</id>
+    <version>5.00.2843</version>
+    <title>Listary</title>
+    <authors>Zhenheng Dai</authors>
+    <owners>Ishan, scowalt</owners>
+    <description>Listary is a unique search utility for Windows. Not only does it make file browsing truly flexible -- thanks to its multi-file managers support -- but the ultra-compact UI also redefines minimalism. The lightweight design doesn't stop it from providing various advanced features however, that may fit the needs of both casual and power users alike. All you have to do is just type the file name that you’re looking for, and Listary will display the search results at breakneck speed.</description>
+    <releaseNotes> * Fixed: Some rare crashes on recent Windows 10 updates.
+    </releaseNotes>
+    <summary>Keep files at your fingertips. Listary is a unique search utility for Windows.</summary>
+    <language>en-us</language>
+    <projectUrl>http://www.listary.com</projectUrl>
+    <iconUrl>http://www.listary.com/wp-content/themes/listary4/images/logo_48x48.png</iconUrl>
+    <copyright>Bopsoft</copyright>
+    <licenseUrl>http://www.listary.com/download</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>listary search find filemanager admin</tags>
+    <packageSourceUrl>https://github.com/scowalt/chocolatey-packages</packageSourceUrl>
+  </metadata>
+</package>
