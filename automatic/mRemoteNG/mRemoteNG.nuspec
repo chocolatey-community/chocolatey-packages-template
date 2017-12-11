@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>mRemoteNG</id>
-        <version>1.75.7011.34963</version>
+        <version>1.75.7012.16814</version>
 		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
 		<owners>Geert Serneels, Mike Cole</owners>
         <title>mRemoteNG</title>
