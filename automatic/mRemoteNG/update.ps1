@@ -17,7 +17,7 @@ function global:au_GetLatest {
 	$page = Invoke-WebRequest $release_url
 	$html = $page.parsedHTML
 
-	$release_downloads = $html.body.getElementsByTagName("ul") | where {$_.className -like "release-downloads"}
+	$release_downloads = $html.body.getElementsByTagName("div") | where {$_.className -like "*label-latest*"}
 	$downloadUrl = $release_downloads.getElementsByTagName("a") | where {$_.href -like "*.msi"}
 	$url = $downloadUrl.href.Replace("about:", "https://github.com")
 	Write-Host $url
