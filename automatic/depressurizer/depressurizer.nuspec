@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>depressurizer</id>
-    <version>0.7.4.1</version>
+    <version>0.7.4.2</version>
     <packageSourceUrl>https://github.com/scowalt/chocolatey-packages</packageSourceUrl>
     <owners>scowalt</owners>
 
@@ -24,7 +24,7 @@ In addition to providing a way to quickly and easily modify games' assigned cate
 Depressurizer can also auto-categorize your games for you. Currently, it does so based on data from that games' Steam store pages. It can use genres, Steam flags (like "Single-Player" and "Steam Cloud"), Steam tags, Developer &amp; Publisher info, How Long to Beat times, year, and/or Steam review user scores. Auto-categorizing can be done manually or automatically via shortcut.
 
 It also saves your configuration information independently of Steam, providing an automatic backup in the event that Steam loses your configuration.</description>
-    <releaseNotes>https://github.com/Depressurizer/Depressurizer/releases/tag/v0.7.4.1</releaseNotes>
+    <releaseNotes>https://github.com/Depressurizer/Depressurizer/releases/tag/v0.7.4.2</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5.1" version="4.5.1.20140606" />
     </dependencies>

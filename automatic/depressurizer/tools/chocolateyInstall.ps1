@@ -6,11 +6,11 @@ $unzipLocation = Join-Path "C:" $packageName
 $packageArgs = @{
   packageName   = '$packageName'
   unzipLocation = $unzipLocation
-  url           = 'https://github.com/Depressurizer/Depressurizer/releases/download/v0.7.4.1/depressurizer-0.7.4.1.zip'
+  url           = 'https://github.com/Depressurizer/Depressurizer/releases/download/v0.7.4.2/depressurizer-0.7.4.2.zip'
 
   softwareName  = 'Depressurizer*'
 
-  checksum      = '34be10c07c1dc0377869cf419e168ae67c5f0789d91809ba411ce8c247985b83'
+  checksum      = '24410ee4fd4a39c33629cb51033e266ec2db264748e13660897cfbc71592acaa'
   checksumType  = 'sha256'
 }
 
