@@ -21,7 +21,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: ripclawffb/chocolatey-packages
   github_api_key:
-    secure: wCfFZ/fPEZD6M2QrJmshENIqPhr/Dd8pYLh1OMtfk0IcqPWGFPfYvAViHSEJVz2y #https://ci.appveyor.com/tools/encrypt
+    secure: #https://ci.appveyor.com/tools/encrypt
 
 
   # Mail credentials - for error notifications
@@ -100,8 +100,8 @@ notifications:
 - provider: Email
   to: $(mail_user)
   on_build_success: false
-  on_build_failure: true
-  on_build_status_changed: true
+  on_build_failure: false
+  on_build_status_changed: false
 
 #on_finish:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
