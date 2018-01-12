@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>telegraf</id>
+    <version>1.5.1</version>
+    <title>Telegraf (Install)</title>
+    <authors>InfluxData</authors>
+    <owners>Asif Shaikh</owners>
+    <licenseUrl>https://github.com/influxdata/telegraf/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/influxdata/telegraf</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Telegraf is a plugin-driven server agent for collecting and reporting
+      metrics, and is the first piece of the TICK stack. Telegraf has plugins to source a
+      variety of metrics directly from the system it’s running on, pull metrics from third
+      party APIs, or even listen for metrics via a statsd and Kafka consumer services. It
+      also has output plugins to send metrics to a variety of other datastores, services,
+      and message queues, including InfluxDB, Graphite, OpenTSDB, Datadog, Librato, Kafka,
+      MQTT, NSQ, and many others.
+
+      Telegraf is installed under %ProgramFiles%\telegraf.</description>
+    <summary>Telegraf is a plugin-driven server agent for collecting and reporting metrics.</summary>
+    <releaseNotes>https://github.com/influxdata/telegraf/blob/master/CHANGELOG.md</releaseNotes>
+    <copyright>2015 InfluxDB</copyright>
+    <tags>admin telegraf influxdata influxdb</tags>
+    <packageSourceUrl>https://dl.influxdata.com/telegraf/releases/</packageSourceUrl>
+    <docsUrl>https://github.com/influxdata/telegraf</docsUrl>
+  </metadata>
+</package>
