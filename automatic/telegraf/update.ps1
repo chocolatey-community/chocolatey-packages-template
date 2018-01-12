@@ -20,11 +20,16 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases 
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $url = (($download_page.AllElements | Where Class -eq 'modal-body' | select -First 1 -ExpandProperty innerText) -split '["\n\r"|"\r\n"|\n|\r| ]' | Select-String -Pattern '\.zip$' | select -first 1).ToString()
+    $HTML = New-Object -Com "HTMLFile"
+    $HTML.IHTMLDocument2_write($download_page.RawContent)
 
-    $version  = $url -split '[_-]|.zip' | select -Last 1 -Skip 3
+    $url = (($HTML.all.tags("code") | ForEach InnerText | Select-String -Pattern 'telegraf' | `
+    Select-String -Pattern '\.zip') -split '["\n\r"|"\r\n"|\n|\r| ]' | Select-String -Pattern 'https' | `
+    Select-Object -First 1) -replace " ",""
+    
+    $version  = $url -split '[_-]|.zip' | Select-Object -Last 1 -Skip 3
 
     @{
         Version      = $version
