@@ -12,7 +12,16 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <tags>SQL Server Data Tools SSDT Visual Studio 2015 admin</tags>
 		<summary>This update addresses product defects for SQL Server projects, database deployments, and database tools.</summary>
-		<description>This update addresses product defects for SQL Server projects, database deployments, and database tools.</description>
+		<description>
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/analysis` - Install tools for SQL Server Analysis Services.
+ * `/integration` - Install tools for SQL Server Integration Services.
+ * `/reporting` - Install tools for SQL Server Reporting Services.
+ 
+To pass parameters, use --params "''" (e.g. choco install ssdt15 [other options] --params="'/analysis /reporting'").
+		</description>
 		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/ssdt15.png</iconUrl>
 		<releaseNotes>https://msdn.microsoft.com/en-us/library/mt674925.aspx</releaseNotes>
 		<licenseUrl>https://msdn.microsoft.com/en-us/library/mt706449.aspx</licenseUrl>
