@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>stickies</id>
-        <version>9.0.4.0</version>
+        <version>9.0.5.0</version>
 		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
         <title>Stickies</title>
         <authors>Tom Revell</authors>
