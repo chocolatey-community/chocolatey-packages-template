@@ -1,5 +1,5 @@
-﻿$checksum = '4795220984356e3a9e337063ef3fedf9547a4ee1feaaf5347b99d19064455f8c'
-$url = 'https://downloads.plex.tv/plex-media-server/1.12.3.4973-215c28d86/Plex-Media-Server-1.12.3.4973-215c28d86.exe'
+﻿$checksum = '59886ed7d9fb0f5f34acd16f12d2e214c9f60e696f22c86d0539f6da3233a92d'
+$url = 'https://downloads.plex.tv/plex-media-server/1.13.0.5023-31d3c0c65/Plex-Media-Server-1.13.0.5023-31d3c0c65.exe'
 
 if ((get-process "Plex Media Server" -ea SilentlyContinue) -eq $Null){ 
     $PMSRunning="False" # Always false on new install.
