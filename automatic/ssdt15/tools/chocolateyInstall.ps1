@@ -12,16 +12,42 @@ if ($Matches.Major -eq 6 -and $Matches.Minor -eq 3)
     }
 }
 
+$pp = Get-PackageParameters
+
 $packageArgs = @{
   packageName   = 'ssdt15'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
   fileType      = 'exe'
   url           = $url
-  silentArgs    = '/passive /norestart'
+  silentArgs    = "/passive /norestart"
   validExitCodes= @(0)
   softwareName  = 'ssdt15*'
   checksum      = $checksum
   checksumType  = 'sha256'
+}
+
+if (($pp['analysis'] -eq 'true') -and ($pp['integration'] -eq 'true') -and ($pp['reporting'] -eq 'true'))
+{
+    $packageArgs.silentArgs += " INSTALLALL=1"
+}
+else 
+{
+    if ($pp['analysis'] -eq 'true')
+    {
+        $packageArgs.silentArgs += " INSTALLAS=1"
+    }
+
+    if ($pp['integration'] -eq 'true')
+    {
+        $packageArgs.silentArgs += " INSTALLIS=1"
+    }
+
+    if ($pp['reporting'] -eq 'true')
+    {
+        $packageArgs.silentArgs += " INSTALLRS=1"
+    }
+
+    # else default installation of tools
 }
 
 Install-ChocolateyPackage @packageArgs
