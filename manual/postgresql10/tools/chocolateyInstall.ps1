@@ -12,7 +12,9 @@ if(!$password)
 
 if(!$password)
 {
-    throw "Please specify a password to be assigned to the postgres user."
+    # We need to do this to pass package verification.
+    $password = [guid]::NewGuid().ToString("N")
+    Write-Output "You did not specify a password for the postgres user so an insecure one has been generated for you. Please change it immediately. The password is $($password)"
 }
 
 $silentArgs = @(
