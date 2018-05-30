@@ -16,4 +16,7 @@
         <copyright>Copyright 1999-2018 RingCentral, Inc.</copyright>
         <tags>chat communicator admin</tags>
     </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>
