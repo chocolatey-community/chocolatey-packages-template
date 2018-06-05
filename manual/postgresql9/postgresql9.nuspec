@@ -3,9 +3,9 @@
   <metadata>
     <id>postgresql9</id>
     <title>PostgreSQL</title>
-    <version>9.6.9.0</version>
+    <version>9.6.9.20180605</version>
     <authors>PostgreSQL Global Development Group</authors>
-    <owners>hoflogic</owners>
+    <owners>cole.mike</owners>
     <projectUrl>https://postgresql.org/</projectUrl>
     <projectSourceUrl>https://github.com/postgres/postgres</projectSourceUrl>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
