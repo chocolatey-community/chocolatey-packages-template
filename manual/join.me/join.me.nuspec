@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>join.me</id>
-        <version>3.2.1.5233</version>
+        <version>3.2.1.523301</version>
         <title>join.me</title>
         <authors>LogMeIn, Inc.</authors>
         <owners>Mike Cole</owners>
         <licenseUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/join.me/license.txt</licenseUrl>
         <projectUrl>https://www.join.me/</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/join.me/logo.png</iconUrl>
+        <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/join.me.png</iconUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <description>A drop-dead simple online meeting and screen sharing service from LogMeIn, join.me is used by millions of people and hundreds of thousands of businesses for everything from online meetings, to ad hoc show and tell collaboration.</description>
         <summary>Note: The checksums for this installer constantly change, so it needs to run with --ignore-checksums if you have not turned off the feature allowEmptyChecksumsSecure.</summary>

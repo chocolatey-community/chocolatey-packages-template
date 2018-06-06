@@ -9,7 +9,7 @@
     <projectUrl>https://postgresql.org/</projectUrl>
     <projectSourceUrl>https://github.com/postgres/postgres</projectSourceUrl>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/blob/master/icons/postgresql9.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/postgresql9.png</iconUrl>
     <licenseUrl>https://www.postgresql.org/about/licence/</licenseUrl>
     <docsUrl>https://www.postgresql.org/docs/9/static/index.html</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

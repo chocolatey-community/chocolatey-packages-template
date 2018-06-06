@@ -13,7 +13,7 @@
         <tags>azure admin</tags>
 		<summary>Easily work with Azure Storage - from any platform, anywhere.</summary>
 		<description>Microsoft Azure Storage Explorer (Preview) is a standalone app from Microsoft that allows you to easily work with Azure Storage data on Windows, macOS and Linux.</description>
-		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/blob/master/icons/microsoftazurestorageexplorer.png</iconUrl>
+		<iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/microsoftazurestorageexplorer.png</iconUrl>
 		<releaseNotes>http://storageexplorer.com/releasenotes.html</releaseNotes>
     </metadata>
 	<files>

@@ -8,7 +8,7 @@
 		<owners>Brian Mengo, Mike Cole</owners>
 		<licenseUrl>http://store.steampowered.com/subscriber_agreement/</licenseUrl>
 		<projectUrl>http://store.steampowered.com/</projectUrl>
-		<iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/steam.png</iconUrl>
+		<iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/steam.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>The ultimate entertainment platform. Play, connect, create and more.</description>
 		<summary></summary>

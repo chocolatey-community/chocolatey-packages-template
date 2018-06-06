@@ -25,7 +25,7 @@ mRemoteNG supports the following protocols:
 * HTTP/HTTPS (Hypertext Transfer Protocol)
 * rlogin
 * Raw Socket Connections</description>
-		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/nremoteng.jpg</iconUrl>
+		<iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/mremoteng.jpg</iconUrl>
 		<releaseNotes>https://github.com/mRemoteNG/mRemoteNG/releases</releaseNotes>
 		<licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html</licenseUrl>
     </metadata>

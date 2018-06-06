@@ -13,7 +13,7 @@
         <tags>zoom admin webinar webcam meeting</tags>
 		<description>Zoom unifies cloud video conferencing, simple online meetings, group messaging, and a software-defined conference room solution into one easy-to-use platform. Our solution offers the best video, audio, and wireless screen-sharing experience across Windows, Mac, iOS, Android, Blackberry, Linux, Zoom Rooms, and H.323/SIP room systems. Founded in 2011, Zoom's mission is to develop a people-centric cloud service that transforms the real-time collaboration experience and improves the quality and effectiveness of communications forever.</description>
 		<summary>Zoom unifies cloud video conferencing, simple online meetings, group messaging, and a software-defined conference room solution into one easy-to-use platform.</summary>
-		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/zoom.jpg</iconUrl>
+		<iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/zoom.png</iconUrl>
 		<docsUrl>https://support.zoom.us/hc/en-us</docsUrl>
 		<licenseUrl>http://zoom.us/pricing</licenseUrl>
     </metadata>
