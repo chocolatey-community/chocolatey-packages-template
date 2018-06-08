@@ -1,4 +1,4 @@
-﻿$checksum = 'e067ea8e562c218c03490a780c67f5f16340fbbee5dc89a3e24fa55c154d4142'
+﻿$checksum = 'd131eaf356f53d8d898c3116eb764a6cfdf1d2a333fcc2b30f10ab66dba8176a'
 
 $packageArgs = @{
   packageName   = 'microsoftazurestorageexplorer'
