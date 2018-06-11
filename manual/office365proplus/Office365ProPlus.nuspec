@@ -1,20 +1,25 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>Office365ProPlus</id>
-    <version>2016.20180605</version>
-    <title>Office365ProPlus</title>
-    <authors>Microsoft</authors>
-    <owners>Mike Cole</owners>
-    <licenseUrl>https://technet.microsoft.com/en-us/library/gg982959.aspx</licenseUrl>
-    <projectUrl>http://office.microsoft.com/</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Get the latest versions of your familiar Office programs, such as Word, Excel and PowerPoint, and more, all in one convenient subscription. This will download and silently install the entire Office 365 2013 Professional Plus edition. A license is required and you will be prompted to enter your account information upon first launching the software after install.</description>
-    <summary>Office365ProPlus</summary>
-    <releaseNotes />
-    <copyright />
-    <tags>Office365ProPlus Office MSOffice MicrosoftOffice admin</tags>
-	<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/office365proplus.png</iconUrl>
-	<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-  </metadata>
+    <metadata>
+        <id>Office365ProPlus</id>
+        <version>2016.20180605</version>
+        <title>Office 365 ProPlus</title>
+        <authors>Microsoft</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>https://technet.microsoft.com/en-us/library/gg982959.aspx</licenseUrl>
+        <projectUrl>http://office.microsoft.com/</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>
+            Get the latest versions of your familiar Office programs, such as Word, Excel and PowerPoint, and more, all in one convenient
+            subscription. This will download and silently install the entire Office 365 2016 Professional Plus edition. A license is required
+            and you will be prompted to enter your account information upon first launching the software after install.
+        </description>
+        <summary>Office 365 ProPlus</summary>
+        <releaseNotes>https://docs.microsoft.com/en-us/officeupdates/update-history-office365-proplus-by-date</releaseNotes>
+        <copyright />
+        <tags>Office365ProPlus Office MSOffice MicrosoftOffice admin</tags>
+        <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/office365proplus.png</iconUrl>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <docsUrl>https://support.office.com/</docsUrl>
+    </metadata>
 </package>
