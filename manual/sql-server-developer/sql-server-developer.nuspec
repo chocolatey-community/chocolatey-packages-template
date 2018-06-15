@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>sql-server-developer</id>
+    <version>14.1805.4072.1</version>
+    <title>Microsoft SQL Server 2017 Developer</title>
+    <authors>Microsoft</authors>
+    <owners>colemike</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://download.microsoft.com/download/F/D/5/FD5E5C28-6973-4273-8737-D69AA3BEA243/SQL_Server_2016_Licensing_Datasheet_EN_US.pdf</licenseUrl>
+    <projectUrl>https://www.microsoft.com/en-us/sql-server/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/plexmediaserver.png</iconUrl>
+    <description>Build, test, and demonstrate applications in a non-production environment with this full-featured edition of SQL Server 2017.</description>
+    <summary>Installs SQL Server 2017 Developer database engine.</summary>
+    <releaseNotes>https://support.microsoft.com/en-us/kb/3182545</releaseNotes>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <copyright>2016 Microsoft</copyright>
+    <tags>sql-server database microsoft admin</tags>
+    <dependencies>
+      <dependency id="vcredist2015" version="14.0.24215.20170201" />
+      <dependency id="KB2919355" version="1.0.20160719" />
+    </dependencies>    
+  </metadata>
+</package>
