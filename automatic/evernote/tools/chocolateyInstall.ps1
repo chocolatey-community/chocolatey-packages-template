@@ -1,4 +1,4 @@
-﻿$checksum = 'a0146f555433a21abfa536e3d99b0889d62838ad3cc0213428d910f974166571'
+﻿$checksum = '3fc4d10e4d7babd596fd551026abd133075c8f18b63ee8bec392911b78638611'
 
 $packageArgs = @{
   packageName   = 'evernote'
