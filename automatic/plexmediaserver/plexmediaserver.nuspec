@@ -1,23 +1,26 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>plexmediaserver</id>
-		<version>1.13.2.5154</version>
-		<title>Plex Media Server</title>
-		<authors>Plex, Inc.</authors>
-		<owners>Mike Cole</owners>
-		<licenseUrl>https://plex.tv/legal#tabs-21</licenseUrl>
-		<projectUrl>http://plex.tv/</projectUrl>
-		<iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/plexmediaserver.png</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Plex Media Server works with the family of Plex apps, as well as other DLNA clients to make your PC-connected media accessible from all of your devices.</description>
-		<summary>Plex Media Server - Stream media from your PC to all your devices.</summary>
-		<copyright>Copyright 2013, Plex Inc.</copyright>
-		<tags>plex media mediaserver streaming video music plexmediaserver htpc dlna admin</tags>
-		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages/tree/master/plexmediaserver</packageSourceUrl>
-		<docsUrl>https://support.plex.tv/hc/en-us</docsUrl>
-	</metadata>
-  	<files>
-		<file src="tools\**" target="tools" />
-	</files>	
+    <metadata>
+        <id>plexmediaserver</id>
+        <version>1.13.2.515401</version>
+        <title>Plex Media Server</title>
+        <authors>Plex, Inc.</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>https://plex.tv/legal#tabs-21</licenseUrl>
+        <projectUrl>http://plex.tv/</projectUrl>
+        <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/plexmediaserver.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Plex Media Server works with the family of Plex apps, as well as other DLNA clients to make your PC-connected media accessible from all of your devices.</description>
+        <summary>Plex Media Server - Stream media from your PC to all your devices.</summary>
+        <copyright>Copyright 2013, Plex Inc.</copyright>
+        <tags>plex media mediaserver streaming video music plexmediaserver htpc dlna admin</tags>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/tree/master/plexmediaserver</packageSourceUrl>
+        <docsUrl>https://support.plex.tv/hc/en-us</docsUrl>
+        <dependencies>
+            <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>    
 </package>
