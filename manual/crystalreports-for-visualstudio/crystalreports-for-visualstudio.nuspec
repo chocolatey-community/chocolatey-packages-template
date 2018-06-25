@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>crystalreports-for-visualstudio</id>
+    <version>13.0.22.0</version>
+    <title>Crystal Reports, version for Visual Studio</title>
+    <authors>SAP</authors>
+    <owners>patm</owners>
+    <licenseUrl>http://www.sap.com/corporate/en/legal/terms-of-use.html</licenseUrl>
+    <projectUrl>https://wiki.scn.sap.com/wiki/display/BOBJ/Crystal+Reports%2C+Developer+for+Visual+Studio+Downloads</projectUrl>
+    <iconUrl>http://rocketdock.com/images/screenshots/CrystalReports.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SAP Crystal Reports, developer version for Microsoft Visual Studio
+### Note
+You must already have Visual Studio 2010, Visual Studio 2012, Visual Studio 2013, Visual Studio 2015, or Visual Studio 2017 installed to proceed with this installation.</description>
+    <summary>Crystal Reports version for Visual Studio</summary>
+    <releaseNotes>https://wiki.scn.sap.com/wiki/x/OpOgGg</releaseNotes>
+    <tags>SAP Crystal Reports developer version for Microsoft Visual Studio admin</tags>
+  </metadata>
+</package>
