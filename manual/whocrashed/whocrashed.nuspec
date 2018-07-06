@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>whocrashed</id>
+    <version>6.01</version>
+    <title>Who Crashed</title>
+    <authors>Resplendence Software Projects Sp.</authors>
+    <owners>cole.mike</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://www.resplendence.com/licensing</licenseUrl>
+    <projectUrl>http://www.resplendence.com/whocrashed</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/whocrashed.png</iconUrl>
+    <description>
+        #### Note:
+        The Free edition is only available for home use. Business users must purchase a professional license.
+
+        Analyzes existing crash dumps and tries to determine and state the root cause in easy to understand language.
+    </description>
+    <summary>Analyzes existing crash dumps and tries to determine and state the root cause in easy to understand language.</summary>
+    <releaseNotes>http://www.resplendence.com/whocrashed_pro.htm</releaseNotes>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <copyright>Resplendence Software Projects Sp.</copyright>
+    <tags>Crash Dump Debugging admin</tags>    
+  </metadata>
+</package>
