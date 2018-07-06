@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mactype</id>
+    <version>2017.628.0</version>
+    <title>MacType</title>
+    <authors>Flying Snow</authors>
+    <owners>cole.mike</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/snowie2000/mactype</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/mactype.png</iconUrl>
+    <description>A brand new program which turns your Windows machine into a Mac. With the power of freetype, it can render your Windows fonts smoothly and much more conveniently to read. This program is re-developed from GDI++, a Japanese project which is no longer being updated. MacType is now more powerful than GDI++. It supports Chrome 18+, GTK and even Safari.</description>
+    <summary>The ultimate font rasterizer for Windows</summary>
+    <releaseNotes>https://github.com/snowie2000/mactype/releases</releaseNotes>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <copyright>2017 FlyingSnow</copyright>
+    <tags>font rasterizer admin</tags>
+  </metadata>
+</package>
