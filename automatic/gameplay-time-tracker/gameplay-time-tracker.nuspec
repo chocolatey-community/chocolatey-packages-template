@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>gameplay-time-tracker</id>
+        <version>2.10.91.91</version>
+        <title>Gameplay Time Tracker</title>
+        <authors>mik61</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>https://www.gameplay-time-tracker.info/en/download.aspx</licenseUrl>
+        <projectUrl>https://www.gameplay-time-tracker.info</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/gameplay-time-tracker.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Using this program you can learn how much time you spend on your favourite computer games!</description>
+        <summary></summary>
+        <releaseNotes>https://www.gameplay-time-tracker.info/en/download.aspx</releaseNotes>
+        <copyright>Copyright © 2011 mik61</copyright>
+        <tags>games gaming admin</tags>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/</packageSourceUrl>
+    </metadata>
+      <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
