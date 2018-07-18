@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>netfx-4.5.2-devpack</id>
-        <version>4.5.5165101</version>
+        <version>4.5.5165101.20180718</version>
 		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
         <title>.NET Framework 4.5.2 Developer Pack</title>
         <authors>Microsoft</authors>
