@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>money-manager-ex</id>
+        <version>1.3.3.0</version>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <title>Money Manager EX</title>
+        <authors>Money Manager EX</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>https://www.moneymanagerex.org/about/license</licenseUrl>
+        <projectUrl>https://www.moneymanagerex.org/</projectUrl>
+        <copyright>Copyright 2016 - Money Manager EX</copyright>
+        <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/money-manager-ex.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Money Manager Ex is a free, open-source, cross-platform, easy-to-use personal finance software. It primarily helps organize one's finances and keeps track of where, when and how the money goes. It is also a great tool to get a bird's eye view of your financial worth.
+
+Money Manager includes all the basic features that 90% of users would want to see in a personal finance application. The design goals are to concentrate on simplicity and user-friendliness - something one can use everyday.</description>
+        <summary>Money Manager Ex is a free, open-source, cross-platform, easy-to-use personal finance software.</summary>
+        <tags>finance budget admin</tags>
+        <releaseNotes>https://www.moneymanagerex.org/development/changelog</releaseNotes>
+        <docsUrl>https://github.com/moneymanagerex/moneymanagerex/wiki</docsUrl>
+        <bugTrackerUrl>https://github.com/moneymanagerex/moneymanagerex/labels/bug</bugTrackerUrl>
+        <projectSourceUrl>https://github.com/moneymanagerex/moneymanagerex</projectSourceUrl>
+    </metadata>
+</package>
