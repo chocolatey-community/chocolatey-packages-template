@@ -1,13 +1,13 @@
 import-module au
 
 $download_page_url = 'https://zoom.us/download#client_4meeting'
-$url = 'https://zoom.us/client/latest/ZoomInstaller.exe'
+$url = 'https://zoom.us/client/latest/ZoomInstallerFull.msi'
 
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
             "(^[$]checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-			"(^[$]url\s*=\s*)('.*')"   = "`$1'$($Latest.Url)'"
+            "(^[$]url\s*=\s*)('.*')"   = "`$1'$($Latest.Url)'"
         }
      }
 }
