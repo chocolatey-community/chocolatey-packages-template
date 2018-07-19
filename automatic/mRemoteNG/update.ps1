@@ -14,6 +14,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     Write-Host $release_url
 
+	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 	$page = Invoke-WebRequest $release_url
 	$html = $page.parsedHTML
 
