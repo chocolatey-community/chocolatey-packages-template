@@ -15,13 +15,12 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $release_url -UseBasicParsing
 
     $re = '\.msi$'
-    $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+    $url = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
-    $verRe = '\/'
-    $version32 = $url32 -split "$verRe" | select -last 1 -skip 
+    $version32 = $url.Substring($url.LastIndexOf("-") + 1).Replace(".msi", "")
 
     @{
-        URL = $url32
+        URL = $url
         Version = $version32
     }
 }
