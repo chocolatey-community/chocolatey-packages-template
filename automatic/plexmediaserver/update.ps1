@@ -2,11 +2,15 @@ import-module au
 
 $feed_url = 'https://plex.tv/downloads/details/1?build=windows-i386&distro=english'
 
+function global:au_BeforeUpdate() {
+     $Latest.Checksum32 = Get-RemoteChecksum $Latest.Url
+ }
+
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
             "(^[$]checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-			"(^[$]url\s*=\s*)('.*')"   = "`$1'$($Latest.Url)'"
+            "(^[$]url\s*=\s*)('.*')"   = "`$1'$($Latest.Url)'"
         }
      }
 }
@@ -28,4 +32,4 @@ function global:au_GetLatest {
     return $Latest
 }
 
-update -NoCheckUrl -ChecksumFor 32
+update -NoCheckUrl -ChecksumFor None
