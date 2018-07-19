@@ -6,28 +6,24 @@ function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
             "(^[$]checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-			"(^[$]url\s*=\s*)('.*')"   = "`$1'$($Latest.Url)'"
+            "(^[$]url\s*=\s*)('.*')"   = "`$1'$($Latest.Url)'"
         }
      }
 }
 
 function global:au_GetLatest {
-    Write-Host $release_url
+    $download_page = Invoke-WebRequest -Uri $release_url -UseBasicParsing
 
-	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-	$page = Invoke-WebRequest $release_url
-	$html = $page.parsedHTML
+    $re = '\.msi$'
+    $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
-	$release_downloads = $html.body.getElementsByTagName("div") | where {$_.className -like "*label-latest*"}
-	$downloadUrl = $release_downloads.getElementsByTagName("a") | where {$_.href -like "*.msi"}
-	$url = $downloadUrl.href.Replace("about:", "https://github.com")
-	Write-Host $url
+    $verRe = '\/'
+    $version32 = $url32 -split "$verRe" | select -last 1 -skip 
 
-	$version = $url.Substring($url.LastIndexOf("-") + 1).Replace(".msi", "")
-	Write-Host $version
-
-    $Latest = @{ URL = $url; Version = $version }
-    return $Latest
+    @{
+        URL = $url32
+        Version = $version32
+    }
 }
 
 update -NoCheckUrl -ChecksumFor 32
