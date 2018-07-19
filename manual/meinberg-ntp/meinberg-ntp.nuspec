@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>meinberg-ntp</id>
+        <version>4.2.8.0</version>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <title>Meinberg NTP</title>
+        <authors>MEINBERG Radio Clocks</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>https://www.meinbergglobal.com/english/sw/readme-ntpinstaller.htm#legal</licenseUrl>
+        <projectUrl>https://www.meinbergglobal.com/english/sw/ntp.htm</projectUrl>
+        <copyright>Meinberg Funkuhren GmbH Co KG. All rights reserved.</copyright>
+        <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/meinberg-ntp.webp</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Meinberg’s family of LANTIME NTP time servers offers flexible high performance, with proven reliability and advanced security features. With full IPv4 / IPv6 support validated in NTP time synchronization as well as the configuration interfaces (Web-based, SSH and SNMP), LANTIME time servers are designed to be deployed in networks of any size and industry. Users can assign several IP addresses and the system’s IP autoconf feature supports automatic configuration.
+
+The GNU/Linux operating system of LANTIME SBCs (Single Board Computers) is optimized to ensure a high level of security and reliability. The system’s large display shows the state of the NTP subsystem. System configuration requires only a standard web browser to access the extensive but straightforward html interface. Alternatively, a text-based, menu-driven setup utility can be started from the shell prompt after logging into the unit via Telnet or SSH.
+
+LANTIME’s integrated security features ensure that time synchronization data can be reliably signed and secured by symmetric keys (MD5) and NTP autokey procedures. Clients are protected against manipulated time and man-in-the-middle attacks, verifying that NTP packets received were sent by the LANTIME system. Additionally, the entire LANTIME configuration can be completed using encrypted channels (e.g. SSH, HTTPS or SNMPv3). Flexible system management disables every unused or unneeded protocol to reduce possible points of attack.
+
+To support network management systems, LANTIME time servers offer an extensive SNMP interface, accessible by SNMP V1, V2.c and V3. This allows the monitoring of all relevant system parameters, including operating system performance, network interface statistics, detailed IRIG, NTP or PTP status information, as well as the complete system configuration. The interface also can be used to alter the LANTIME configuration via SNMP set commands.
+
+Based on modular system architecture, flexible LANTIME time servers may be equipped with up to two additional Ethernet ports, including optional fiber optic network ports.</description>
+        <summary>Meinberg’s family of LANTIME NTP time servers.</summary>
+        <tags>meinberg-ntp meinberg ntp time w32tm admin</tags>
+        <releaseNotes>https://www.meinbergglobal.com/english/sw/ntp.htm</releaseNotes>
+        <docsUrl>https://www.meinbergglobal.com/english/docs/#target_sel_1</docsUrl>
+        <bugTrackerUrl>https://www.meinbergglobal.com/english/support/tech-support.htm</bugTrackerUrl>
+    </metadata>
+</package>
