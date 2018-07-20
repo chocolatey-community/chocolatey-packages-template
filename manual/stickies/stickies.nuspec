@@ -3,13 +3,13 @@
     <metadata>
         <id>stickies</id>
         <version>9.0.5.0</version>
-		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
         <title>Stickies</title>
         <authors>Tom Revell</authors>
         <owners>Mike Cole</owners>
         <licenseUrl>http://www.zhornsoftware.co.uk/stickies/download.html</licenseUrl>
         <projectUrl>http://www.zhornsoftware.co.uk/stickies/</projectUrl>
-		<copyright>Copyright 2016 Zhorn Software</copyright>
+        <copyright>Copyright 2016 Zhorn Software</copyright>
         <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/stickies.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>From the Author:
@@ -23,7 +23,7 @@ Stickies will never support animated dancing figures, or play "Greensleeves". Th
         <dependencies>
             <dependency id="vcredist2008" version="9.0.30729.6161" />
         </dependencies>
-		<releaseNotes>http://www.zhornsoftware.co.uk/stickies/versions.html</releaseNotes>
-		<docsUrl>http://www.zhornsoftware.co.uk/stickies/faq.html</docsUrl>
+        <releaseNotes>http://www.zhornsoftware.co.uk/stickies/versions.html</releaseNotes>
+        <docsUrl>http://www.zhornsoftware.co.uk/stickies/faq.html</docsUrl>
     </metadata>
 </package>
