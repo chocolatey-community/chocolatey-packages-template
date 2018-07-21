@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>steam</id>
-        <version>2.10.91.910302</version>
+        <version>3.0.0.0</version>
         <title>Steam</title>
         <authors>Steam Corporation</authors>
         <owners>Brian Mengo, Mike Cole</owners>
