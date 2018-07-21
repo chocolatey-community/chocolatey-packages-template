@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>daemontoolslite</id>
+        <version>10.8.0</version>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <title>DAEMON Tools Lite</title>
+        <authors>DT Soft Ltd</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>http://www.daemon-help.com/en/legal_info/license_agreement.html</licenseUrl>
+        <projectUrl>https://www.daemon-tools.cc/products/dtLite</projectUrl>
+        <copyright>Copyright 2000-2017</copyright>
+        <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/daemontoolslite.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>DAEMON Tools Lite is an advanced application for Microsoft Windows which provides one of the best optical media emulation in the industry.
+You can mount *.mdx, *.mds/*.mdf, *.iso, *.b5t, *.b6t, *.bwt, *.ccd, *.cdi, *.cue, *.nrg, *.pdi, *.isz disc images to a virtual drive.
+Make .iso, *.mds/*.mdf and *.mdx images of CD/DVD/Blu-ray discs.
+DAEMON Tools Pro comes with two possible licences (standard and advanced) and enables you to emulate not only CD/DVD drives but also HD DVD and Blu-ray ones.
+The maximum number of virtual drives that you can mount with images simultaneously is up to 32. DAEMON Tools Pro Advanced has a special feature for advanced users — possibility to emulate up to 4 IDE virtual devices.
+And with DAEMON Tools Net you can build centralized storage of CD, DVD, Blu-ray images and manage user access within home or business networks.</description>
+        <summary>DAEMON Tools Lite is an advanced application for Microsoft Windows which provides one of the best optical media emulation in the industry.</summary>
+        <tags>iso emulation virtual-disk mount-imaged isc-image cd-emulator dvd-emulator admin</tags>
+        <releaseNotes>https://www.daemon-tools.cc/releasenotes/dtlite</releaseNotes>
+        <docsUrl>http://daemon-help.com/</docsUrl>
+    </metadata>
+</package>
