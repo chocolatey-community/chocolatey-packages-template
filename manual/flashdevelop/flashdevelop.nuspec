@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>flashdevelop</id>
+        <version>5.3.3.0</version>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <title>FlashDevelop</title>
+        <authors>fdorg</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>https://github.com/fdorg/flashdevelop/blob/development/LICENSE.txt</licenseUrl>
+        <projectUrl>http://flashdevelop.org/</projectUrl>
+        <copyright>FlashDevelop.org 2005-2018</copyright>
+        <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/flashdevelop.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>FlashDevelop offers first class support for ActionScript (2 and 3) and Haxe development. Great completion and code generation, projects compilation and debugging, plenty of project templates, SWF/SWC exploration etc. FlashDevelop is also a great web developer IDE with source-control support (svn, git, mercurial), tasks/todo, snippets, XML/HTML completion and zen-coding for HTML.</description>
+        <summary>Open source code editor for Actionscript, Haxe and more.</summary>
+        <tags>editor as3 haxe loom javascript html css admin</tags>
+        <releaseNotes>http://www.flashdevelop.org/community/viewforum.php?f=11</releaseNotes>
+        <docsUrl>http://www.flashdevelop.org/wikidocs/index.php?title=Main_Page</docsUrl>
+        <bugTrackerUrl>https://github.com/fdorg/flashdevelop/issues</bugTrackerUrl>
+        <projectSourceUrl>https://github.com/fdorg/flashdevelop</projectSourceUrl>
+        <dependencies>
+            <dependency id="jre8" />
+        </dependencies>
+    </metadata>
+</package>
