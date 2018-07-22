@@ -33,7 +33,7 @@ $packageArgs = @{
     url64bit = "https://get.enterprisedb.com/postgresql/postgresql-9.6.9-1-windows-x64.exe"
     checksum64 = "E952754B3FDE78C6E8F31F5699AF3AAEA98165CC30523D77C43CD6AB329F7DD3"
     checksumType64 = "sha256"
-	url32bit = "https://get.enterprisedb.com/postgresql/postgresql-9.6.9-1-windows.exe"
+    url32bit = "https://get.enterprisedb.com/postgresql/postgresql-9.6.9-1-windows.exe"
     checksum32 = "0DECA63FABEFC191C704EA1E3A2CEB8512F1B714BF120CFB98799B9C9EC0D269"
     checksumType32 = "sha256"
     silentArgs = $silentArgs
@@ -41,4 +41,14 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
-Install-ChocolateyPath "$($env:SystemDrive)\postgresql\pg9\bin" -PathType 'Machine'
+
+$forceX86 = $env:chocolateyForceX86;
+$bitCheck = Get-ProcessorBits
+
+if ($forceX86 -Or $BitCheck -eq 32) {
+    $programFiles = 'Program Files (x86)'
+} else {
+    $programFiles = 'Program Files'
+}
+
+Install-ChocolateyPath "$($env:SystemDrive)\$programFiles\postgresql\pg9\bin" -PathType 'Machine'
