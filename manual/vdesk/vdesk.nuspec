@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>vdesk</id>
+        <version>1.1.2</version>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+        <title>VDesk</title>
+        <authors>Elliot Sime</authors>
+        <owners>Mike Cole</owners>
+        <licenseUrl>https://github.com/eksime/VDesk/blob/master/license.md</licenseUrl>
+        <projectUrl>https://github.com/eksime/VDesk</projectUrl>
+        <copyright>Copyright (C) 2017</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Launch programs on new virtual desktops.</description>
+        <summary>Launch programs on new virtual desktops</summary>
+        <tags>virtual-desktop admin</tags>
+        <releaseNotes>https://github.com/eksime/VDesk/releases</releaseNotes>
+        <docsUrl>https://github.com/eksime/VDesk</docsUrl>
+        <bugTrackerUrl>https://github.com/eksime/VDesk/issues</bugTrackerUrl>
+        <projectSourceUrl>https://github.com/eksime/VDesk</projectSourceUrl>
+    </metadata>
+</package>
