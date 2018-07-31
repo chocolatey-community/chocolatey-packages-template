@@ -1,4 +1,4 @@
-﻿$checksum = 'efe1c45ca5adc8e3809847ac6af5aebe15fac2f3a44628c1cecec9de142d6044'
+﻿$checksum = '3a8f828b849ea02c76cd75ad426170ff3673aa6041a43d55cceac8e084f8b5f2'
 
 $packageArgs = @{
   packageName   = 'glip'
