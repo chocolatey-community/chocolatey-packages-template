@@ -1,6 +1,6 @@
 import-module au
 
-$url = 'https://www.gameplay-time-tracker.info/Versions/GameplayTimeTrackerInstaller.exe'
+$url = 'http://media.steampowered.com/client/installer/SteamSetup.exe'
 
 function global:au_SearchReplace {
     @{
@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     Write-Host $url
 
-    $temp_file = $env:TEMP + '\GameplayTimeTrackerInstaller.exe'
+    $temp_file = $env:TEMP + '\SteamSetup.exe'
     Invoke-WebRequest $url -OutFile $temp_file
     Write-Host $temp_file
 
