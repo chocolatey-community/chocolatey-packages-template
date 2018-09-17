@@ -1,4 +1,4 @@
-﻿$checksum = '360dc830cf59bd19afa64605b8e2fd0ef05bc43817d504f8078d06d43606fe2f'
+﻿$checksum = '4d41607fef219e4edb23bddf2ff15312cf20ef158eb0ccd0ca7a1314c42dd579'
 
 $packageArgs = @{
   packageName   = 'gameplay-time-tracker'
