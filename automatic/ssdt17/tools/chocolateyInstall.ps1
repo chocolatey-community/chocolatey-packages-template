@@ -1,5 +1,5 @@
-﻿$checksum = '4ca5b3b06b6545efdecb611217b595cb5a576f06e51e9254a90925f01dadfae4'
-$url = 'https://go.microsoft.com/fwlink/?linkid=2014060'
+﻿$checksum = '281120da0a0dc122f55f67388b21acc61c6f74fee7097e829134366c640329c0'
+$url = 'https://go.microsoft.com/fwlink/?linkid=2024393'
 
 (Get-WmiObject -Class Win32_OperatingSystem).Version -match "(?<Major>\d+).(?<Minor>\d+).(?<Build>\d+)" | Out-Null
  
