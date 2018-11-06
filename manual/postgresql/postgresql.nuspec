@@ -3,7 +3,7 @@
   <metadata>
     <id>postgresql</id>
     <title>PostgreSQL</title>
-    <version>10.4.0.0</version>
+    <version>10.4.0.20181106</version>
     <authors>PostgreSQL Global Development Group</authors>
     <owners>cole.mike</owners>
     <projectUrl>https://postgresql.org/</projectUrl>
@@ -51,7 +51,7 @@ And because of the liberal license, PostgreSQL can be used, modified, and distri
     <tags>postgres postgresql relational database admin</tags>
     <releaseNotes>https://www.postgresql.org/docs/10/static/release.html</releaseNotes>
     <dependencies>
-      <dependency id="postgresql10" version="10.4.0.20180605" />
+      <dependency id="postgresql10" version="10.4.0.20181106" />
     </dependencies>
   </metadata>
 </package>

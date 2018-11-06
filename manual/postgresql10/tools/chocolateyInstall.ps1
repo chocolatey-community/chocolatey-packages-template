@@ -51,4 +51,4 @@ if ($forceX86 -Or $BitCheck -eq 32) {
     $programFiles = 'Program Files'
 }
 
-Install-ChocolateyPath "$($env:SystemDrive)\$programFiles\postgresql\pg10\bin" -PathType 'Machine'
+Install-ChocolateyPath "$($env:SystemDrive)\$programFiles\postgresql\10\bin" -PathType 'Machine'
