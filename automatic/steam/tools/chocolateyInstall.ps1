@@ -1,5 +1,7 @@
 ﻿$checksum = '3bc6942fe09f10ed3447bccdcf4a70ed369366fef6b2c7f43b541f1a3c5d1c51'
 
+Start-CheckandStop "Steam"
+
 $packageArgs = @{
   packageName   = 'steam'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -13,3 +15,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+if ($ProcessWasRunning -eq "True") {&$ProcessFullPath}
