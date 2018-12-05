@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>vdesk</id>
-        <version>1.1.2</version>
+        <version>1.2.0</version>
         <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
         <title>VDesk</title>
         <authors>Elliot Sime</authors>
@@ -18,5 +18,8 @@
         <docsUrl>https://github.com/eksime/VDesk</docsUrl>
         <bugTrackerUrl>https://github.com/eksime/VDesk/issues</bugTrackerUrl>
         <projectSourceUrl>https://github.com/eksime/VDesk</projectSourceUrl>
+        <dependencies>
+            <dependency id="dotnet4.7.1" />
+        </dependencies>
     </metadata>
 </package>
