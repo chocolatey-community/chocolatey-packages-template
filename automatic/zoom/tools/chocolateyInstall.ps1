@@ -1,4 +1,4 @@
-﻿$checksum = '10836e392f2f77d453527847e5eb1ac43db3f1cdbf740d63c3baf21ad0a4f7d9'
+﻿$checksum = '1e243a2d854dde8c471b561eb6b76920f392706ca5de09f0eb3d32a5fa3e1c4a'
 $url = 'https://zoom.us/client/latest/ZoomInstallerFull.msi'
 
 $packageArgs = @{
