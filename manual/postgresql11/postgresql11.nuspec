@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>postgresql10</id>
+    <id>postgresql11</id>
     <title>PostgreSQL</title>
-    <version>10.6.0.0</version>
+    <version>11.1.0.0</version>
     <authors>PostgreSQL Global Development Group</authors>
     <owners>cole.mike</owners>
     <projectUrl>https://postgresql.org/</projectUrl>
     <projectSourceUrl>https://github.com/postgres/postgres</projectSourceUrl>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/postgresql10.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/postgresql11.png</iconUrl>
     <licenseUrl>https://www.postgresql.org/about/licence/</licenseUrl>
-    <docsUrl>https://www.postgresql.org/docs/10/static/index.html</docsUrl>
+    <docsUrl>https://www.postgresql.org/docs/11/static/index.html</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>object-relational SQL database</summary>
     <description><![CDATA[
 ## Installation directory
 
-This package will install PostgreSQL to `%SystemDrive%`\Program Files\PostgreSQL\10.6`
+This package will install PostgreSQL to `%SystemDrive%`\Program Files\PostgreSQL\11.1`
 
 ## Package parameters
 
@@ -52,7 +52,7 @@ And because of the liberal license, PostgreSQL can be used, modified, and distri
     <releaseNotes>https://www.postgresql.org/docs/10/static/release.html</releaseNotes>
     <dependencies>
       <dependency id="chocolatey" version="0.10.8" />
-      <dependency id="vcredist2013" version="12.0.40660.0" />
+      <dependency id="vcredist140" version="14.16.27024.1" />
     </dependencies>
   </metadata>
   <files>
