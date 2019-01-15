@@ -20,5 +20,6 @@
         </description>
         <releaseNotes>http://www.dvdflick.net/changelog.php</releaseNotes>
         <docsUrl>http://www.dvdflick.net/guide/guide_new.pdf</docsUrl>
+        <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
     </metadata>
 </package>

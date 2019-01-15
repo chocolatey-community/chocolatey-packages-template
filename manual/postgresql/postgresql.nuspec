@@ -3,7 +3,7 @@
   <metadata>
     <id>postgresql</id>
     <title>PostgreSQL</title>
-    <version>10.4.0.20181106</version>
+    <version>10.6</version>
     <authors>PostgreSQL Global Development Group</authors>
     <owners>cole.mike</owners>
     <projectUrl>https://postgresql.org/</projectUrl>
@@ -17,7 +17,7 @@
     <description><![CDATA[
 ## Installation directory
 
-This package will install PostgreSQL to `%SystemDrive%`\Program Files\PostgreSQL\10.4`
+This package will install PostgreSQL to `%SystemDrive%`\Program Files\PostgreSQL\10.6`
 
 ## Package parameters
 
@@ -51,7 +51,7 @@ And because of the liberal license, PostgreSQL can be used, modified, and distri
     <tags>postgres postgresql relational database admin</tags>
     <releaseNotes>https://www.postgresql.org/docs/10/static/release.html</releaseNotes>
     <dependencies>
-      <dependency id="postgresql10" version="10.4.0.20181106" />
+      <dependency id="postgresql10" version="10.6" />
     </dependencies>
   </metadata>
 </package>
