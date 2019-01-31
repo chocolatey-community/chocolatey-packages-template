@@ -18,7 +18,7 @@ function global:au_GetLatest {
 
     $html = New-Object -Com "HTMLFile"
     $html.IHTMLDocument2_write($notes_content.content)
-    $link = $html.getElementsByTagName("a") | where {$_.innerText -like "*Download SSDT for Visual Studio 2015*"}
+    $link = $html.getElementsByTagName("a") | where {$_.innerText -like "*Download SSDT for Visual Studio 2017*"}
 
     Write-Host $link.href
 
