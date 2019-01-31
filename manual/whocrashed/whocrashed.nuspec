@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>whocrashed</id>
@@ -9,7 +10,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://www.resplendence.com/licensing</licenseUrl>
     <projectUrl>http://www.resplendence.com/whocrashed</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/whocrashed.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/mikecole/chocolatey-packages/master/icons/whocrashed.png</iconUrl>
     <description>
         #### Note:
         The Free edition is only available for home use. Business users must purchase a professional license.
@@ -20,6 +21,12 @@
     <releaseNotes>http://www.resplendence.com/whocrashed_pro.htm</releaseNotes>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
     <copyright>Resplendence Software Projects Sp.</copyright>
-    <tags>Crash Dump Debugging admin</tags>    
+    <bugTrackerUrl>https://www.resplendence.com/support</bugTrackerUrl>
+    <docsUrl>https://www.resplendence.com/whocrashed.htm</docsUrl>
+    <tags>Crash Dump Debugging admin</tags>
+    <dependencies></dependencies>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
   </metadata>
 </package>
