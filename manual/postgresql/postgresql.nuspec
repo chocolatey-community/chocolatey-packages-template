@@ -10,7 +10,7 @@
     <projectUrl>https://postgresql.org/</projectUrl>
     <projectSourceUrl>https://github.com/postgres/postgres</projectSourceUrl>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-    <iconUrl>http://rawcdn.githack.com/mikecole/chocolatey-packages/e6f9e1fa989ae0a4a7c89caa5a0365759f518719/icons/postgresql.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/4e47bcb69ff4dea27b2546e0e3425e8ee98a22f7/icons/postgresql.png</iconUrl>
     <licenseUrl>https://www.postgresql.org/about/licence/</licenseUrl>
     <docsUrl>https://www.postgresql.org/docs/10/static/index.html</docsUrl>
     <bugTrackerUrl>https://www.postgresql.org/account/submitbug/</bugTrackerUrl>
@@ -18,7 +18,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>object-relational SQL database</summary>
     <copyright>Copyright © 1996-2019 The PostgreSQL Global Development Group</copyright>
-    <description><![CDATA[
+    <description>
 ## Installation directory
 
 This package will install PostgreSQL to `%SystemDrive%`\Program Files\PostgreSQL\10.6`
@@ -51,12 +51,12 @@ Also, PostgreSQL can be extended by the user in many ways, for example by adding
 * procedural languages
 
 And because of the liberal license, PostgreSQL can be used, modified, and distributed by anyone free of charge for any purpose, be it private, commercial, or academic.
-]]></description>
+</description>
     <tags>postgres postgresql relational database admin</tags>
     <releaseNotes>https://www.postgresql.org/docs/10/static/release.html</releaseNotes>
     <dependencies>
       <dependency id="postgresql10" version="10.6" />
     </dependencies>
-    <files></files>
   </metadata>
+  <files></files>
 </package>
