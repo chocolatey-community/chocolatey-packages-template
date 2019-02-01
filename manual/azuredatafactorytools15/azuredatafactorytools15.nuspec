@@ -16,7 +16,10 @@
     <description>An integrated development environment for Data Factory application development.</description>
     <iconUrl>http://rawcdn.githack.com/mikecole/chocolatey-packages/cc08f1f7f3687dd335bb8b290e8caf2b0c913a7c/icons/azuredatafactorytools15.png</iconUrl>
     <licenseUrl>https://visualstudiogallery.msdn.microsoft.com/site/371a4cf9-0093-40fa-b7dd-be3c74f49005/eula?licenseType=None</licenseUrl>
-    <releaseNotes>https://github.com/mikecole/chocolatey-packages/commits/master/manual/azuredatafactorytools15</releaseNotes>
+    <releaseNotes>
+###CHANGELOG:
+* 0.9.3425.20180131 - Improved package internals.
+    </releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" />
