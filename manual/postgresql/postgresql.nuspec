@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>postgresql</id>
     <title>PostgreSQL</title>
-    <version>10.6</version>
+    <version>10.6.0.20190131</version>
     <authors>PostgreSQL Global Development Group</authors>
     <owners>cole.mike</owners>
     <projectUrl>https://postgresql.org/</projectUrl>
     <projectSourceUrl>https://github.com/postgres/postgres</projectSourceUrl>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-    <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/postgresql10.png</iconUrl>
+    <iconUrl>http://rawcdn.githack.com/mikecole/chocolatey-packages/e6f9e1fa989ae0a4a7c89caa5a0365759f518719/icons/postgresql.png</iconUrl>
     <licenseUrl>https://www.postgresql.org/about/licence/</licenseUrl>
     <docsUrl>https://www.postgresql.org/docs/10/static/index.html</docsUrl>
+    <bugTrackerUrl>https://www.postgresql.org/account/submitbug/</bugTrackerUrl>
+    <mailingListUrl>https://www.postgresql.org/list/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>object-relational SQL database</summary>
+    <copyright>Copyright © 1996-2019 The PostgreSQL Global Development Group</copyright>
     <description><![CDATA[
 ## Installation directory
 
@@ -23,7 +27,7 @@ This package will install PostgreSQL to `%SystemDrive%`\Program Files\PostgreSQL
 
 * `/Password` - (required) Password to be assigned to the postgres user
 
-Example: `choco install postgresql --params '/Password:hunter2'`
+Example: `choco install postgresql --params '/Password:hunter2' --params-global`
 
 ## What is PostgreSQL?
 PostgreSQL is an object-relational database management system (ORDBMS) based on POSTGRES, Version 4.2, developed at the University of California at Berkeley Computer Science Department. POSTGRES pioneered many concepts that only became available in some commercial database systems much later.
@@ -53,5 +57,6 @@ And because of the liberal license, PostgreSQL can be used, modified, and distri
     <dependencies>
       <dependency id="postgresql10" version="10.6" />
     </dependencies>
+    <files></files>
   </metadata>
 </package>
