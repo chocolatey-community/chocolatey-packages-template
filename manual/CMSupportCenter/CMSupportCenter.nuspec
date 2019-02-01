@@ -1,21 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>CMSupportCenter</id>
-        <version>5.0.7958.1147</version>
-        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-        <title>System Center 2012 Configuration Manager Support Center</title>
-        <authors>Microsoft</authors>
-        <owners>Mike Cole</owners>
-        <licenseUrl>http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
-        <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=42645</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>System Center 2012 Configuration Manager Support Center helps you to gather information about System Center 2012 Configuration Manager clients so that you can more easily address issues.</description>
-        <summary>Support tool for System Center 2012 Configuration Manager</summary>
-        <tags>microsoft system-center admin</tags>
-        <docsUrl>https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn688621(v=technet.10)</docsUrl>
-        <dependencies>
-            <dependency id="dotnet4.5.2" />
-        </dependencies>
-    </metadata>
+  <metadata>
+    <id>cmsupportcenter</id>
+    <version>5.0.7958.20190201</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <title>System Center 2012 Configuration Manager Support Center</title>
+    <authors>Microsoft</authors>
+    <owners>Mike Cole</owners>
+    <licenseUrl>http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=42645</projectUrl>
+    <copyright>© Microsoft 2019</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>System Center 2012 Configuration Manager Support Center helps you to gather information about System Center 2012 Configuration Manager clients so that you can more easily address issues.</description>
+    <summary>Support tool for System Center 2012 Configuration Manager</summary>
+    <tags>microsoft system-center admin</tags>
+    <docsUrl>https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn688621(v=technet.10)</docsUrl>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/6a5d411dbfe7802204afe1d7094381a7300ec3bd/icons/cmsupportcenter.png</iconUrl>
+    <releaseNotes>https://www.microsoft.com/en-us/download/details.aspx?id=42645</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5.2" version="4.5.2.20140902" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" />
+  </files>
 </package>
