@@ -1,3 +1,5 @@
+﻿$ErrorActionPreference = 'Stop'
+
 $packageArgs = @{
   packageName   = 'CMSupportCenter'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
