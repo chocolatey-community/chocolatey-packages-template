@@ -1,16 +1,20 @@
-﻿$checksum = '7f349fbeba6676f432754d9354130af7c6d546db842496088427752cd093aac3'
+﻿$ErrorActionPreference = 'Stop'
+
+$checksum = '7f349fbeba6676f432754d9354130af7c6d546db842496088427752cd093aac3'
 $url = 'https://assets.cdngetgo.com/d7/8e/3ad5cf554afcbe07a5e89aa90ba8/g2msetup83811282-it.zip'
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$unzipLocation = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 
 $zipArgs = @{
   packagename = 'gotomeeting'
   url = $url
-  unzipLocation = $toolsDir
+  unzipLocation = $unzipLocation 
   checksum = $checksum
   checksumType = "sha256"
 }
 
-Install-ChocolateyZipPackage $zipArgs
+Install-ChocolateyZipPackage @zipArgs
+
+$msiFileList = Get-ChildItem -Path $unzipLocation -Filter '*.msi'
 
 $packageArgs = @{
   packageName   = 'gotomeeting'
@@ -18,9 +22,7 @@ $packageArgs = @{
   silentArgs    = '/quiet'
   validExitCodes= @(0)
   softwareName  = 'gotomeeting*'
-  checksum      = $checksum
-  checksumType  = 'sha256'
-  file          = $unzipLocation
+  file          = $msiFileList[0].FullName
 }
 
-Install-ChocolateyInstallPackage $packageArgs
+Install-ChocolateyInstallPackage @packageArgs
