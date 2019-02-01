@@ -1,3 +1,5 @@
+"$ErrorActionPreference = 'Stop'"
+
 $packageArgs = @{
   packageName   = 'caffeine'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
