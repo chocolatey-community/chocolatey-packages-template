@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>caffeine</id>
-    <version>1.64.0.20190131</version>
+    <version>1.64.0.20190201</version>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
     <title>Caffeine</title>
     <authors>Tom Revell, Zhorn Software</authors>
     <owners>Mike Cole</owners>
     <projectUrl>http://www.zhornsoftware.co.uk/caffeine/index.html</projectUrl>
-    <iconUrl>http://rawcdn.githack.com/mikecole/chocolatey-packages/ab11e04ca312d0fa8e25656cd30b927e62174797/icons/caffeine.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/8a5007ecfdb235a2a9ae4e61bf8317d3614f5ff9/icons/caffeine.png</iconUrl>
     <copyright>Tom Revell</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>If you have problems with your PC locking or going to sleep, caffeine will keep it awake. It works by simulating a keypress once every 59 seconds, so your machine thinks you're still working at the keyboard, so won't lock the screen or activate the screensaver.</description>
