@@ -1,3 +1,5 @@
+﻿$ErrorActionPreference = 'Stop'
+
 $packageArgs = @{
   packageName   = 'clipcache'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
