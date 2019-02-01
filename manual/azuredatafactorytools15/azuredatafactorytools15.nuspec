@@ -1,19 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>azuredatafactorytools15</id>
-        <version>0.9.3425.201</version>
-        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-        <owners>Mike Cole</owners>
-        <title>Microsoft Azure DataFactory Tools for Visual Studio 2015</title>
-        <authors>Microsoft Corporation</authors>
-        <projectUrl>https://visualstudiogallery.msdn.microsoft.com/371a4cf9-0093-40fa-b7dd-be3c74f49005</projectUrl>
-        <copyright>Copyright Microsoft Corporation. All rights reserved.</copyright>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>VisualStudio2015 Azure AzureDataFactory admin</tags>
-        <summary>An integrated development environment for Data Factory application development.</summary>
-        <description>An integrated development environment for Data Factory application development.</description>
-        <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/azuredatafactorytools15.png</iconUrl>
-        <licenseUrl>https://visualstudiogallery.msdn.microsoft.com/site/371a4cf9-0093-40fa-b7dd-be3c74f49005/eula?licenseType=None</licenseUrl>
-    </metadata>
+  <metadata>
+    <id>azuredatafactorytools15</id>
+    <version>0.9.3425.20180131</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <owners>Mike Cole</owners>
+    <title>Microsoft Azure DataFactory Tools for Visual Studio 2015</title>
+    <authors>Microsoft Corporation</authors>
+    <projectUrl>https://visualstudiogallery.msdn.microsoft.com/371a4cf9-0093-40fa-b7dd-be3c74f49005</projectUrl>
+    <copyright>Copyright Microsoft Corporation. All rights reserved.</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>VisualStudio2015 Azure AzureDataFactory admin</tags>
+    <summary>An integrated development environment for Data Factory application development.</summary>
+    <description>An integrated development environment for Data Factory application development.</description>
+    <iconUrl>http://rawcdn.githack.com/mikecole/chocolatey-packages/cc08f1f7f3687dd335bb8b290e8caf2b0c913a7c/icons/azuredatafactorytools15.png</iconUrl>
+    <licenseUrl>https://visualstudiogallery.msdn.microsoft.com/site/371a4cf9-0093-40fa-b7dd-be3c74f49005/eula?licenseType=None</licenseUrl>
+    <releaseNotes>https://github.com/mikecole/chocolatey-packages/commits/master/manual/azuredatafactorytools15</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" />
+  </files>
 </package>
