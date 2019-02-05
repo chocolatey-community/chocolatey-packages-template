@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>azuredatafactorytools15</id>
-    <version>0.9.3425.20180131</version>
+    <version>0.9.3425.20190205</version>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
     <owners>Mike Cole</owners>
     <title>Microsoft Azure DataFactory Tools for Visual Studio 2015</title>
@@ -15,9 +15,12 @@
     <summary>An integrated development environment for Data Factory application development.</summary>
     <description>An integrated development environment for Data Factory application development.</description>
     <iconUrl>http://rawcdn.githack.com/mikecole/chocolatey-packages/cc08f1f7f3687dd335bb8b290e8caf2b0c913a7c/icons/azuredatafactorytools15.png</iconUrl>
-    <licenseUrl>https://visualstudiogallery.msdn.microsoft.com/site/371a4cf9-0093-40fa-b7dd-be3c74f49005/eula?licenseType=None</licenseUrl>
+    <licenseUrl>https://marketplace.visualstudio.com/items/AzureDataFactory.MicrosoftAzureDataFactoryToolsforVisualStudio2015/license</licenseUrl>
+    <docsUrl>https://marketplace.visualstudio.com/items?itemName=AzureDataFactory.MicrosoftAzureDataFactoryToolsforVisualStudio2015#overview</docsUrl>
+    <bugTrackerUrl>https://marketplace.visualstudio.com/items?itemName=AzureDataFactory.MicrosoftAzureDataFactoryToolsforVisualStudio2015#qna</bugTrackerUrl>
     <releaseNotes>
 ###CHANGELOG:
+* 0.9.3425.20190205 - Fixed issues with package: broken URLs, wrong version.
 * 0.9.3425.20180131 - Improved package internals.
     </releaseNotes>
   </metadata>
