@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 import-module au
 
 $url = 'https://evernote.com/download/get.php?file=Win'
