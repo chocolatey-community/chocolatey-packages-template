@@ -1,26 +1,30 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
-        <id>steam</id>
-        <version>3.0.1.20181204</version>
-        <title>Steam</title>
-        <authors>Steam Corporation</authors>
-        <owners>Brian Mengo, Mike Cole</owners>
-        <licenseUrl>http://store.steampowered.com/subscriber_agreement/</licenseUrl>
-        <projectUrl>http://store.steampowered.com/</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/steam.png</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>The ultimate entertainment platform. Play, connect, create and more.</description>
-        <summary></summary>
-        <releaseNotes />
-        <copyright>Copyright Valve Corporation</copyright>
-        <tags>steam games gaming admin</tags>
-        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/</packageSourceUrl>
-        <dependencies>
-            <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
-        </dependencies>
-    </metadata>
-      <files>
-        <file src="tools\**" target="tools" />
-    </files>
+  <metadata>
+    <id>steam</id>
+    <version>3.0.1.20190215</version>
+    <title>Steam</title>
+    <authors>Valve Corporation</authors>
+    <owners>Brian Mengo, Mike Cole</owners>
+    <licenseUrl>http://store.steampowered.com/subscriber_agreement/</licenseUrl>
+    <projectUrl>http://store.steampowered.com/</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/mikecole/chocolatey-packages/master/icons/steam.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    Steam is a digital distribution platform developed by Valve Corporation for purchasing and playing video games. Steam offers digital rights management, matchmaking servers, video streaming, and social networking services.
+    </description>
+    <summary>Steam Client by Valve Corporation</summary>
+    <releaseNotes />
+    <copyright>Copyright Valve Corporation</copyright>
+    <tags>steam games gaming admin</tags>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/</packageSourceUrl>
+    <bugTrackerUrl>https://help.steampowered.com/en/</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

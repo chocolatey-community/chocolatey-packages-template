@@ -1,4 +1,5 @@
-﻿$packageName = 'steam'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'steam'
 $installerType = 'EXE'
 $silentArgs = '/S'
 $processor = Get-WmiObject Win32_Processor

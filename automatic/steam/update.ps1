@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 import-module au
 
 $url = 'http://media.steampowered.com/client/installer/SteamSetup.exe'
