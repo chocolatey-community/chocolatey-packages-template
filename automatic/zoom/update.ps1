@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 import-module au
 
 $download_page_url = 'https://zoom.us/download#client_4meeting'
