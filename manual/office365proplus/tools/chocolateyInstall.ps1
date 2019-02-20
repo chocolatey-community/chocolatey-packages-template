@@ -1,7 +1,37 @@
-﻿$script                     = $MyInvocation.MyCommand.Definition
-$packageName                = 'Office365ProPlus'
+﻿$ErrorActionPreference = 'Stop'
+$script                     = $MyInvocation.MyCommand.Definition
 $configFile                 = Join-Path $(Split-Path -parent $script) 'configuration.xml'
 $configFile64               = Join-Path $(Split-Path -parent $script) 'configuration64.xml'
+
+$pp = Get-PackageParameters
+$language = $pp["Language"]
+
+if ($language)
+{
+    Write-Output "Language specified: $language"
+    
+    $file = $configFile
+    $x = [xml] (Get-Content $file)
+    $nodes = $x.SelectNodes("/Configuration/Add/Product/Language")
+    foreach($node in $nodes) {
+        $node.SetAttribute("ID", $language);
+    }
+    $x.Save($file)
+    
+    $file = $configFile64
+    $x = [xml] (Get-Content $file)
+    $nodes = $x.SelectNodes("/Configuration/Add/Product/Language")
+    foreach($node in $nodes) {
+        $node.SetAttribute("ID", $language);
+    }
+    $x.Save($file)
+}
+else
+{
+    Write-Output 'No language specified. Defaulting to OS language.'
+}
+
+$packageName                = 'Office365ProPlus'
 $bitCheck                   = Get-ProcessorBits
 $forceX86                   = $env:chocolateyForceX86
 $configurationFile          = if ($BitCheck -eq 32 -Or $forceX86) { $configFile } else { $configFile64 }
