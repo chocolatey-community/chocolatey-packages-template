@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>whocrashed</id>
-    <version>6.5.0</version>
+    <version>6.6.0</version>
     <title>Who Crashed</title>
     <authors>Resplendence Software Projects Sp.</authors>
     <owners>cole.mike</owners>
@@ -23,10 +23,10 @@
     <copyright>Resplendence Software Projects Sp.</copyright>
     <bugTrackerUrl>https://www.resplendence.com/support</bugTrackerUrl>
     <docsUrl>https://www.resplendence.com/whocrashed.htm</docsUrl>
-    <tags>Crash Dump Debugging admin</tags>
-    <dependencies></dependencies>
-    <files>
-        <file src="tools\**" target="tools" />
-    </files>
+    <tags>Crash Dump Debugging</tags>  
+    <dependencies></dependencies>     
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>   
 </package>
