@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>little-system-cleaner</id>
+    <version>0.3.0.0</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <owners>Mike Cole</owners>
+    <title>Little System Cleaner</title>
+    <authors>Little Apps</authors>
+    <projectUrl>https://www.little-system-cleaner.com/</projectUrl>
+    <copyright>Copyright Little Apps 2008</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://rawcdn.githack.com/mikecole/chocolatey-packages/a474df52e3d9af0d453e3c920a1d31ae57429b07/icons/little-system-cleaner.png</iconUrl>
+    <tags>system cleanup</tags>
+    <summary>Little System Cleaner is an all in one system cleaner for Windows computers.</summary>
+    <description>
+Little System Cleaner is an all in one system cleaner for Windows computers. Little System Cleaner combines the following tools:
+
+- Registry Cleaner
+- Registry Optimizer
+- Privacy Cleaner
+- Disk Cleaner
+- Duplicate Finder
+- Startup Manager
+- Uninstall Manager
+        </description>
+    <releaseNotes>https://github.com/little-apps/little-system-cleaner/releases</releaseNotes>
+    <docsUrl>https://github.com/little-apps/little-system-cleaner</docsUrl>
+    <licenseUrl>https://github.com/little-apps/little-system-cleaner/blob/master/LICENSE</licenseUrl>
+    <bugTrackerUrl>https://github.com/little-apps/little-system-cleaner/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/little-apps/little-system-cleaner</projectSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" />
+  </files>
+</package>
