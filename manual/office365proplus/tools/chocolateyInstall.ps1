@@ -2,11 +2,19 @@
 $script                     = $MyInvocation.MyCommand.Definition
 $configFile                 = Join-Path $(Split-Path -parent $script) 'configuration.xml'
 $configFile64               = Join-Path $(Split-Path -parent $script) 'configuration64.xml'
+$forceX86                   = $env:chocolateyForceX86
+$configurationFile          = if ($BitCheck -eq 32 -Or $forceX86) { $configFile } else { $configFile64 }
 
 $pp = Get-PackageParameters
+$configPath = $pp["ConfigPath"]
 $language = $pp["Language"]
 
-if ($language)
+if ($configPath)
+{
+    Write-Output "Custom config specified: $configPath"
+    $configurationFile = $configPath
+}
+elseif ($language)
 {
     Write-Output "Language specified: $language"
     
@@ -14,7 +22,7 @@ if ($language)
     $x = [xml] (Get-Content $file)
     $nodes = $x.SelectNodes("/Configuration/Add/Product/Language")
     foreach($node in $nodes) {
-        $node.SetAttribute("ID", $language);
+        $node.SetAttribute("ID", $language)
     }
     $x.Save($file)
     
@@ -22,19 +30,18 @@ if ($language)
     $x = [xml] (Get-Content $file)
     $nodes = $x.SelectNodes("/Configuration/Add/Product/Language")
     foreach($node in $nodes) {
-        $node.SetAttribute("ID", $language);
+        $node.SetAttribute("ID", $language)
     }
     $x.Save($file)
 }
 else
 {
+    Write-Output 'No custom configuration specified.'
     Write-Output 'No language specified. Defaulting to OS language.'
 }
 
 $packageName                = 'Office365ProPlus'
 $bitCheck                   = Get-ProcessorBits
-$forceX86                   = $env:chocolateyForceX86
-$configurationFile          = if ($BitCheck -eq 32 -Or $forceX86) { $configFile } else { $configFile64 }
 $officetempfolder           = Join-Path $env:Temp 'chocolatey\Office365ProPlus'
 $packageArgs                = @{
     packageName             = 'Office365DeploymentTool'

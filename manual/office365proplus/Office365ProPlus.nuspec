@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>office365proplus</id>
-    <version>2016.20190220</version>
+    <version>2016.20190301</version>
     <title>Office 365 ProPlus</title>
     <authors>Microsoft</authors>
     <owners>Mike Cole</owners>
@@ -12,6 +12,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ## Package parameters
+* `/ConfigPath` - (optional) Full path to custom install configuration.
+Example: `choco install office365proplus --params '/ConfigPath:c:\myConfig.xml`
+
 * `/Language` - (optional) The installation language. Defaults to match your OS language. [List of possible languages](https://docs.microsoft.com/en-us/deployoffice/overview-of-deploying-languages-in-office-365-proplus#languages-culture-codes-and-companion-proofing-languages)
 Example: `choco install office365proplus --params '/Language:de-de'`
 
