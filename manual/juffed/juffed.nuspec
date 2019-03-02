@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>juffed</id>
+    <version>0.8.1</version>
+    <title>JuffEd</title>
+    <authors>Mikhail Murzin</authors>
+    <owners>Mike Cole</owners>
+    <licenseUrl>http://juffed.com/en/license.html</licenseUrl>
+    <projectUrl>http://juffed.com/en/index.html</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/8c00dc6e655e87501d9bd6d73786a794b68fd690/icons/juffed.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+JuffEd is a free, cross-platform text editor for programmers and advanced users. Has syntax highlighting for many languages, code folding,
+find/replace using plain text and regexps, code completion, multiple charsets and many other useful features.
+#Features:
+- syntax highlighting
+- powerful search using regexps
+- code completion
+- sessions
+- plugins
+- multiple charsets (with auto-detection)
+    </description>
+    <summary>QScintilla-based tabbed text editor with syntax highlighting.</summary>
+    <releaseNotes>https://sourceforge.net/projects/juffed/</releaseNotes>
+    <copyright>© 2007—2012 Mikhail Murzin</copyright>
+    <tags>editor text development</tags>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/</packageSourceUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/juffed/bugs/</bugTrackerUrl>
+    <docsUrl>https://sourceforge.net/p/juffed/wiki/Home/</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/juffed/mailman/</mailingListUrl>
+    <projectSourceUrl>https://sourceforge.net/p/juffed/code/HEAD/tree/</projectSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
