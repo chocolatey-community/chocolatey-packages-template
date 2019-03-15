@@ -1,5 +1,5 @@
-﻿$checksum = '4457b7d29c10b6b6fbea4e0462060ce013131e66e7c3473ea53c28253510bca0'
-$url = 'https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.76.15/mRemoteNG-Installer-1.76.15.31277.msi'
+﻿$checksum = 'bc1ee51b2831db962c8ff168048880faf0f5623139bd19222026ac5e7402de06'
+$url = 'https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.76.16/mRemoteNG-Installer-1.76.16.41771.msi'
 
 $packageArgs = @{
   packageName   = 'mremoteng'
