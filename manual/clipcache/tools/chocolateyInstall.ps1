@@ -8,7 +8,7 @@ $packageArgs = @{
   silentArgs    = '/VERYSILENT'
   validExitCodes= @(0)
   softwareName  = 'clipcache*'
-  checksum      = '3F67550C7F85C242A8707D7F2299D8C913654E5B8B6C111A1C5B687CEF7BD7EA'
+  checksum      = 'DEC258AC357F1A13029DD6338187D28C88C37860E8EC54546E644909630623ED'
   checksumType  = 'sha256'
 }
 
