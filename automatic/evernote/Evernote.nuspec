@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>evernote</id>
     <version>6.17.7.8474</version>
@@ -19,13 +19,14 @@ DISCUSS: Connect your work with the people who help you get it done. Communicate
 
 PRESENT: Have fast, effective meetings by presenting your work as it evolves. No need to build slides, just one click and your notes are transformed into a beautiful screen-friendly layout.</description>
     <summary>A cross-platform, freemium app designed for note taking, organizing, and archiving.</summary>
-    <releaseNotes />
     <copyright>Copyright 2016 Evernote Corporation</copyright>
-    <tags>Evernote notes admin</tags>
+    <tags>Evernote notes</tags>
     <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/</packageSourceUrl>
     <bugTrackerUrl>https://help.evernote.com/hc/en-us</bugTrackerUrl>
     <docsUrl>https://help.evernote.com/hc/en-us/categories/200198557-Getting-Started</docsUrl>
     <mailingListUrl>https://discussion.evernote.com/</mailingListUrl>
+    <projectSourceUrl>https://github.com/evernote</projectSourceUrl>
+    <releaseNotes>https://discussion.evernote.com/forum/224-evernote-for-windows/?sortby=start_date</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
