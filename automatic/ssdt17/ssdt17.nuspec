@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>ssdt17</id>
-        <version>14.0.16186.0</version>
+        <version>14.0.16191.0</version>
 		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
 		<owners>Mike Cole</owners>
         <title>Microsoft SQL Server Data Tools for Visual Studio 2017</title>
