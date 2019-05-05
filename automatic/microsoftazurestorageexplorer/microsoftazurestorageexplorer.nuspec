@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>microsoftazurestorageexplorer</id>
-        <version>1.8.0</version>
-        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-        <owners>Mike Cole</owners>
-        <title>Microsoft Azure Storage Explorer</title>
-        <authors>Microsoft</authors>
-        <projectUrl>http://storageexplorer.com/</projectUrl>
-        <copyright>Copyright 2006 Microsoft</copyright>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>azure admin</tags>
-        <summary>Easily work with Azure Storage - from any platform, anywhere.</summary>
-        <description>Microsoft Azure Storage Explorer (Preview) is a standalone app from Microsoft that allows you to easily work with Azure Storage data on Windows, macOS and Linux.</description>
-        <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/microsoftazurestorageexplorer.png</iconUrl>
-        <releaseNotes>http://storageexplorer.com/releasenotes.html</releaseNotes>
-    </metadata>
-    <files>
-        <file src="tools\**" target="tools" />
-    </files>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>microsoftazurestorageexplorer</id>
+    <version>1.8.0</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <owners>Mike Cole</owners>
+    <title>Microsoft Azure Storage Explorer</title>
+    <authors>Microsoft</authors>
+    <projectUrl>http://storageexplorer.com/</projectUrl>
+    <copyright>Copyright 2006 Microsoft</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>azure</tags>
+    <summary>Easily work with Azure Storage - from any platform, anywhere.</summary>
+    <description>Microsoft Azure Storage Explorer is a standalone app from Microsoft that allows you to easily work with Azure Storage data on Windows, macOS and Linux.</description>
+    <iconUrl>https://cdn.staticaly.com/gh/mikecole/chocolatey-packages/master/icons/microsoftazurestorageexplorer.png</iconUrl>
+    <releaseNotes>https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-relnotes</releaseNotes>
+    <docsUrl>https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows</docsUrl>
+    <bugTrackerUrl>https://feedback.azure.com/forums/34192--general-feedback</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
