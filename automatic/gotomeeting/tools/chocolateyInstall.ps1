@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$checksum = '7f349fbeba6676f432754d9354130af7c6d546db842496088427752cd093aac3'
-$url = 'https://assets.cdngetgo.com/d7/8e/3ad5cf554afcbe07a5e89aa90ba8/g2msetup83811282-it.zip'
+$checksum = '10ace09684f9a3dc58572a25abb41ab2a69791f30787938acd56aa3b0d1c26ee'
+$url = 'https://assets.cdngetgo.com/13/84/bdc590684a73a88cca4d2914c87b/g2msetup84112127-it.zip'
 $unzipLocation = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 
 $zipArgs = @{
