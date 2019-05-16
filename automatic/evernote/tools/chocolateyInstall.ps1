@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType      = 'exe'
   url           = 'https://evernote.com/download/get.php?file=Win'
   silentArgs    = '/quiet'
-  validExitCodes= @(0)
+  validExitCodes= @(0, -1073741819)
   softwareName  = 'evernote*'
   checksum      = $checksum
   checksumType  = 'sha256'
