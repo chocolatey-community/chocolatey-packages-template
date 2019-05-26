@@ -9,7 +9,7 @@
     <title>New Relic Infrastructure (Install)</title>
     <authors>New Relic</authors>
     <projectUrl>https://newrelic.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/ripclawffb/chocolatey-newrelic-infra@fb6049523522565c4173fb2ee1056f3eef8d81a2/NewRelic-logo-square-w.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ripclawffb/chocolatey-packages@master/icons/newrelic-infra.png</iconUrl>
     <copyright>2008 - 2019</copyright>
     <licenseUrl>https://docs.newrelic.com/docs/licenses/license-information</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
