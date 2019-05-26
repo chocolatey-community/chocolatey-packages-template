@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>newrelic-infra</id>
+    <version>1.3.18</version>
+    <packageSourceUrl>https://github.com/ripclawffb/chocolatey-newrelic-infra</packageSourceUrl>
+    <owners>Asif Shaikh</owners>
+    <title>New Relic Infrastructure (Install)</title>
+    <authors>New Relic</authors>
+    <projectUrl>https://newrelic.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ripclawffb/chocolatey-newrelic-infra@fb6049523522565c4173fb2ee1056f3eef8d81a2/NewRelic-logo-square-w.png</iconUrl>
+    <copyright>2008 - 2019</copyright>
+    <licenseUrl>https://docs.newrelic.com/docs/licenses/license-information</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/getting-started/introduction-new-relic-infrastructure</docsUrl>
+    <tags>newrelic-infra admin new relic infra infrastructure</tags>
+    <summary>New Relic Infrastructure is an agent which provides flexible, dynamic server monitoring.</summary>
+    <description><![CDATA[New Relic Infrastructure is an agent which provides flexible, dynamic
+server monitoring. Infrastructure empowers modern operations teams to make 
+intelligent decisions about complex systems, from a physical datacenter to 
+thousands of Amazon Elastic Compute Cloud (Amazon EC2) or Microsoft Azure 
+instances.
+
+Real-time metrics and powerful analytics reduce your mean-time-to-resolution 
+(MTTR) by connecting changes in host performance to changes in your configuration. 
+Hosts are automatically added and removed from the interface as they are created 
+and destroyed, and a powerful Events page lets you see every change.
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.
+]]></description>
+    <releaseNotes>https://docs.newrelic.com/docs/release-notes/infrastructure-release-notes/infrastructure-agent-release-notes</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

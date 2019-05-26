@@ -1,0 +1,1 @@
+﻿Stop-Service -Name newrelic-infra -Force -ErrorAction SilentlyContinue
