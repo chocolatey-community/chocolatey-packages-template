@@ -21,7 +21,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: ripclawffb/chocolatey-packages
   github_api_key:
-    secure: #https://ci.appveyor.com/tools/encrypt
+    secure: qzFCYVsRuTg5+XWcshyOJTSbtJG1p20JGzZaaZPD3DyTfdIJ0aV3pDh2gtj68kYi #https://ci.appveyor.com/tools/encrypt
 
 
   # Mail credentials - for error notifications
@@ -35,7 +35,7 @@ environment:
 
   # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
   # Optional, leave empty to create anonymous gist
-  gist_id:
+  gist_id: cbab2a407ba1e3def260bb8a9d3ec454
 
   # Force test: gist id for test results
   gist_id_test:
