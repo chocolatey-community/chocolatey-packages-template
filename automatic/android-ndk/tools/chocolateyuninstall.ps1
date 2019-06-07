@@ -1,5 +1,5 @@
-﻿$url        = 'https://dl.google.com/android/repository/android-ndk-r19c-windows-x86.zip'
-$url64      = 'https://dl.google.com/android/repository/android-ndk-r19c-windows-x86_64.zip'
+﻿$url        = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86.zip'
+$url64      = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86_64.zip'
 
 If(Get-OSArchitectureWidth -Compare 32) {
   $zipFileName = $url.split('/')[-1]

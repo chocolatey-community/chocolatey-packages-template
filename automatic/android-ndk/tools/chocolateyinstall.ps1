@@ -15,8 +15,8 @@ $installationPath = $pathElements[0..($pathElements.count-2)] -join "\"
 $installationFolder = $pathElements[-1]
 
 
-$url        = 'https://dl.google.com/android/repository/android-ndk-r19c-windows-x86.zip'
-$url64      = 'https://dl.google.com/android/repository/android-ndk-r19c-windows-x86_64.zip'
+$url        = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86.zip'
+$url64      = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86_64.zip'
 
 If(Get-OSArchitectureWidth -Compare 32) {
   $zipFileName = $url.split('/')[-1]
@@ -41,9 +41,9 @@ $packageArgs = @{
 
   softwareName  = $softwareName
 
-  checksum      = '800c3c6ba616ddf25097d43566d5d574f9e6c0a10538bf60dd5be0e024f732cd'
+  checksum      = '7541bacd22f5757b9947314ee71111e18fc7db852ac67b23b7dbace229b941cf'
   checksumType  = 'sha256'
-  checksum64    = '0faf708c9837a921cae5262745f5857162614bb9689a0d188780d12ea93a2c18'
+  checksum64    = '315cdfdb971ee85a71e267da2cc7d6667ec722c3649aedc45cd42a97b2e8b056'
   checksumType64= 'sha256'
 }
 
