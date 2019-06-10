@@ -9,25 +9,22 @@ $androidPath = "${Env:SystemDrive}\Android\android-ndk"
 # set default installation path if not passed
 if (!$packageParameters['InstallationPath']) { $packageParameters['InstallationPath'] = "${androidPath}" }
 
-$pathElements = $packageParameters['InstallationPath'].split("\")
-
-$installationPath = $pathElements[0..($pathElements.count-2)] -join "\"
-$installationFolder = $pathElements[-1]
-
+$installationPath = Split-Path $packageParameters['InstallationPath'] -Parent
+$installationFolder = Split-Path $packageParameters['InstallationPath'] -Leaf
 
 $url        = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86.zip'
 $url64      = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86_64.zip'
 
 If(Get-OSArchitectureWidth -Compare 32) {
-  $zipFileName = $url.split('/')[-1]
+  $zipFileName = Split-Path $url -Leaf
 } Else {
-  $zipFileName = $url64.split('/')[-1]
+  $zipFileName = Split-Path $url64 -Leaf
 }
 
 If(Get-OSArchitectureWidth -Compare 32) {
-  $folderName = $url.split('/')[-1].replace('-windows-x86.zip','')
+  $folderName = (Split-Path $url -Leaf).replace('-windows-x86.zip','')
 } Else {
-  $folderName = $url64.split('/')[-1].replace('-windows-x86_64.zip','')
+  $folderName = (Split-Path $url64 -Leaf).replace('-windows-x86_64.zip','')
 }
 
 $packageName = 'android-ndk'

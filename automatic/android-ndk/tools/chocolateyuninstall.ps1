@@ -2,9 +2,9 @@
 $url64      = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86_64.zip'
 
 If(Get-OSArchitectureWidth -Compare 32) {
-  $zipFileName = $url.split('/')[-1]
+  $zipFileName = Split-Path $url -Leaf
 } Else {
-  $zipFileName = $url64.split('/')[-1]
+  $zipFileName = Split-Path $url64 -Leaf
 }
 
 $ErrorActionPreference = 'Stop';
