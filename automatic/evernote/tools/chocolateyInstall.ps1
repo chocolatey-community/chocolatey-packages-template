@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
-$checksum = 'A04B00156CA9099845BDB16595E88D6E7E1EC36A4171E4BF4E0B958D7D7C65F4'
+$checksum = 'c38f178399cbd50d39b5941a1300d3737da2224d77f349eb6dbc4912aaef1115'
 
 $packageArgs = @{
   packageName   = 'evernote'

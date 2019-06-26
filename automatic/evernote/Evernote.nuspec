@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>evernote</id>
-    <version>6.18.4.8489</version>
+    <version>6.19.2.8555</version>
     <title>Evernote</title>
     <authors>Evernote Corporation</authors>
     <owners>Peter Jahn</owners>
