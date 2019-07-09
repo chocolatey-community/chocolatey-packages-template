@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$checksum = '1FF0D2CF45526CB69872C08412C166A7252241CEBD412F1913279AA3AFDD4047'
+$checksum = '0A7E3A03256D3143118BE5389F0C5F7F405A40066D999E246C57280E9282AE14'
 $url = 'http://www.resplendence.com/download/whocrashedSetup.exe'
 
 $packageArgs = @{
