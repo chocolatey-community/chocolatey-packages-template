@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mactype</id>
-    <version>2017.628.0</version>
+    <version>2019.1-beta6</version>
     <title>MacType</title>
     <authors>Flying Snow</authors>
     <owners>cole.mike</owners>
