@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <metadata>
-        <id>zoom</id>
-        <version>4.8.5336.0930</version>
-        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-        <owners>Mike Cole, Kyle McNally</owners>
-        <title>Zoom Client for Meetings</title>
-        <authors>Zoom Video Communications, Inc.</authors>
-        <projectUrl>https://zoom.us/</projectUrl>
-        <copyright>Copyright ©2017 Zoom Video Communications, Inc. All rights reserved.</copyright>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>zoom admin webinar webcam meeting</tags>
-        <description>Zoom unifies cloud video conferencing, simple online meetings, group messaging, and a software-defined conference room solution into one easy-to-use platform. Our solution offers the best video, audio, and wireless screen-sharing experience across Windows, Mac, iOS, Android, Blackberry, Linux, Zoom Rooms, and H.323/SIP room systems. Founded in 2011, Zoom's mission is to develop a people-centric cloud service that transforms the real-time collaboration experience and improves the quality and effectiveness of communications forever.</description>
-        <summary>Zoom unifies cloud video conferencing, simple online meetings, group messaging, and a software-defined conference room solution into one easy-to-use platform.</summary>
-        <iconUrl>https://cdn.staticaly.com/gh/mikecole/chocolatey-packages/master/icons/zoom.png</iconUrl>
-        <docsUrl>https://support.zoom.us/hc/en-us</docsUrl>
-        <licenseUrl>http://zoom.us/pricing</licenseUrl>
-        <bugTrackerUrl>https://support.zoom.us/hc/en-us/requests/new</bugTrackerUrl>
-    </metadata>
-    <files>
-        <file src="tools\**" target="tools" />
-    </files>
+  <metadata>
+    <id>zoom</id>
+    <version>4.8.5336.0931</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <owners>Mike Cole, Kyle McNally</owners>
+    <title>Zoom Client for Meetings</title>
+    <authors>Zoom Video Communications, Inc.</authors>
+    <projectUrl>https://zoom.us/</projectUrl>
+    <copyright>Copyright ©2017 Zoom Video Communications, Inc. All rights reserved.</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>zoom admin webinar webcam meeting</tags>
+    <description>Zoom unifies cloud video conferencing, simple online meetings, group messaging, and a software-defined conference room solution into one easy-to-use platform. Our solution offers the best video, audio, and wireless screen-sharing experience across Windows, Mac, iOS, Android, Blackberry, Linux, Zoom Rooms, and H.323/SIP room systems. Founded in 2011, Zoom's mission is to develop a people-centric cloud service that transforms the real-time collaboration experience and improves the quality and effectiveness of communications forever.</description>
+    <summary>Zoom unifies cloud video conferencing, simple online meetings, group messaging, and a software-defined conference room solution into one easy-to-use platform.</summary>
+    <iconUrl>https://cdn.staticaly.com/gh/mikecole/chocolatey-packages/master/icons/zoom.png</iconUrl>
+    <docsUrl>https://support.zoom.us/hc/en-us</docsUrl>
+    <licenseUrl>http://zoom.us/pricing</licenseUrl>
+    <bugTrackerUrl>https://support.zoom.us/hc/en-us/requests/new</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
