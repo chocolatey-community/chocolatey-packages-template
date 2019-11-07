@@ -11,8 +11,8 @@ if (!$packageParameters['InstallationPath']) { $packageParameters['InstallationP
 
 $installationPath = $packageParameters['InstallationPath']
 
-$url        = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86.zip'
-$url64      = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86_64.zip'
+$url        = 'https://dl.google.com/android/repository/android-ndk-r20b-windows-x86.zip'
+$url64      = 'https://dl.google.com/android/repository/android-ndk-r20b-windows-x86_64.zip'
 
 If(Get-OSArchitectureWidth -Compare 32) {
   $zipFileName = Split-Path $url -Leaf
@@ -37,9 +37,9 @@ $packageArgs = @{
 
   softwareName   = $softwareName
 
-  checksum       = '7541bacd22f5757b9947314ee71111e18fc7db852ac67b23b7dbace229b941cf'
+  checksum       = '58a79270e419c299c05084ec06d36c117e26b038b38bcde17af4ec3c45c29f5c'
   checksumType   = 'sha256'
-  checksum64     = '315cdfdb971ee85a71e267da2cc7d6667ec722c3649aedc45cd42a97b2e8b056'
+  checksum64     = 'b9dd083aae7a29c887876ffb3840d4b192dee1a05ad9dbf545f2facd00b4e821'
   checksumType64 = 'sha256'
 }
 
