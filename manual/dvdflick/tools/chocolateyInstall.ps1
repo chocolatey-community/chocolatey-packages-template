@@ -1,8 +1,9 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageArgs = @{
   packageName   = 'dvdflick'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
   fileType      = 'exe'
-  url           = 'https://superb-dca2.dl.sourceforge.net/project/dvdflick/dvdflick/DVD%20Flick%201.3.0.7/dvdflick_setup_1.3.0.7.exe'
+  url           = 'https://managedway.dl.sourceforge.net/project/dvdflick/dvdflick/DVD%20Flick%201.3.0.7/dvdflick_setup_1.3.0.7.exe'
   silentArgs    = '/VERYSILENT'
   validExitCodes= @(0)
   softwareName  = 'dvdflick*'
