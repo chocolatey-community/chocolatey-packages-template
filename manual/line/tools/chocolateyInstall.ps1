@@ -7,7 +7,7 @@ $packageArgs = @{
   silentArgs    = '/S'
   validExitCodes= @(0)
   softwareName  = 'Line*'
-  checksum      = 'BBD1AEFC9EA4E22590F7CDBC8CE1411F343B7051149DFAB00346E53BADDCB3AD'
+  checksum      = 'D9D236E12F488947ADCEE00966EA5C0BB88B8BB2691804E567B2B37F39E1DCF3'
   checksumType  = 'sha256'
 }
 
