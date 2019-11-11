@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>glip</id>
-        <version>19.9.1.0</version>
-        <title>glip</title>
-        <authors>RingCentral</authors>
-        <owners>Mike Cole</owners>
-        <licenseUrl>https://www.ringcentral.com/legal/eulatos.html</licenseUrl>
-        <projectUrl>https://www.ringcentral.com/teams/overview.html</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/mikecole/chocolatey-packages/master/icons/glip.png</iconUrl>
-        <requireLicenseAcceptance>true</requireLicenseAcceptance>
-        <description>In the digital age, it’s an increasing challenge to connect teams due to the rich variety of resources. Glip provides a single, unified team workspace that empowers you to work, communicate, and collaborate faster and more effectively than ever before. Emails, scattered discussions, and disjointed resources are drastically reduced as teams share conversations, files, tasks, and calendars. Your teams, whether internal or external, can collaborate using their favorite devices anytime, anyplace—all within the Glip team workspace.</description>
-        <summary></summary>
-        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/tree/master/manual/glip</packageSourceUrl>
-        <copyright>Copyright 1999-2018 RingCentral, Inc.</copyright>
-        <tags>chat communicator admin</tags>
-    </metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>glip</id>
+    <version>19.11.1.0</version>
+    <title>glip</title>
+    <authors>RingCentral</authors>
+    <owners>Mike Cole</owners>
+    <licenseUrl>https://www.ringcentral.com/legal/eulatos.html</licenseUrl>
+    <projectUrl>https://www.ringcentral.com/teams/overview.html</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/mikecole/chocolatey-packages/master/icons/glip.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>In the digital age, it’s an increasing challenge to connect teams due to the rich variety of resources. Glip provides a single, unified team workspace that empowers you to work, communicate, and collaborate faster and more effectively than ever before. Emails, scattered discussions, and disjointed resources are drastically reduced as teams share conversations, files, tasks, and calendars. Your teams, whether internal or external, can collaborate using their favorite devices anytime, anyplace—all within the Glip team workspace.</description>
+    <summary></summary>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/tree/master/automatic/glip</packageSourceUrl>
+    <copyright>Copyright 1999-2018 RingCentral, Inc.</copyright>
+    <tags>chat communicator</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

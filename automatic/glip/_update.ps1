@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 import-module au
 
 $url = 'http://downloads.ringcentral.com/glip/rc/GlipForWindows64'
