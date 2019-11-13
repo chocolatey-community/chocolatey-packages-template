@@ -1,9 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
+
 $script                     = $MyInvocation.MyCommand.Definition
+$packageName                = 'Office365ProPlus'
 $configFile                 = Join-Path $(Split-Path -parent $script) 'configuration.xml'
 $configFile64               = Join-Path $(Split-Path -parent $script) 'configuration64.xml'
+$bitCheck                   = Get-ProcessorBits
 $forceX86                   = $env:chocolateyForceX86
 $configurationFile          = if ($BitCheck -eq 32 -Or $forceX86) { $configFile } else { $configFile64 }
+$officetempfolder           = Join-Path $env:Temp 'chocolatey\Office365ProPlus'
 
 $pp = Get-PackageParameters
 $configPath = $pp["ConfigPath"]
@@ -40,9 +44,6 @@ else
     Write-Output 'No language specified. Defaulting to OS language.'
 }
 
-$packageName                = 'Office365ProPlus'
-$bitCheck                   = Get-ProcessorBits
-$officetempfolder           = Join-Path $env:Temp 'chocolatey\Office365ProPlus'
 $packageArgs                = @{
     packageName             = 'Office365DeploymentTool'
     fileType                = 'exe'
