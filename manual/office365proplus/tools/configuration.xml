@@ -1,10 +1,12 @@
 <Configuration>
-    <Add OfficeClientEdition="32" >
+    <Add OfficeClientEdition="32" Channel="Monthly">
         <Product ID="O365ProPlusRetail">
-            <Language ID="MatchOS" />
+            <Language ID="MatchInstalled" />
+            <Language ID="MatchOS" Fallback="en-us" />
         </Product>
     </Add>
     <Updates Enabled="TRUE" />
     <Display Level="None" AcceptEULA="TRUE" />
     <Logging Path="%temp%" />
+    <RemoveMSI All="True" />
 </Configuration>

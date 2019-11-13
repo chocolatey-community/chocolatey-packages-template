@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>office365proplus</id>
-    <version>2016.20190418</version>
+    <version>2016.20191113</version>
     <title>Office 365 ProPlus</title>
     <authors>Microsoft</authors>
     <owners>Mike Cole</owners>
