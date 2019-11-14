@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>plexmediaserver</id>
-        <version>1.18.1.2019</version>
+        <version>1.18.2.2029</version>
         <title>Plex Media Server</title>
         <authors>Plex, Inc.</authors>
         <owners>Mike Cole</owners>
