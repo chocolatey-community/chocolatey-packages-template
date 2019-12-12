@@ -23,7 +23,7 @@
     <releaseNotes>https://github.com/influxdata/telegraf/blob/master/CHANGELOG.md</releaseNotes>
     <copyright>2015 InfluxDB</copyright>
     <tags>admin telegraf influxdata influxdb</tags>
-    <packageSourceUrl>https://dl.influxdata.com/telegraf/releases/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/ripclawffb/chocolatey-telegraf</packageSourceUrl>
     <docsUrl>https://github.com/influxdata/telegraf</docsUrl>
   </metadata>
 </package>
