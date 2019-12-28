@@ -9,6 +9,7 @@ $toolsDir        = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url             = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.13.0_windows_i386.zip'
 $url64           = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.13.0_windows_amd64.zip'
 $fileLocation    = Join-Path $install_folder 'telegraf.exe'
+$telegrafRegPath = "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf"
 
 If(!(Test-Path -Path $configDirectory)){
   New-Item -Path $configDirectory -ItemType Directory
@@ -16,6 +17,10 @@ If(!(Test-Path -Path $configDirectory)){
 
 If (Get-Service -Name "telegraf" -ErrorAction SilentlyContinue) {
     & $fileLocation --service uninstall
+}
+
+If (Test-Path $telegrafRegPath) {
+    Remove-Item $telegrafRegPath -Force
 }
 
 $packageArgs = @{
