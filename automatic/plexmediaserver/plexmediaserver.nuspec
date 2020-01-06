@@ -14,7 +14,7 @@
         <summary>Plex Media Server - Stream media from your PC to all your devices.</summary>
         <copyright>Copyright 2013, Plex Inc.</copyright>
         <tags>plex media mediaserver streaming video music plexmediaserver htpc dlna admin</tags>
-        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/tree/master/plexmediaserver</packageSourceUrl>
+        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/tree/master/automatic/plexmediaserver</packageSourceUrl>
         <docsUrl>https://support.plex.tv/hc/en-us</docsUrl>
         <dependencies>
             <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
