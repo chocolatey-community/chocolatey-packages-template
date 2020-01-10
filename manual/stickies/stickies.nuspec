@@ -1,29 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>stickies</id>
-        <version>9.0.5.0</version>
-        <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-        <title>Stickies</title>
-        <authors>Tom Revell</authors>
-        <owners>Mike Cole</owners>
-        <licenseUrl>http://www.zhornsoftware.co.uk/stickies/download.html</licenseUrl>
-        <projectUrl>http://www.zhornsoftware.co.uk/stickies/</projectUrl>
-        <copyright>Copyright 2016 Zhorn Software</copyright>
-        <iconUrl>http://cdn.rawgit.com/mikecole/chocolatey-packages/master/icons/stickies.png</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>From the Author:
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>stickies</id>
+    <version>10.0.0.0</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <title>Stickies</title>
+    <authors>Tom Revell</authors>
+    <owners>Mike Cole</owners>
+    <licenseUrl>http://www.zhornsoftware.co.uk/stickies/download.html</licenseUrl>
+    <projectUrl>http://www.zhornsoftware.co.uk/stickies/</projectUrl>
+    <copyright>Copyright 2016 Zhorn Software</copyright>
+    <iconUrl>http://rawcdn.githack.com/mikecole/chocolatey-packages/062d2e3db7d6ef6078752f20fad7c4ac19476804/icons/stickies.png</iconUrl>
+    <bugTrackerUrl>http://zhornsoftware.forumotion.com/</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>From the Author:
 Stickies is a PC utility I wrote to try to cut down on the number of yellow notes I was leaving stuck to my monitor. It is a computerised version of those notes.
 
 The design goal behind Stickies is that the program is small and simple. Stickies will not mess with your system files, or write to the registry. Stickies stores information in a single text-based ini file.
 
 Stickies will never support animated dancing figures, or play "Greensleeves". They are instead yellow rectangular windows onto which you can put some text notes. Once created, they will stay on screen until you take them away. Just like a real sticky piece of paper.</description>
-        <summary>Post-It functionality for your Windows desktop</summary>
-        <tags>notes admin</tags>
-        <dependencies>
-            <dependency id="vcredist2008" version="9.0.30729.6161" />
-        </dependencies>
-        <releaseNotes>http://www.zhornsoftware.co.uk/stickies/versions.html</releaseNotes>
-        <docsUrl>http://www.zhornsoftware.co.uk/stickies/faq.html</docsUrl>
-    </metadata>
+    <summary>Post-It functionality for your Windows desktop</summary>
+    <tags>notes</tags>
+    <dependencies>
+      <dependency id="vcredist2008" version="9.0.30729.6161" />
+    </dependencies>
+    <releaseNotes>http://www.zhornsoftware.co.uk/stickies/versions.html</releaseNotes>
+    <docsUrl>http://www.zhornsoftware.co.uk/stickies/faq.html</docsUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" />
+  </files>
 </package>
