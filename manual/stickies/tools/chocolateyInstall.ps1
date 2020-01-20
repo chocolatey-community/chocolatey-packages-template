@@ -3,11 +3,11 @@ $packageArgs = @{
   packageName   = 'stickies'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
   fileType      = 'exe'
-  url           = 'https://www.zhornsoftware.co.uk/stickies/stickies_setup_10_0a.exe'
+  url           = 'https://www.zhornsoftware.co.uk/support/kb00013-9.0e.exe'
   silentArgs    = '-silent'
   validExitCodes= @(0)
   softwareName  = 'stickies*'
-  checksum      = '6F17C14C63FC269F28E5C374F6BA55F4AF1274D9684BA58F70E62DBB9BE6D1FD'
+  checksum      = 'F6B912B8E4166314DC032C7C16EE2CEC981D41592ABD03A3B42D30C2102E13A8'
   checksumType  = 'sha256'
 }
 
