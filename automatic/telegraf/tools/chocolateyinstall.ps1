@@ -23,6 +23,10 @@ If (Test-Path $telegrafRegPath) {
     Remove-Item $telegrafRegPath -Force
 }
 
+If (Test-Path "$env:ProgramFiles\telegraf\telegraf.conf" -ErrorAction SilentlyContinue) {
+  Copy-Item -Force -Path "$env:ProgramFiles\telegraf\telegraf.conf" -Destination "$env:ProgramFiles\telegraf\telegraf.backup.conf"
+}
+
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $unzip_folder
@@ -45,3 +49,8 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 Install-ChocolateyInstallPackage @packageArgs
+
+If (Test-Path "$env:ProgramFiles\telegraf\telegraf.backup.conf" -ErrorAction SilentlyContinue) {
+  Move-Item -Force -Path "$env:ProgramFiles\telegraf\telegraf.backup.conf" -Destination "$env:ProgramFiles\telegraf\telegraf.conf"
+  Restart-Service -Name "telegraf"
+}
