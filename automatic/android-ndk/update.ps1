@@ -9,13 +9,10 @@ function global:au_SearchReplace {
             "(?i)(^[$]softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
             "(?i)(^[$]url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
             "(checksum\s*=\s*)('.*')"             = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^[$]url64\s*=\s*)('.*')"        = "`$1'$($Latest.URL64)'"
-            "(checksum64\s*=\s*)('.*')"           = "`$1'$($Latest.Checksum64)'"
         }
 
         ".\tools\chocolateyUninstall.ps1" = @{
             "(?i)(^[$]url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^[$]url64\s*=\s*)('.*')"        = "`$1'$($Latest.URL64)'"
         }
 
         "$($Latest.PackageName).nuspec" = @{
@@ -30,7 +27,7 @@ function global:au_GetLatest {
     $match = $download_page.Content | Select-String -Pattern '(android-ndk-.*-windows-.*\.zip)'
     $url = "https://dl.google.com/android/repository/$($match.Matches[0].value)"
     
-    $rawVersion  = $url -split '[_-]|.zip' | Select-Object -Last 1 -Skip 3
+    $rawVersion  = $url -split '[_-]|.zip' | Select-Object -Last 1 -Skip 4
     $rawVersion = $rawVersion.Replace('r','')
 
     If($rawVersion -as [int]){
@@ -48,7 +45,6 @@ function global:au_GetLatest {
     @{
         Version      = $version
         URL32        = $url
-        URL64        = $url -replace 'x86','x86_64'
         ReleaseNotes = 'https://developer.android.com/ndk/downloads/revision_history'
     }
 }
