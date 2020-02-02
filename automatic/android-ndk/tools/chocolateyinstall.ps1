@@ -12,7 +12,7 @@ if (!$packageParameters['InstallationPath']) { $packageParameters['InstallationP
 
 $installationPath = $packageParameters['InstallationPath']
 
-$url = 'https://dl.google.com/android/repository/android-ndk-r20-windows-x86_64.zip'
+$url = 'https://dl.google.com/android/repository/android-ndk-r21-windows-x86_64.zip'
 
 $folderName = (Split-Path $url -Leaf).replace('-windows-x86_64.zip','')
 
