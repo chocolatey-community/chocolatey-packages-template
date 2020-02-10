@@ -6,10 +6,9 @@
     <version>8.41.0.12127</version>
     <title>GoToMeeting</title>
     <authors>Citrix Systems</authors>
-    <owners>Mike Cole</owners>
-    <licenseUrl>https://esign.citrixonline.com/CitrixOnline/Production/Global_TOS_JAN2016.html</licenseUrl>
+    <owners>Mike Cole</owners>    
     <projectUrl>http://www.gotomeeting.com</projectUrl>
-    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/ab11e04ca312d0fa8e25656cd30b927e62174797/icons/gotomeeting.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/3df290ec3a72798bded3ba8b739f4198405490b3/icons/gotomeeting.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>GoToMeeting is a conferencing and online meeting tool.</description>
     <summary>GotoMeeting - Online Meetings Made Easy</summary>

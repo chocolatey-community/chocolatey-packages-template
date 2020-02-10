@@ -1,26 +1,24 @@
 import-module au
 
-$download_page_url = 'https://link.gotomeeting.com/minimum-build-msi'
+$download_url = 'https://link.gotomeeting.com/minimum-build-msi'
 
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-            "(^[$]url\s*=\s*)('.*')"   = "`$1'$($Latest.Url)'"
+            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.Url)'"
         }
-     }
+    }
 }
 
 function global:au_GetLatest {
-    $content = Invoke-WebRequest -UseBasicParsing -Uri $download_page_url
+    $request = Invoke-WebRequest -Uri $download_url -MaximumRedirection 0 -ErrorAction Ignore
 
-    $content -match '<title>GoToMeeting MSI Installer - \d+.\d+.\d+.\d+'| Out-Null
-    $version = $matches[0] -replace "<title>GoToMeeting MSI Installer - ", ""
+    $path = ([System.Uri]$request.Headers.Location).AbsolutePath
 
-    $re = '\.zip$'
-    $url = $content.Links | ? href -match $re | select -first 1 -expand href
+    $version = $path.SubString($path.LastIndexOf('/') + 1).TrimStart("G2MSetup").TrimEnd("_IT.msi")
 
-    $Latest = @{ URL = $url; Version = $version }
+    $Latest = @{ URL = $request.Headers.Location; Version = $version }
     return $Latest
 }
 
