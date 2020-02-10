@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$checksum = '10ace09684f9a3dc58572a25abb41ab2a69791f30787938acd56aa3b0d1c26ee'
-$url = 'https://assets.cdngetgo.com/13/84/bdc590684a73a88cca4d2914c87b/g2msetup84112127-it.zip'
+$checksum = 'c4874077ecd97636b52be9485bd02819fcca1c889a9e161b697c9b55d390cf6c'
+$url = 'https://builds.cdn.getgo.com/builds/g2m/15939/G2MSetup10.4.15939_IT.msi?c_prod=g2mwt&c_cmp=care'
 $unzipLocation = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 
 $zipArgs = @{
