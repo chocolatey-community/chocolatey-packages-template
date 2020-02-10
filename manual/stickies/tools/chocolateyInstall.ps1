@@ -1,8 +1,9 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageArgs = @{
   packageName   = 'stickies'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
   fileType      = 'exe'
-  url           = 'http://www.zhornsoftware.co.uk/stickies/stickies_setup_9.0e.exe'
+  url           = 'https://www.zhornsoftware.co.uk/support/kb00013-9.0e.exe'
   silentArgs    = '-silent'
   validExitCodes= @(0)
   softwareName  = 'stickies*'

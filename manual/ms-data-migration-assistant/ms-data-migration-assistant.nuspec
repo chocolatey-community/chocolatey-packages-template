@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ms-data-migration-assistant</id>
+    <version>4.2.0.0</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <title>Microsoft Data Migration Assistant</title>
+    <authors>Microsoft</authors>
+    <owners>Mike Cole</owners>
+    <licenseUrl>http://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=53595</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/40960406165b38d19e957abd9e93ff6c420b9485/icons/ms-data-migration-assistant.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Data Migration Assistant (DMA) enables you to upgrade to a modern data platform by detecting compatibility issues that can impact database functionality on your new version of SQL Server.
+It recommends performance and reliability improvements for your target environment. It allows you to not only move your schema and data, but also uncontained objects from your source server
+to your target server.
+        </description>
+    <summary>Data Migration Assistant (DMA) enables you to upgrade to a modern data platform by detecting compatibility issues that can impact database functionality on your new version of SQL Server.</summary>
+    <tags>microsoft sql-server</tags>
+    <docsUrl>https://www.microsoft.com/en-us/download/details.aspx?id=53595</docsUrl>
+    <copyright>© Microsoft 2019</copyright>
+    <releaseNotes>https://www.microsoft.com/en-us/download/details.aspx?id=53595</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5.2" version="4.5.2.20140902" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

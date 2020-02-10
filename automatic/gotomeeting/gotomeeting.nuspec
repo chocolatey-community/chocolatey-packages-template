@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>gotomeeting</id>
-    <version>8.38.1.11282</version>
+    <version>8.41.0.12127</version>
     <title>GoToMeeting</title>
     <authors>Citrix Systems</authors>
     <owners>Mike Cole</owners>    

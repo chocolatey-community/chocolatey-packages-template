@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 import-module au
 
 $url = 'http://go.microsoft.com/fwlink/?LinkId=708343'

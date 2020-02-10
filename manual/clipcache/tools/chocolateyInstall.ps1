@@ -1,3 +1,5 @@
+﻿$ErrorActionPreference = 'Stop'
+
 $packageArgs = @{
   packageName   = 'clipcache'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -6,7 +8,7 @@ $packageArgs = @{
   silentArgs    = '/VERYSILENT'
   validExitCodes= @(0)
   softwareName  = 'clipcache*'
-  checksum      = '3F67550C7F85C242A8707D7F2299D8C913654E5B8B6C111A1C5B687CEF7BD7EA'
+  checksum      = '424E0A11588AAAE19D5DA0BE287DDE3EB7032AB6398416CAB2974422DC2A9A04'
   checksumType  = 'sha256'
 }
 

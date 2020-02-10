@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>line</id>
+    <version>5.21.3.2086</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <owners>Mike Cole</owners>
+    <title>LINE</title>
+    <authors>LINE Corporation</authors>
+    <projectUrl>http://line.naver.jp/en/#</projectUrl>
+    <copyright></copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/69f2551f8aefa335874cb778752f593dbe33c7aa/icons/line.png</iconUrl>
+    <tags>messenger communication messaging voice-chat video-call voice-call</tags>
+    <summary>Free SMS, Free Voice call messenger application.</summary>
+    <description>
+Free SMS, Free Voice call messenger application.
+    </description>
+    <docsUrl>https://help.line.me/line/?lang=en</docsUrl>
+    <licenseUrl>https://terms.line.me/line_terms/?lang=en</licenseUrl>
+    <dependencies>
+      <dependency id="vcredist2013" version="12.0.40660.20180427" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" />
+  </files>
+</package>

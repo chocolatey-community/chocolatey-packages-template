@@ -1,18 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>clipcache</id>
-        <version>3.6.1.0</version>
-		<packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
-		<owners>Mike Cole</owners>
-        <title>ClipCache Pro</title>
-        <authors>XRayz Software</authors>
-        <projectUrl>http://www.xrayz.co.uk/clipcache/</projectUrl>
-		<copyright>Copyright XRayz Software</copyright>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>clipboard admin</tags>
-		<summary>ClipCache Pro is a clipboard management application.</summary>
-		<description>ClipCache Pro is a clipboard management application.</description>      
-		<releaseNotes>http://www.xrayz.co.uk/clipcache/versions</releaseNotes>		
-    </metadata>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>clipcache</id>
+    <version>3.6.3.0</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <owners>Mike Cole</owners>
+    <title>ClipCache Pro</title>
+    <authors>XRayz Software</authors>
+    <projectUrl>http://www.xrayz.co.uk/clipcache/</projectUrl>
+    <copyright>Copyright XRayz Software</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>clipboard</tags>
+    <summary>ClipCache Pro is a clipboard management application.</summary>
+    <description>ClipCache Pro is a clipboard management application.</description>
+    <releaseNotes>http://www.xrayz.co.uk/clipcache/versions</releaseNotes>
+    <docsUrl>http://www.xrayz.co.uk/clipcache/</docsUrl>
+    <mailingListUrl>http://www.xrayz.co.uk/forum/</mailingListUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

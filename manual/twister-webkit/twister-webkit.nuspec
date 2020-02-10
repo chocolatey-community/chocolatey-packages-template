@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>twister-webkit</id>
+    <version>0.9.28.0</version>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages</packageSourceUrl>
+    <owners>Mike Cole</owners>
+    <title>Twister</title>
+    <authors>iShift</authors>
+    <projectUrl>https://github.com/iShift/twister-webkit</projectUrl>
+    <copyright></copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/3e357ac1b7f73b6f74fae43c7b31429522c4838e/icons/twister-webkit.png</iconUrl>
+    <tags>blog</tags>
+    <summary>Desktop app for twister (Multilanguage)</summary>
+    <description>
+twister is the fully decentralized P2P microblogging platform leveraging from the free software implementations of Bitcoin and BitTorrent protocols.
+    </description>
+    <releaseNotes>https://github.com/iShift/twister-webkit/releases</releaseNotes>
+    <docsUrl>https://github.com/iShift/twister-webkit/wiki</docsUrl>
+    <licenseUrl>https://github.com/iShift/twister-webkit/blob/master/LICENSE</licenseUrl>
+    <bugTrackerUrl>https://github.com/iShift/twister-webkit/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/iShift/twister-webkit</projectSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" />
+  </files>
+</package>
