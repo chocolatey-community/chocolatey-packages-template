@@ -6,7 +6,7 @@
     <title>Cryptomator</title>
     <authors>The Cryptomator Contributors</authors>
     <owners>Stu Mace</owners>
-    <licenseUrl>https://github.com/cryptomator/cryptomator/blob/master/LICENSES/MIT-X-Consortium-License.txt</licenseUrl>
+    <licenseUrl>https://github.com/cryptomator/cryptomator/blob/develop/LICENSE.txt</licenseUrl>
     <projectUrl>https://cryptomator.org</projectUrl>
     <iconUrl>https://cdn.rawgit.com/cryptomator/cryptomator.github.io/master/img/logo.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
