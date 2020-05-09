@@ -10,7 +10,7 @@
     <authors>New Relic</authors>
     <projectUrl>https://newrelic.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/ripclawffb/chocolatey-packages@master/icons/newrelic-infra.png</iconUrl>
-    <copyright>2008 - 2019</copyright>
+    <copyright>2008 - 2020</copyright>
     <licenseUrl>https://docs.newrelic.com/docs/licenses/license-information</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/getting-started/introduction-new-relic-infrastructure</docsUrl>
@@ -30,6 +30,21 @@ and destroyed, and a powerful Events page lets you see every change.
 **Please Note**: This is an automatically updated package. If you find it is 
 out of date by more than a day or two, please contact the maintainer(s) and
 let them know the package is no longer updating correctly.
+
+### Package Specific
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/GenerateConfig:` - Whether or not to generate a config
+ * `/LicenseKey:` - Your license key
+ * `/DisplayName:` - Display Name
+ * `/Proxy:` - Proxy url and port
+ * `/CustomAttributes:` - Any custom attributes that need to be added
+
+https://docs.newrelic.com/docs/infrastructure/install-configure-manage-infrastructure/windows-installation/install-infrastructure-windows-server-using-msi-installer#step-by-step-instructions
+
+To pass parameters, use `--params "''"` (e.g. `choco install packageID [other options] --params="'/ITEM:value /ITEM2:value2 /FLAG_BOOLEAN'"`).
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 ]]></description>
     <releaseNotes>https://docs.newrelic.com/docs/release-notes/infrastructure-release-notes/infrastructure-agent-release-notes</releaseNotes>
   </metadata>
