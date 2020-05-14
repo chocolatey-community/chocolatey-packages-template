@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>reaper-sws-extension</id>
+    <version>2.10.0.1</version>
+    <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/reaper-sws-extension</packageSourceUrl>
+    <owners>HarryH</owners>    
+    <title>Reaper SWS Extension (Install)</title>
+    <authors>SWS Developers</authors>
+    <projectUrl>https://www.sws-extension.org</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/reaper-sws-extension.png</iconUrl>
+    <copyright>2019 Tim Payne (SWS), Jeffos (S&amp;M), Xenakios, Fingers (FNG), P Bourdon (Padre), Adam Wathan (AW), Shane StClair (Autorender), Philip S. Considine (IX), wol and Dominik Martin Drzic (BR).</copyright>
+    <licenseUrl>https://github.com/reaper-oss/sws/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/reaper-oss/sws</projectSourceUrl>
+    <tags>reaper extension sws</tags>
+    <summary>The SWS extension is a collection of features that seamlessly integrate into REAPER, the Digital Audio Workstation (DAW) software by Cockos, Inc </summary>
+    <description><![CDATA[The SWS extension is a collection of features that seamlessly integrate into REAPER, the Digital Audio Workstation (DAW) software by Cockos, Inc.
+
+For more information on the capabilities of the SWS extension or to download it, please visit the end-user website. For more information on REAPER itself or to download the latest version, go to reaper.fm.
+
+You are welcome to contribute! Just fork the repo and send us a pull request (also see Submitting pull requests in the wiki). See Building the SWS Extension for build instructions.
+
+While not strictly required by the license, if you use the code in your own project we would like definitely like to hear from you.
+
+The SWS extension includes the following 3rd party libraries (which are all similarly licensed):
+
+    OscPkt
+    libebur128
+
+The SWS extension also relies on TagLib and WDL.
+
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.]]></description>
+    <dependencies>
+      <dependency id="reaper" version="5.965" />      
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
