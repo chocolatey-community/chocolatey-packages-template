@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>guitar-pro</id>
+    <version>7.5.4.1799</version>
+    <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/guitar-pro</packageSourceUrl>
+    <owners>HarryH</owners>    
+    <title>GuitarPro (Install)</title>
+    <authors>Arobas Music</authors>
+    <projectUrl>https://www.guitar-pro.com</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/guitar-pro.png</iconUrl>
+    <copyright>2020 Arobas Music</copyright>
+    <licenseUrl>https://www.guitar-pro.com/en/index.php?pg=legal-cgv</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>guitar-pro guitar bass drums tab song notation tabulature score</tags>
+    <summary>The complete guitar software for writing and playing tablature or standard score.</summary>
+    <description><![CDATA[Guitar Pro is a complete  workshop for all guitarists — beginning or advanced — who wish to improve, write music, or simply use a virtual backing band. Guitar Pro supports all fretted instruments from 3 to 10 strings (guitars,basses, banjo, mandolin, ukulele...), as well as all and any instruments that can be in your band or orchestra.
+
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.]]></description>   
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
