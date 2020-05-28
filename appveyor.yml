@@ -1,0 +1,17 @@
+version: 1.0.{build}
+
+skip_tags: true
+
+build:
+
+  publish_nuget: true
+
+  publish_nuget_symbols: true
+
+  use_snupkg_format: true
+
+  include_nuget_references: true
+
+  publish_core_console: true
+
+  verbosity: minimal
