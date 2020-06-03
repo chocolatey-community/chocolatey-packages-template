@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dependencies</id>
+    <version>1.10</version>
+    <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/dependencies</packageSourceUrl>
+    <owners>HarryH</owners>    
+    <title>Dependencies</title>
+    <authors>lucasg</authors>
+    <projectUrl>https://github.com/lucasg/Dependencies</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/dependencies.png</iconUrl>
+    <copyright>Copyright (c) 2017 lucasg</copyright>
+    <licenseUrl>https://github.com/lucasg/Dependencies/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/lucasg/Dependencies</projectSourceUrl>
+    <tags>dependencies depends</tags>
+    <summary>An open-source modern Dependency Walker. A rewrite of the old legacy software "depends.exe" in C# for Windows devs to troubleshoot dll load dependencies issues.</summary>
+    <description><![CDATA[Dependencies is a rewrite of the legacy software Dependency Walker which was shipped along Windows SDKs, but whose development stopped around 2006. Dependencies can help Windows developers troubleshooting their dll load dependencies issues.
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.]]></description>
+    <dependencies>
+      <dependency id="vcredist140" version="14.24.28127.4" />      
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
