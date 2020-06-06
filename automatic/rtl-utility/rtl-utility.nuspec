@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>rtl-utility</id>
+    <version>0.5.1</version>
+    <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/rtl-utility</packageSourceUrl>
+    <owners>HarryH</owners>    
+    <title>RTL Utility</title>
+    <authors>Oblique Audio</authors>
+    <projectUrl>https://oblique-audio.com/rtl-utility.php</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/rtl-utility.png</iconUrl>
+    <copyright>Copyright Oblique Audio © 2020. All Rights Reserved.</copyright>
+    <licenseUrl>https://oblique-audio.com/downloads/RtlUserGuide.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>round trip latency measure daw digital audio low interface loopback</tags>
+    <summary>RTL Utility is a tool for measuring the Round Trip Latency of your Digital Audio Workstation (DAW) and audio interface. The utility is used for low latency performance testing by system builders, reviewers, device manufacturers and at dawbench.com.</summary>
+    <description><![CDATA[RTL Utility is a tool for measuring the Round Trip Latency of your Digital Audio Workstation (DAW) and audio interface. The utility is used for low latency performance testing by system builders, reviewers, device manufacturers and at dawbench.com.
+
+When your DAW sends data to your audio interface for playback, it doesn’t send a continuous stream of data one bit at a time. What it does is fill up a section of RAM called a buffer and sends that in a single message when it is ready. Before sending the next message it has to fill the buffer again. This wait time introduces a latency, or delay, between something happening in your DAW and when you actually hear it.
+
+While you are recording, the audio interface buffers and sends data to your DAW in a similar fashion. This introduces latency into your recordings.
+
+If you send a signal from your DAW, out through the audio interface and back in via a loopback patch, then there will be a round trip latency which is the sum of the output and input delays. This is the RTL.
+
+## Package parameters
+- `/InstallDir` - Installation directory, by default Chocolatey tools directory.
+Example: `choco install rtl-utility --params "/InstallDir:C:\your\install\path"`
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.]]></description>   
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
