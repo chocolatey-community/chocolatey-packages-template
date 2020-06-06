@@ -17,6 +17,10 @@
     <summary>An open-source modern Dependency Walker. A rewrite of the old legacy software "depends.exe" in C# for Windows devs to troubleshoot dll load dependencies issues.</summary>
     <description><![CDATA[Dependencies is a rewrite of the legacy software Dependency Walker which was shipped along Windows SDKs, but whose development stopped around 2006. Dependencies can help Windows developers troubleshooting their dll load dependencies issues.
 
+## Package parameters
+- `/InstallDir` - Installation directory, by default Chocolatey tools directory.
+Example: `choco install dependencies --params "/InstallDir:C:\your\install\path"`
+
 **Please Note**: This is an automatically updated package. If you find it is 
 out of date by more than a day or two, please contact the maintainer(s) and
 let them know the package is no longer updating correctly.]]></description>

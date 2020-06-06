@@ -1,7 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop';
 
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$pp = Get-PackageParameters
+
+$installDir = $toolsPath
+if ($pp.InstallDir)
+{ 
+  $installDir = $pp.InstallDir
+}
+Write-Host "$env:ChocolateyPackageName is going to be installed in '$installDir'"
+
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName  
+  unzipLocation  = $installDir
   url            = 'https://github.com/lucasg/Dependencies/releases/download/v1.10/Dependencies_x86_Release.zip'
   checksum       = 'C2F8F8ADC6BF4D54EC13936557C898B6BF561C53C8DCB945D0A03A68B4E4E413'
   checksumType   = 'sha256'
