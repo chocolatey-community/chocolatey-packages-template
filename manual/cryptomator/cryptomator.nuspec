@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>cryptomator</id>
-    <version>1.5.3</version>
+    <version>1.5.5</version>
     <title>Cryptomator</title>
     <authors>The Cryptomator Contributors</authors>
     <owners>Stu Mace</owners>
@@ -33,11 +33,7 @@
 
 - HMAC over file contents to recognize changed ciphertext before decryption
 - I/O operations are transactional and atomic, if the filesystems support it
-- Each file contains all information needed for decryption (except for the key of course), no common metadata means no [SPOF](http://en.wikipedia.org/wiki/Single_point_of_failure)
-
-### Security Architecture
-
-For more information on the security details visit [cryptomator.org](https://cryptomator.org/architecture/).</description>
+- Each file contains all information needed for decryption (except for the key of course), no common metadata means no [SPOF](http://en.wikipedia.org/wiki/Single_point_of_failure)</description>
     <summary>Multi-platform transparent client-side encryption of your files in the cloud.</summary>
     <releaseNotes>https://github.com/cryptomator/cryptomator/releases</releaseNotes>
     <copyright>2016 The Cryptomator Contributors (cryptomator.org)</copyright>
