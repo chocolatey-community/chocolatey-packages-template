@@ -12,7 +12,7 @@ if (!$packageParameters['InstallationPath']) { $packageParameters['InstallationP
 
 $installationPath = $packageParameters['InstallationPath']
 
-$url = 'https://dl.google.com/android/repository/android-ndk-r21c-windows-x86_64.zip'
+$url = 'https://dl.google.com/android/repository/android-ndk-r21d-windows-x86_64.zip'
 
 $folderName = (Split-Path $url -Leaf).replace('-windows-x86_64.zip','')
 
@@ -26,7 +26,7 @@ $packageArgs = @{
 
   softwareName  = $softwareName
 
-  checksum      = 'd35730b13694ec3eb9a51ae3b4a82f47065bb36735a73b53e02e740a830eaede'
+  checksum      = '18335e57f8acab5a4acf6a2204130e64f99153015d55eb2667f8c28d4724d927'
   checksumType  = 'sha256'
 }
 
