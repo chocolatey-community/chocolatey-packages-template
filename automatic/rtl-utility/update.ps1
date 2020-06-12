@@ -14,7 +14,7 @@ function global:au_SearchReplace
 
 function global:au_GetLatest
 {
-    $baseUrl = 'https://oblique-audio.com/'
+    $baseUrl = 'http://oblique-audio.com/'
     $releases = $baseUrl + 'rtl-utility.php'
     $regex32 = '/RTL_Utility_(?<Version>[\d_]+)_Win32.exe$'
     $regex64 = '/RTL_Utility_(?<Version>[\d_]+)_x64.exe$'
