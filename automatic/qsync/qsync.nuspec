@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qsync</id>
-    <version>4.3.10.0414</version>
+    <version>4.4.0.0617</version>
     <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/qsync</packageSourceUrl>
     <owners>HarryH</owners>    
     <title>QSync (Install)</title>
