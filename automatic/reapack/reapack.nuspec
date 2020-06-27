@@ -19,6 +19,9 @@
 
 Discover, install and keep up to date your REAPER resources including ReaScripts, JS effects, extensions, themes, language packs, templates, web interfaces and more.
 
+## Package parameters
+- `/ReaperResourcePath` - Reaper resource path, by default %APPDATA%\Reaper.
+Example: `choco install reapack --params "/ReaperResourcePath:C:\your\reaper\resources"`
 
 **Please Note**: This is an automatically updated package. If you find it is 
 out of date by more than a day or two, please contact the maintainer(s) and
