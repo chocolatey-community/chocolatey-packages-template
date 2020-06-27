@@ -28,7 +28,10 @@ Example: `choco install rtl-utility --params "/InstallDir:C:\your\install\path"`
 
 **Please Note**: This is an automatically updated package. If you find it is 
 out of date by more than a day or two, please contact the maintainer(s) and
-let them know the package is no longer updating correctly.]]></description>   
+let them know the package is no longer updating correctly.]]></description>
+    <dependencies>
+      <dependency id="vcredist140" version="14.25.28508.3" />      
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
