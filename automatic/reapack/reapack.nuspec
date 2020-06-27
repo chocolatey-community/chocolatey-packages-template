@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>reapack</id>
+    <version>1.2.3</version>
+    <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/reapack</packageSourceUrl>
+    <owners>HarryH</owners>    
+    <title>ReaPack</title>
+    <authors>Christian Fillion</authors>
+    <projectUrl>https://reapack.com</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/reapack.png</iconUrl>
+    <copyright>Copyright © 2015-2020 Christian Fillion</copyright>
+    <licenseUrl>https://github.com/cfillion/reapack/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/cfillion/reapack</projectSourceUrl>
+    <tags>reaper extension reapack package-manager reascript reascripts jseffect jseffects</tags>
+    <summary>ReaPack is a package manager for REAPER, the Digital Audio Workstation.</summary>
+    <description><![CDATA[ReaPack is a package manager for REAPER, the Digital Audio Workstation.
+
+Discover, install and keep up to date your REAPER resources including ReaScripts, JS effects, extensions, themes, language packs, templates, web interfaces and more.
+
+## Package parameters
+- `/ReaperResourcePath` - Reaper resource path, by default %APPDATA%\Reaper.
+Example: `choco install reapack --params "/ReaperResourcePath:C:\your\reaper\resources"`
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.]]></description>
+    <dependencies>
+      <dependency id="reaper" version="5.12" />      
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
