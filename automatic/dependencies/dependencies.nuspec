@@ -13,6 +13,7 @@
     <licenseUrl>https://github.com/lucasg/Dependencies/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/lucasg/Dependencies</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/lucasg/Dependencies/issues</bugTrackerUrl>
     <tags>dependencies depends</tags>
     <summary>An open-source modern Dependency Walker. A rewrite of the old legacy software "depends.exe" in C# for Windows devs to troubleshoot dll load dependencies issues.</summary>
     <description><![CDATA[Dependencies is a rewrite of the legacy software Dependency Walker which was shipped along Windows SDKs, but whose development stopped around 2006. Dependencies can help Windows developers troubleshooting their dll load dependencies issues.

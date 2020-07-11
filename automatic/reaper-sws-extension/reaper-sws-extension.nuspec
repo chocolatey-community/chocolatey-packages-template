@@ -13,6 +13,7 @@
     <licenseUrl>https://github.com/reaper-oss/sws/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/reaper-oss/sws</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/reaper-oss/sws/issues</bugTrackerUrl>
     <tags>reaper extension sws</tags>
     <summary>The SWS extension is a collection of features that seamlessly integrate into REAPER, the Digital Audio Workstation (DAW) software by Cockos, Inc </summary>
     <description><![CDATA[The SWS extension is a collection of features that seamlessly integrate into REAPER, the Digital Audio Workstation (DAW) software by Cockos, Inc.

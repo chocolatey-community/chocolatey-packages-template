@@ -13,6 +13,7 @@
     <licenseUrl>https://github.com/cfillion/reapack/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/cfillion/reapack</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/cfillion/reapack/issues</bugTrackerUrl>
     <tags>reaper extension reapack package-manager reascript reascripts jseffect jseffects</tags>
     <summary>ReaPack is a package manager for REAPER, the Digital Audio Workstation.</summary>
     <description><![CDATA[ReaPack is a package manager for REAPER, the Digital Audio Workstation.
