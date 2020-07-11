@@ -8,7 +8,7 @@
     <title>Reaper SWS Extension (Install)</title>
     <authors>SWS Developers</authors>
     <projectUrl>https://www.sws-extension.org</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/reaper-sws-extension.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/0463cace8d275275806e354cb69fa23ec1897b2e/icons/reaper-sws-extension.png</iconUrl>
     <copyright>2019 Tim Payne (SWS), Jeffos (S&amp;M), Xenakios, Fingers (FNG), P Bourdon (Padre), Adam Wathan (AW), Shane StClair (Autorender), Philip S. Considine (IX), wol and Dominik Martin Drzic (BR).</copyright>
     <licenseUrl>https://github.com/reaper-oss/sws/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

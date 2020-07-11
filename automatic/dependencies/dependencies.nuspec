@@ -8,7 +8,7 @@
     <title>Dependencies</title>
     <authors>lucasg</authors>
     <projectUrl>https://github.com/lucasg/Dependencies</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/dependencies.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/0463cace8d275275806e354cb69fa23ec1897b2e/icons/dependencies.png</iconUrl>
     <copyright>Copyright (c) 2017 lucasg</copyright>
     <licenseUrl>https://github.com/lucasg/Dependencies/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -8,7 +8,7 @@
     <title>RTL Utility</title>
     <authors>Oblique Audio</authors>
     <projectUrl>https://oblique-audio.com/rtl-utility.php</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/rtl-utility.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/0463cace8d275275806e354cb69fa23ec1897b2e/icons/rtl-utility.png</iconUrl>
     <copyright>Copyright Oblique Audio © 2020. All Rights Reserved.</copyright>
     <licenseUrl>https://oblique-audio.com/downloads/RtlUserGuide.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
