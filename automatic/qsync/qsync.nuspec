@@ -8,9 +8,9 @@
     <title>QSync (Install)</title>
     <authors>QNAP Systems</authors>
     <projectUrl>https://www.qnap.com/en/utilities/essentials</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/qsync.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/0463cace8d275275806e354cb69fa23ec1897b2e/icons/qsync.png</iconUrl>
     <copyright>Copyright ©2020 QNAP Systems, Inc. All Rights Reserved.</copyright>
-    <licenseUrl>https://www.qnap.com/en/before_buy/con_show.php?op=showone&amp;cid=14</licenseUrl>
+    <licenseUrl>https://www.qnap.com/terms-of-use </licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>qnap nas qsync sync synchronization file filesync</tags>
     <summary>Qsync enables automatic file synchronization across different devices.</summary>

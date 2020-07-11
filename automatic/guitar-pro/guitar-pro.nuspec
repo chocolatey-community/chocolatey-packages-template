@@ -8,7 +8,7 @@
     <title>GuitarPro (Install)</title>
     <authors>Arobas Music</authors>
     <projectUrl>https://www.guitar-pro.com</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/guitar-pro.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/0463cace8d275275806e354cb69fa23ec1897b2e/icons/guitar-pro.png</iconUrl>
     <copyright>2020 Arobas Music</copyright>
     <licenseUrl>https://www.guitar-pro.com/en/index.php?pg=legal-cgv</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

@@ -8,11 +8,12 @@
     <title>ReaPack</title>
     <authors>Christian Fillion</authors>
     <projectUrl>https://reapack.com</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Sam13/chocolatey-packages/master/icons/reapack.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/0463cace8d275275806e354cb69fa23ec1897b2e/icons/reapack.png</iconUrl>
     <copyright>Copyright © 2015-2020 Christian Fillion</copyright>
     <licenseUrl>https://github.com/cfillion/reapack/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/cfillion/reapack</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/cfillion/reapack/issues</bugTrackerUrl>
     <tags>reaper extension reapack package-manager reascript reascripts jseffect jseffects</tags>
     <summary>ReaPack is a package manager for REAPER, the Digital Audio Workstation.</summary>
     <description><![CDATA[ReaPack is a package manager for REAPER, the Digital Audio Workstation.
