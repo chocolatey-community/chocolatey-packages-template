@@ -8,7 +8,7 @@
     <owners>Asif Shaikh</owners>
     <licenseUrl>https://github.com/influxdata/telegraf/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/influxdata/telegraf</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/ripclawffb/chocolatey-packages@master/icons/telegraf.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ripclawffb/chocolatey-telegraf@master/telegraf.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Telegraf is a plugin-driven server agent for collecting and reporting
       metrics, and is the first piece of the TICK stack. Telegraf has plugins to source a
@@ -26,4 +26,7 @@
     <packageSourceUrl>https://github.com/ripclawffb/chocolatey-telegraf</packageSourceUrl>
     <docsUrl>https://github.com/influxdata/telegraf</docsUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
