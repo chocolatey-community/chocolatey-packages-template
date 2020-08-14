@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>microsoft-powershellforgithub-psmodule</id>
+    <version>0.14.0</version>
+    <title>Microsoft PowerShellForGithub (Install)</title>
+    <authors>Microsoft</authors>
+    <owners>Asif Shaikh</owners>
+    <licenseUrl>https://github.com/microsoft/PowerShellForGitHub/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://www.powershellgallery.com/packages/PowerShellForGitHub</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ripclawffb/chocolatey-microsoft-powershellforgithub-psmodule@master/microsoft-powershellforgithub-psmodule.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>---
+
+      This is a PowerShell module that provides stateless command-line interaction and automation for the GitHub v3 API.
+
+      Embracing the benefits of PowerShell, it has full support for pipelining, allowing you pipe the output of virtually any command into any other command within the module.
+
+      ---</description>
+    <summary>PowerShell module that provides command-line interaction for the GitHub v3 API</summary>
+    <releaseNotes>https://github.com/microsoft/PowerShellForGitHub/releases</releaseNotes>
+    <copyright>Copyright (c) 2020 Microsoft All rights reserved.</copyright>
+    <tags>admin microsoft powershellforgithub powershell module github git</tags>
+    <packageSourceUrl>https://github.com/ripclawffb/chocolatey-microsoft-powershellforgithub-psmodule</packageSourceUrl>
+    <docsUrl>https://github.com/microsoft/PowerShellForGitHub/blob/master/USAGE.md#examples</docsUrl>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>

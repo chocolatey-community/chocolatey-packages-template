@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>microsoft-vsteam-psmodule</id>
+    <version>6.5.1</version>
+    <title>Microsoft Azure DevOps (VSTeam) PowerShell Module (Install)</title>
+    <authors>Microsoft</authors>
+    <owners>Asif Shaikh</owners>
+    <licenseUrl>https://github.com/MethodsAndPractices/vsteam/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://www.powershellgallery.com/packages/VSTeam</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ripclawffb/chocolatey-microsoft-vsteam-psmodule@master/microsoft-vsteam-psmodule.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>---
+
+      VSTeam is a PowerShell module with commands for accessing your Azure DevOps Server (previously named Visual Studio Team Foundation Server) 2017/2018 and Azure DevOps (previously named Visual Studio Team Services).
+
+      The VSTeam module is also a provider allowing users to navigate their Azure DevOps Server and Azure DevOps as a file system.
+
+      To get started you can visit this blog PowerShell I would like you to meet TFS and VSTS
+
+      Documentation of the cmdlets can be found in the docs README or using Get-Help VSTeam once the module is installed.
+
+      ---</description>
+    <summary>PowerShell module with commands for accessing your Azure DevOps Server</summary>
+    <releaseNotes>https://github.com/MethodsAndPractices/vsteam/blob/master/CHANGELOG.md</releaseNotes>
+    <copyright>Copyright (c) 2020</copyright>
+    <tags>admin microsoft methods practices MethodsAndPractices vsteam vsts powershell module azure devops server</tags>
+    <packageSourceUrl>https://github.com/ripclawffb/chocolatey-microsoft-vsteam-psmodule</packageSourceUrl>
+    <docsUrl>https://github.com/MethodsAndPractices/vsteam/blob/master/docs/readme.md</docsUrl>
+    <dependencies>
+      <dependency id="dotnet4.5" />
+      <dependency id="powershell" version="5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
