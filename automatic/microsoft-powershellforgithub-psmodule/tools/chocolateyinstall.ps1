@@ -6,8 +6,9 @@ $exe         = "$ENV:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
 
 $PSversion = $PSVersionTable.PSVersion.Major
 if ($PSversion -lt "4"){
-   Write-Warning "  ** PowerShell < v4 detected."
-	Write-Warning "  ** $packageName installs via the PowerShell Gallery and thus requires PowerShell v4+."
+   Write-Warning "  ** PowerShell < v5 detected."
+   Write-Warning "  ** $packageName installs via the PowerShell Gallery and thus requires PowerShell v5+."
+   Write-Warning "  ** If PowerShell v5 was installed as a dependency, you need to reboot and reinstall this package."
 	throw
 }
 

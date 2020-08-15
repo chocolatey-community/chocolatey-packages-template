@@ -23,6 +23,10 @@
     <tags>admin microsoft powershellforgithub powershell module github git</tags>
     <packageSourceUrl>https://github.com/ripclawffb/chocolatey-microsoft-powershellforgithub-psmodule</packageSourceUrl>
     <docsUrl>https://github.com/microsoft/PowerShellForGitHub/blob/master/USAGE.md#examples</docsUrl>
+    <dependencies>
+      <dependency id="dotnet4.5" />
+      <dependency id="powershell" version="5.0" />
+    </dependencies>  
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
