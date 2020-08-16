@@ -21,6 +21,8 @@
 ## Package parameters
 - `/InstallDir` - Installation directory, by default Chocolatey tools directory.
 Example: `choco install dependencies --params "/InstallDir:C:\your\install\path"`
+- `/NoStartMenu` - Set to true to prevent installation of a menu item.
+Example: `choco install dependencies --params "/NoStartMenu"`
 
 **Please Note**: This is an automatically updated package. If you find it is 
 out of date by more than a day or two, please contact the maintainer(s) and

@@ -22,3 +22,16 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
+
+if (-Not $pp.NoStartMenu) {
+  Write-Verbose "Creating start menu entry"
+  $linkfiles = get-childitem "$installDir" -include "*Gui.exe" -recurse
+
+  # This will create a Link for selected exe and will add a line chocoUninstall.ps1 to remove it on uninstall
+  foreach ($file in $linkfiles) {
+    Write-Verbose "Crating Start Menu enty for $($file.BaseName)"
+    $newlink ="$($env:ProgramData)\Microsoft\Windows\Start Menu\Programs\$($file.BaseName).lnk"
+    Install-ChocolateyShortcut -shortcutFilePath $newlink -targetPath "$file"
+    Add-Content "$toolsPath\chocoUninstall.ps1" -Value "Remove-Item `"$($newlink)`" -Force -ea ignore"
+  }
+}
