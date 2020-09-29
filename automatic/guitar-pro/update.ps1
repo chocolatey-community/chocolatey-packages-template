@@ -2,7 +2,11 @@ import-module au
 
 function global:au_SearchReplace
 {
-    @{}
+    @{
+        "tools\chocolateyInstall.ps1" = @{
+			"(^(\s)*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"            
+        }
+    }
 }
 
 function global:au_GetLatest
