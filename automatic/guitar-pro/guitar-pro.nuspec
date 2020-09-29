@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>guitar-pro</id>
-    <version>7.5.4.1799</version>
+    <version>7.5.5.1844</version>
     <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/guitar-pro</packageSourceUrl>
     <owners>HarryH</owners>    
     <title>GuitarPro (Install)</title>
