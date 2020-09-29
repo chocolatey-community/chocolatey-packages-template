@@ -30,4 +30,12 @@ function global:au_GetLatest
             }
 }
 
+function global:au_BeforeUpdate
+{    
+    # Remote exe files from tools directory to avoid getting packed
+    # Since installer just used the download file method the files go into the tools dir
+    $toolsPath = [System.IO.Path]::Combine($PSScriptRoot, 'tools')
+    Remove-Item -Path $toolsPath\*.exe -Force
+}
+
 Update-Package
