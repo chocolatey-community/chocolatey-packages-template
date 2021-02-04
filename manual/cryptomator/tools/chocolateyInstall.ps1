@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName            = 'cryptomator'
   fileType               = 'exe'
-  url64bit               = 'https://dl.bintray.com/cryptomator/cryptomator/1.5.11/Cryptomator-1.5.11-x64.exe'
-  checksum64             = '41003DEE3843D1BF68E4506DAD77440252F4B83C43E7042A4BF12BAA2E2B3806'
+  url64bit               = 'https://dl.bintray.com/cryptomator/cryptomator/1.5.12/Cryptomator-1.5.12-x64.exe'
+  checksum64             = '02E6488E6C6CA714367B0A45ADF8D8A4A40539CCC66EFFC52014E0F9B98EE615'
   checksumType64         = 'sha256'
   silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes         = @(0)
