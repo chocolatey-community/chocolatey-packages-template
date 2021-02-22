@@ -15,8 +15,8 @@ function global:au_SearchReplace
 function global:au_GetLatest
 {
     $releases = 'https://www.sws-extension.org/'
-    $regex64 = 'sws-v(?<Version>[\d\.]+)-x64-install.exe$'
-    $regex32 = 'sws-v(?<Version>[\d\.]+)-install.exe$'
+    $regex64 = 'sws-(?<Version>[\d\.]+)-Windows-x64.exe$'
+    $regex32 = 'sws-(?<Version>[\d\.]+)-Windows-x86.exe$'
 
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing	
     $url64 = $download_page.links | ? href -match $regex64 | Select-Object -First 1
