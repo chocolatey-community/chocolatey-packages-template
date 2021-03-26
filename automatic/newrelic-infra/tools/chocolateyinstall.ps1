@@ -30,6 +30,8 @@ if(Get-Variable -Name GenerateConfig -ErrorAction SilentlyContinue) {
   }
 }
 
+# Enable TLS 1.2
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
 
 $packageName     = 'newrelic-infra'
 $softwareName    = 'newrelic-infra*'
