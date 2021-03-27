@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chow-tape-model</id>
+    <version>2.7.0</version>
+    <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/chow-tape-model</packageSourceUrl>
+    <owners>HarryH</owners>    
+    <title>CHOW Tape Model</title>
+    <authors>Jatin Chowdhury</authors>
+    <projectUrl>https://github.com/jatinchowdhury18/AnalogTapeModel</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/da31de18e18e5f67faaecadb393abbb41e63b892/icons/chow-tape-model.png</iconUrl>
+    <copyright>2020 Jatin Chowdhury</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/jatinchowdhury18/AnalogTapeModel/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/jatinchowdhury18/AnalogTapeModel</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/jatinchowdhury18/AnalogTapeModel/issues</bugTrackerUrl>
+    <tags>vst3 vst tape analog saturation</tags>
+    <summary>CHOW Tape Model is a physical model of an analog tape machine, implemented as an audio plugin.</summary>
+    <description><![CDATA[CHOW Tape Model is a physical model of an analog tape machine, implemented as an audio plugin. The physical model is described in a paper presented at the 2019 DAFx conference. This work began part of a class project for Music 420 at Stanford University (CCRMA).
+    
+    CHOW Tape is an analog tape machine physical model, originally based on the Sony TC-260. The current version can be used to emulate a wide variety of reel-to-reel tape machines. Feel free to build and use for your own enjoyment.
+
+## Package parameters
+- `/Vst3Dir` - VST3 directory, by default Chocolatey tools directory. Will create subfolder ChowTapeModel.
+Example: `choco install chow-tape-model --params "/Vst3Dir:C:\your\install\path"`
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.]]></description>    
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
