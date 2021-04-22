@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>terracreds</id>
+    <version>1.0.3</version>
+    <packageSourceUrl>https://github.com/ripclawffb/chocolatey-terracreds</packageSourceUrl>
+    <owners>Asif Shaikh</owners>
+    <title>Terracreds (Install)</title>
+    <authors>Tony Owens</authors>
+    <projectUrl>https://github.com/tonedefdev/terracreds/releases</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/tonedefdev/terracreds@main/img/terracreds.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <projectSourceUrl>https://github.com/tonedefdev/terracreds</projectSourceUrl>
+    <docsUrl>https://github.com/tonedefdev/terracreds/blob/main/README.md</docsUrl>
+    <tags>terracreds admin terraform credentials manager api key remote backend</tags>
+    <summary>A credential helper for Terraform Cloud/Enterprise that allows secure storage of your API token.</summary>
+    <description>A credential helper for Terraform Cloud/Enterprise that allows secure storage of your API token within the operating system's vault instead of in a plain text configuration file. Storing secrets in plain text can pose major security threats, and Terraform doesn't come pre-packaged with a credential helper, so we decided to create one and to share it with the greater Terraform/DevOps community to help enable stronger security practices.</description>
+    <releaseNotes>https://github.com/tonedefdev/terracreds/releases</releaseNotes>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
