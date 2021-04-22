@@ -6,7 +6,7 @@ function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(^[$]url\s*=\s*)('.*')"          = "`$1'$($Latest.URL)'"
-            "(checksum\s*=\s*)('.*')"             = "`$1'$($Latest.Checksum)'"
+            "(checksum\s*=\s*)('.*')"             = "`$1'$($Latest.Checksum64)'"
         }
 
         "$($Latest.PackageName).nuspec" = @{
@@ -34,7 +34,7 @@ function global:au_GetLatest {
 }
 
 try {
-    update -ChecksumFor all
+    update -ChecksumFor 64
 } catch {
     $ignore = 'Unable to connect to the remote server'
     if ($_ -match $ignore) { Write-Host $ignore; 'ignore' }  else { throw $_ }
