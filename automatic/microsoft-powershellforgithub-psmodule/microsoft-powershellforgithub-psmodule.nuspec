@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>microsoft-powershellforgithub-psmodule</id>
-    <version>0.14.0</version>
+    <version>0.16.0</version>
     <title>Microsoft PowerShellForGithub (Install)</title>
     <authors>Microsoft</authors>
     <owners>Asif Shaikh</owners>
