@@ -2,6 +2,10 @@ import-module au
 
 $releases = 'https://www.powershellgallery.com/packages/VSTeam'
 
+function global:au_SearchReplace {
+    @{}
+ }
+
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
