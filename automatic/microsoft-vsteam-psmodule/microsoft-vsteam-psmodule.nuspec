@@ -26,7 +26,7 @@
     <copyright>Copyright (c) 2020</copyright>
     <tags>admin microsoft methods practices MethodsAndPractices vsteam vsts powershell module azure devops server</tags>
     <packageSourceUrl>https://github.com/ripclawffb/chocolatey-microsoft-vsteam-psmodule</packageSourceUrl>
-    <docsUrl>https://github.com/MethodsAndPractices/vsteam/blob/master/docs/readme.md</docsUrl>
+    <docsUrl>https://github.com/MethodsAndPractices/vsteam/tree/master/.docs</docsUrl>
     <dependencies>
       <dependency id="dotnet4.5" />
       <dependency id="powershell" version="5.0" />
