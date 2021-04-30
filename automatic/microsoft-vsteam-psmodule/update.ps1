@@ -12,7 +12,7 @@ function global:au_GetLatest {
     $match = $download_page.Content | Select-String -Pattern '(href=.*VSTeam.*">)'
     $url = $match.Matches[0].value
 
-    $version  = $url -split '[%2F]|" target="' | Select-Object -Last 1 -Skip 1
+    $version  = $url -split '%2F|" target="' | Select-Object -Last 1 -Skip 1
 
     @{
         Version = $version
