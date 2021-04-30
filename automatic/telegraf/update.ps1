@@ -22,9 +22,9 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $match = $download_page.Content | Select-String -Pattern '(https:.*telegraf.*\.zip)'
+    $match = $download_page.Content | Select-String -Pattern '(https:.*telegraf.*\.zip) '
     $url = $match.Matches[0].value
-    
+
     $version  = $url -split '[_-]|.zip' | Select-Object -Last 1 -Skip 3
 
     @{
