@@ -15,7 +15,7 @@ function global:au_SearchReplace
 function global:au_GetLatest
 {
     $baseUrl = 'https://github.com'
-    $releases = $baseUrl + 'jatinchowdhury18/AnalogTapeModel/releases/latest/'
+    $releases = $baseUrl + '/jatinchowdhury18/AnalogTapeModel/releases/latest/'
     $regex32 = 'AnalogTapeModel/releases/download/v(?<Version>[\d\.]+)/ChowTape-Win32-2.7.0.zip$'
     $regex64 = 'AnalogTapeModel/releases/download/v(?<Version>[\d\.]+)/ChowTape-Win64-2.7.0.zip$'
 
