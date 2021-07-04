@@ -2,7 +2,7 @@
 
 $packageName= 'Project64'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.pj64-emu.com/file/setup-project64-v2-3-2-202-g57a221e/'
+$url        = 'https://www.pj64-emu.com/file/setup-project64-3-0-0-5632-f83bee9/'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -12,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'Project64*'
 
-  checksum      = '14139367A84B4EC6F7EAA89A82D96DBEC4B264BCC83D822CC886AD5210D151C8'
+  checksum      = '591AE9FE2C073D452F8EB08CBE5A9705224F131EADEB553E270A50A11592FD11'
   checksumType  = 'sha256'
 
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
