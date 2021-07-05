@@ -21,7 +21,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: Sam13/chocolatey-packages
   github_api_key:
-    secure: 7gfN+L0MM31RzW/53LBbiW/fCQjEVhFcI3ctg7fWrnsMJx23pBS9MYsrQmbyAB+c #https://ci.appveyor.com/tools/encrypt
+    secure: JwH0RwoeKlJ0FPlW1T97SzJz1/X91EKzZv3r6puBHwBWPyZJ0PsoFeVizEBeDQvU #https://ci.appveyor.com/tools/encrypt
 
 
   # Mail credentials - for error notifications
