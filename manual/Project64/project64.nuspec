@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>project64</id>
-    <version>3.0.1</version>
+    <version>3.0.1.211012</version>
     <packageSourceUrl>https://github.com/scowalt/chocolatey-packages</packageSourceUrl>
     <owners>scowalt</owners>
 
@@ -11,7 +11,7 @@
     <authors>Project64 contributors</authors>
     <projectUrl>http://www.pj64-emu.com/</projectUrl>
     <iconUrl>https://upload.wikimedia.org/wikipedia/commons/f/f2/Project_64_logo.png</iconUrl>
-    <licenseUrl>https://github.com/project64/project64/blob/master/licence.md</licenseUrl>
+    <licenseUrl>https://github.com/project64/project64/blob/develop/license.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/project64/project64</projectSourceUrl>
     <docsUrl>https://github.com/project64/project64/wiki</docsUrl>
