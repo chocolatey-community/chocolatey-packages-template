@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dependencies</id>
-    <version>1.10</version>
+    <version>1.11</version>
     <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/dependencies</packageSourceUrl>
     <owners>HarryH</owners>    
     <title>Dependencies</title>

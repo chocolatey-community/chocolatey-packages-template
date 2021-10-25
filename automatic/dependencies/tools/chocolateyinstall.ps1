@@ -13,11 +13,11 @@ Write-Host "$env:ChocolateyPackageName is going to be installed in '$installDir'
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName  
   unzipLocation  = $installDir
-  url            = 'https://github.com/lucasg/Dependencies/releases/download/v1.10/Dependencies_x86_Release.zip'
-  checksum       = 'C2F8F8ADC6BF4D54EC13936557C898B6BF561C53C8DCB945D0A03A68B4E4E413'
+  url            = 'https://github.com/lucasg/Dependencies/releases/download/v1.11/Dependencies_x86_Release.zip'
+  checksum       = 'd3e75e1e2c549aeafa0cfa9d147d494eb85a08da84ae4e6e2bb9b089c9ebf620'
   checksumType   = 'sha256'
-  url64          = 'https://github.com/lucasg/Dependencies/releases/download/v1.10/Dependencies_x64_Release.zip'
-  checksum64     = '44DF956DBE267E0A705224C3B85D515FEE2ADC87509861E24FB6C6B0EA1B86D6'
+  url64          = 'https://github.com/lucasg/Dependencies/releases/download/v1.11/Dependencies_x64_Release.zip'
+  checksum64     = '820215f3107c135635ded01de2fb0785797cf1fe5fae1cedb6f0afc42f91881b'
   checksumType64 = 'sha256'  
 }
 
