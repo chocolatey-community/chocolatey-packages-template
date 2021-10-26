@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>multi-gitter</id>
+    <version>0.36.0</version>
+    <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/multi-gitter</packageSourceUrl>
+    <owners>HarryH</owners>    
+    <title>Multi Gitter</title>
+    <authors>Johan Lindell</authors>
+    <projectUrl>https://github.com/lindell/multi-gitter</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/8190872b1dcf1f57490a2334aa3748c6d1544e3b/icons/multi-gitter.png</iconUrl>
+    <copyright>Copyright 2020 Johan Lindell</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/lindell/multi-gitter/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/lindell/multi-gitter</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/lindell/multi-gitter/issues</bugTrackerUrl>
+    <tags>github git gitlab bulk script bulk-update multiple repos</tags>
+    <summary>A CLI to update multiple repositories in bulk </summary>
+    <description><![CDATA[A CLI to update multiple repositories in bulk 
+
+## Package parameters
+- `/InstallDir` - Installation directory, by default Chocolatey tools directory.
+Example: `choco install multi-gitter --params "/InstallDir:C:\your\install\path"`
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.]]></description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
