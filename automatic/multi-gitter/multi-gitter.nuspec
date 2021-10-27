@@ -8,7 +8,7 @@
     <title>Multi Gitter</title>
     <authors>Johan Lindell</authors>
     <projectUrl>https://github.com/lindell/multi-gitter</projectUrl>
-    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/8190872b1dcf1f57490a2334aa3748c6d1544e3b/icons/multi-gitter.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/Sam13/chocolatey-packages/4fbac46275c8af7d5cecdf61b897e0f6149c3be1/icons/multi-gitter.png</iconUrl>
     <copyright>Copyright 2020 Johan Lindell</copyright>
     <licenseUrl>https://raw.githubusercontent.com/lindell/multi-gitter/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
