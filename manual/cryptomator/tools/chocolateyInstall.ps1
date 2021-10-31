@@ -2,11 +2,11 @@
 
 $packageArgs = @{
   packageName            = 'cryptomator'
-  fileType               = 'exe'
-  url64bit               = 'https://github.com/cryptomator/cryptomator/releases/download/1.5.16/Cryptomator-1.5.16-x64.exe'
-  checksum64             = 'BE9EFE5D615E9009B3FE7B4B20724CF7A08401D9D8CC9008187F58B03B7A3B47'
+  fileType               = 'msi'
+  url64bit               = 'https://github.com/cryptomator/cryptomator/releases/download/1.6.1/Cryptomator-1.6.1-x64.msi'
+  checksum64             = '444F1664C11D39B2E6FA682ECFB598C2760E714761752F700F67BE1FA427D9E6'
   checksumType64         = 'sha256'
-  silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs             = '/qn /norestart'
   validExitCodes         = @(0)
   registryUninstallerKey = 'Cryptomator'
 }

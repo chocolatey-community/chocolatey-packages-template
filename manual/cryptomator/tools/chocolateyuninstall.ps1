@@ -2,11 +2,10 @@
 
 $packageName = 'Cryptomator'
 $softwareName = 'Cryptomator*'
-$installerType = 'EXE'
-$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+$installerType = 'msi'
+$silentArgs = '/qn /norestart'
 $validExitCodes = @(0)
 
-$uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
 if ($key.Count -eq 1) {
