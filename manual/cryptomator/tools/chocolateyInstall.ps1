@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName            = 'cryptomator'
   fileType               = 'msi'
-  url64bit               = 'https://github.com/cryptomator/cryptomator/releases/download/1.6.3/Cryptomator-1.6.3-x64.msi'
-  checksum64             = 'DB43705ADFF25796464239854AF70A066668D21535874E1B494FB98EA12DFEFB'
+  url64bit               = 'https://github.com/cryptomator/cryptomator/releases/download/1.6.4/Cryptomator-1.6.4-x64.msi'
+  checksum64             = '9916865AF48FE94E2AAFF8A12B00412B9E10F86FF4327B5D16AADD7B6EEAFB63'
   checksumType64         = 'sha256'
   silentArgs             = '/qn /norestart'
   validExitCodes         = @(0)
