@@ -17,11 +17,11 @@ New-Item -ItemType Directory -Path $tempDir
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName  
   unzipLocation  = $tempDir
-  url            = 'https://github.com/lindell/multi-gitter/releases/download/v0.37.0/multi-gitter_0.37.0_Windows_i386.tar.gz'
-  checksum       = 'ddffe107df344e9d871eaeeda51a77704a667ddceb8939811820b8de56a9f28e'
+  url            = 'https://github.com/lindell/multi-gitter/releases/download/v0.38.0/multi-gitter_0.38.0_Windows_i386.tar.gz'
+  checksum       = '916a56454574269e8ab4ca0725d6e06363b11cc1c464fc750b7caae4e6dba554'
   checksumType   = 'sha256'
-  url64          = 'https://github.com/lindell/multi-gitter/releases/download/v0.37.0/multi-gitter_0.37.0_Windows_x86_64.tar.gz'
-  checksum64     = '2cdfb44fea0fa5866002c0c03bea60c3a687de8d3d5dcbf3475467c5c33d5cf3'
+  url64          = 'https://github.com/lindell/multi-gitter/releases/download/v0.38.0/multi-gitter_0.38.0_Windows_x86_64.tar.gz'
+  checksum64     = '1a640a72a3d131e838bd002b7adb57b50374b48b4d56e872c721aeeeafa747b0'
   checksumType64 = 'sha256'  
 }
 
