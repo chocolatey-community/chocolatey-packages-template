@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>trilium-notes</id>
-    <version>0.48.8</version>
+    <version>0.48.9</version>
     <packageSourceUrl>https://github.com/SilvanKohler/chocolatey-packages/tree/master/automatic/trilium-notes</packageSourceUrl>
     <owners>SilvanKohler</owners>
     <!-- ============================== -->
