@@ -1,4 +1,4 @@
-﻿$url = 'https://dl.google.com/android/repository/android-ndk-r22b-windows-x86_64.zip'
+﻿$url = 'https://dl.google.com/android/repository/android-ndk-r23b-windows.zip'
 
 $zipFileName = Split-Path $url -Leaf
 

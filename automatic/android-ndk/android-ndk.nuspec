@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>android-ndk</id>
-    <version>22.2</version>
+    <version>23.2</version>
     <packageSourceUrl>https://github.com/ripclawffb/chocolatey-android-ndk</packageSourceUrl>
     <owners>Asif Shaikh</owners>
     <title>Android NDK (Install)</title>
