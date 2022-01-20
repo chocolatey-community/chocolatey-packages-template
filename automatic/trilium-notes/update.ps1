@@ -6,8 +6,8 @@ $releases = "$domain/zadam/trilium/releases"
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"   	= "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"   	= "`$1'$($Latest.Checksum)'"
     }
   }
 }
@@ -19,7 +19,7 @@ function global:au_GetLatest {
   $url = ($domain, $sublink) -join ''
   $token = $url -split 'trilium-windows-x64-' | select -First 1 -Skip 1 #3
   $version = $token -split '.zip' | select -Last 1 -Skip 1 #3
-  return @{ Version = $version; URL32 = $url }
+  return @{ Version = $version; URL = $url }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor 64

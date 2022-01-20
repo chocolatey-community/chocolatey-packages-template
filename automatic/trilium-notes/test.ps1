@@ -1,0 +1,1 @@
+choco install trilium-notes -dv -s .
