@@ -15,10 +15,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing #1
   $regex   = 'trilium-windows-x64-\d+.\d+.\d+.zip$'
-  $sublink = $download_page.links | ? href -match $regex | select -First 1 -Skip 0 -expand href #2
+  $sublink = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -Skip 0 -expand href #2
   $url = ($domain, $sublink) -join ''
-  $token = $url -split 'trilium-windows-x64-' | select -First 1 -Skip 1 #3
-  $version = $token -split '.zip' | select -Last 1 -Skip 1 #3
+  $token = $url -split 'trilium-windows-x64-' | Select-Object -First 1 -Skip 1 #3
+  $version = $token -split '.zip' | Select-Object -Last 1 -Skip 1 #3
   return @{ Version = $version; URL = $url }
 }
 
