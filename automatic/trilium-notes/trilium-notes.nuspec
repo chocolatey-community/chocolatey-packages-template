@@ -13,7 +13,7 @@
     <title>Trilium Notes</title>
     <authors>zadam</authors>
     <projectUrl>https://github.com/zadam/trilium.git</projectUrl>
-    <iconUrl>https://cdn.statically.io/gh/zadam/trilium/077d19b4/images/app-icons/png/256x256.png</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/SilvanKohler/chocolatey-packages/0a9a8b46/icons/trilium-notes.png</iconUrl>
     <copyright>2007 Free Software Foundation</copyright>
     <licenseUrl>https://github.com/zadam/trilium/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
