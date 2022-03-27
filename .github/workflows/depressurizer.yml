@@ -1,0 +1,56 @@
+name: Depressurizer
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 4 * * *'
+
+permissions:
+  # Required for add-and-commit
+  contents: write
+
+jobs:
+  depressurizer-version-check:
+    runs-on: ubuntu-latest
+    outputs:
+      newVersionNumber: ${{ steps.latest-release.outputs.result }}
+      oldVersionNumber: ${{ steps.current-version.outputs.version }}
+      hasNewerVersion: ${{ steps.has-newer-version.outputs.hasNewerVersion }}
+      exeSha: ${{ steps.generate-sha.outputs.exeSha }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get current Depressurizer version
+        id: current-version
+        run: |
+          echo ::set-output name=version::$(python ./scripts/get_nuspec_verison.py ./packages/depressurizer/depressurizer.nuspec)
+      - uses: actions/github-script@v6
+        id: latest-release
+        with:
+          script: |
+            const scripts = require('./scripts/release.js');
+            return await scripts.latestRelease({github, context}, 'Depressurizer', 'Depressurizer');
+          result-encoding: string
+      - name: Compare versions
+        id: has-newer-version
+        run: |
+          echo ::set-output name=hasNewerVersion::$(python ./scripts/has_newer_version.py "${{steps.current-version.outputs.version}}" "${{steps.latest-release.outputs.result}}")
+      - name: Get download url (failure means no .msi file in release)
+        id: download-url
+        if: ${{ steps.has-newer-version.outputs.hasNewerVersion == 'true' }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const scripts = require('./scripts/release.js');
+            return await scripts.latestReleaseUrl({github, context}, 'Depressurizer', 'Depressurizer', '.exe');
+          result-encoding: string
+      - name: Generate a sha256 checksum for the download
+        id: generate-sha
+        if: ${{ steps.has-newer-version.outputs.hasNewerVersion == 'true' }}
+        run: |
+          wget -O new.exe ${{ steps.download-url.outputs.result }}
+          echo "::set-output name=exeSha::$(sha256sum new.exe | awk '{ print $1}')"
+
+  depressurizer-update:
+    runs-on: windows-latest
+    steps:
+      - name: Hello world
+        run: echo "I'll finish this when there's a new Depressurizer version"

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>depressurizer</id>
+    <version>0.7.4.2</version>
+    <packageSourceUrl>https://github.com/scowalt/chocolatey-packages</packageSourceUrl>
+    <owners>scowalt</owners>
+
+    <title>Depressurizer</title>
+    <authors>Depressurizer</authors>
+    <projectUrl>https://github.com/Depressurizer/Depressurizer</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/Depressurizer/Depressurizer/master/src/Depressurizer/depressurizer_icon.ico</iconUrl>
+    <licenseUrl>https://github.com/Depressurizer/Depressurizer/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Depressurizer/Depressurizer</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/Depressurizer/Depressurizer/issues</bugTrackerUrl>
+    <tags>depressurizer admin steam</tags>
+    <summary>Depressurizer is a program aimed at making it a bit easier to manage large Steam game libraries. It supports manual entry of games from other platforms, so you can categorize, filter and launch all of your (Steam, Origin, uPlay, GOG, etc) games from one location.</summary>
+    <description>Depressurizer is a program aimed at making it a bit easier to manage large Steam game libraries. It can auto-categorize your games for you. Currently, it does so based on data from that games' Steam store pages. It can use genres, Steam flags (like "Single-Player" and "Steam Cloud"), Steam tags, Developer and Publisher info, How Long to Beat times, year, and/or Steam review user scores. Auto-categorizing can be done manually or automatically via shortcut.
+
+In addition to providing a way to quickly and easily modify games' assigned categories, it also lets you mark them as Favorites or as Hidden.
+
+It also saves your configuration information independently of Steam, providing an automatic backup in the event that Steam loses your configuration.</description>
+    <releaseNotes>https://github.com/Depressurizer/Depressurizer/releases/tag/v0.7.4.2</releaseNotes>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.8.0.20190930" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
