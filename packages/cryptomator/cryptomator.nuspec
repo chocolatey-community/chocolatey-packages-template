@@ -39,7 +39,7 @@
     <copyright>2016 The Cryptomator Contributors (cryptomator.org)</copyright>
     <tags>cryptomator admin</tags>
     <projectSourceUrl>https://github.com/cryptomator/cryptomator</projectSourceUrl>
-    <packageSourceUrl>https://github.com/scowalt/chocolatey-packages/tree/master/manual/cryptomator</packageSourceUrl>
+    <packageSourceUrl>https://github.com/scowalt/chocolatey-packages/tree/master/packages/cryptomator</packageSourceUrl>
     <docsUrl>https://github.com/cryptomator/cryptomator/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/cryptomator/cryptomator/issues</bugTrackerUrl>
     <dependencies>
@@ -51,4 +51,3 @@
     <file src="tools\**\*" target="tools" />
   </files>
 </package>
-
