@@ -69,4 +69,4 @@ jobs:
         uses: EndBug/add-and-commit@v8
         with:
           branch: master
-          message: Cryptomator ${{ needs.github-check.outputs.newVersionNumber }}
+          message: Cryptomator ${{ needs.cryptomator-version-check.outputs.newVersionNumber }}
