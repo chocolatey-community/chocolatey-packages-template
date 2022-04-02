@@ -17,11 +17,11 @@ $packageArgs = @{
   packageName           = $env:ChocolateyPackageName  
   fileFullPath          = [System.IO.Path]::Combine($installDir, "dummy_gets_replaced.dll");
   GetOriginalFileName   = $true
-  url                   = 'https://github.com/cfillion/reapack/releases/download/v1.2.3.1/reaper_reapack-x86.dll'
-  checksum              = '4dc467cbf2c7335c59312ccd6938270090c9f006ad58b305cd752381592d9280'
+  url                   = 'https://github.com/cfillion/reapack/releases/download/v1.2.4/reaper_reapack-x86.dll'
+  checksum              = '012402b2390a79f15836acf65a589ab3a88007f8733fd476fffb7158f8994538'
   checksumType          = 'sha256'
-  url64                 = 'https://github.com/cfillion/reapack/releases/download/v1.2.3.1/reaper_reapack-x64.dll'
-  checksum64            = '67b003b7635f13cb1c25afadaa967b6b0143baf67119424bffdd166b5bf26044'
+  url64                 = 'https://github.com/cfillion/reapack/releases/download/v1.2.4/reaper_reapack-x64.dll'
+  checksum64            = '125a1eac2ca569661336fb3e37ec50b531ba24c4ee9e8abe5d65d702f5b4a445'
   checksumType64        = 'sha256'  
 }
 
