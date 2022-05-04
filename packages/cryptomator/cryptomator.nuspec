@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cryptomator</id>
-    <version>1.6.9</version>
+    <version>1.6.10</version>
     <title>Cryptomator</title>
     <authors>The Cryptomator Contributors</authors>
     <owners>Stu Mace</owners>
@@ -51,5 +51,6 @@
     <file src="tools\**\*" target="tools" />
   </files>
 </package>
+
 
 
