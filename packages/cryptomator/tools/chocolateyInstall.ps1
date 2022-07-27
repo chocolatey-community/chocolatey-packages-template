@@ -1,12 +1,12 @@
 $ErrorActionPreference = 'Stop'
 
-$packageVersion = "1.6.10"
+$packageVersion = "1.6.11"
 
 $packageArgs = @{
   packageName            = 'cryptomator'
   fileType               = 'msi'
   url64bit               = "https://github.com/cryptomator/cryptomator/releases/download/$packageVersion/Cryptomator-$packageVersion-x64.msi"
-  checksum64 = '2a17d9d0ab0db8ede457e5dfa236a2e34a1ddcfd16dc3c99bb61f70e9f3c724c'
+  checksum64 = 'aec875ddc2b869c546e69dbab3212c81dae57e8fa7f9fa00af9f143f85da6dcc'
   checksumType64         = 'sha256'
   silentArgs             = '/qn /norestart'
   validExitCodes         = @(0)
@@ -19,6 +19,7 @@ if ($installLocation)  {
     Write-Host "$packageName installed to '$installLocation'"
 }
 else { Write-Warning "Can't find $PackageName install location" }
+
 
 
 
