@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>copyq</id>
+    <title>CopyQ</title>
+    <version>0.0.0</version>
+    <authors>Lukas Holocek</authors>
+    <owners>Miodrag Milic</owners>
+    <summary>Cross-platform clipboard manager with advanced features</summary>
+    <description>CopyQ monitors system clipboard and saves its content in customized tabs. Saved clipboard can be later copied and pasted directly into any application.
+
+Items can be:
+
+* edited with internal editor or with preferred text editor,
+* moved to other tabs,
+* drag'n'dropped to applications,
+* marked with tag or a note,
+* passed to or changed by custom commands, or simply removed.
+
+## Features
+
+* Support for Linux, Windows and OS X 10.9+
+* Store text, HTML, images or any other custom formats
+* Quickly browse and filter items in clipboard history
+* Sort, create, edit, remove, copy/paste, drag'n'drop items in tabs
+* Add notes or tags to items
+* System-wide shortcuts with customizable commands
+* Paste items with shortcut or from tray or main window
+* Fully customizable appearance
+* Advanced command-line interface and scripting
+* Ignore clipboard copied from some windows or containing some text
+* Support for simple Vim-like editor and shortcuts
+* Many more features
+
+## Package parameters
+
+* `NoDesktopIcon` - do not create desktop icon
+* `NoStartup`   - do not run CopyQ on OS startup
+
+![screenshot](https://cdn.rawgit.com/majkinetor/chocolatey/master/copyq/screenshot.png)
+</description>
+    <projectUrl>https://hluk.github.io/CopyQ</projectUrl>
+    <tags>admin clipboard copyq cross-platform foss</tags>
+    <copyright></copyright>
+    <licenseUrl>https://github.com/hluk/CopyQ/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/majkinetor/chocolatey/master/copyq/icon.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2" />
+    </dependencies>
+    <releaseNotes>https://github.com/hluk/CopyQ/releases/tag/v3.0.0</releaseNotes>
+    <docsUrl>https://github.com/hluk/CopyQ/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/hluk/CopyQ/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/hluk/CopyQ</projectSourceUrl>
+    <packageSourceUrl>https://github.com/majkinetor/chocolatey/tree/master/copyq</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
