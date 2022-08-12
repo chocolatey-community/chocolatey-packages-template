@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>less</id>
+    <version>4.87</version>
+    <title>Less for Windows</title>
+    <authors>Mark Nudelman</authors>
+    <owners>Miodrag Milić</owners>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <projectUrl>http://www.greenwoodsoftware.com/less/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Less is a CLI pager, a program that displays text files. Other pagers commonly in use are `more` and `pg`. Less is similar to `more`, but allows backward movement in the file as well as forward movement. Also, less does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like vi.
+
+**NOTE**: If you are using [PSCX](https://chocolatey.org/packages/pscx), you must override its internally distributed less version using the following in your `$PROFILE`:
+
+    ($Pscx:Preferences).PageHelpUsingLess = $false
+</description>
+    <summary>Less is a free, open-source file pager</summary>
+    <tags>pager viewer</tags>
+    <releaseNotes>See http://www.greenwoodsoftware.com/less/news.481.html</releaseNotes>
+    <mailingListUrl>http://www.greenwoodsoftware.com/less/less-announce.html</mailingListUrl>
+    <docsUrl>http://man7.org/linux/man-pages/man1/less.1.html</docsUrl>
+    <projectSourceUrl>http://www.greenwoodsoftware.com/less/download.html#source</projectSourceUrl>
+    <packageSourceUrl>https://github.com/majkinetor/chocolatey/tree/master/less</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
