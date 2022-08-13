@@ -1,6 +1,6 @@
 # AU Packages Template: https://github.com/majkinetor/au-packages-template
 
-param([string[]] $Name, [string] $ForcedPackages, [string] $Root = $PSScriptRoot)
+param([string[]] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot/automatic")
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
