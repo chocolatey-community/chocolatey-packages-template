@@ -1,6 +1,6 @@
 #Name can be 'random N' to randomly force the Nth group of packages.
 
-param( [string[]] $Name, [string] $Root = "$PSScriptRoot" )
+param( [string[]] $Name, [string] $Root = "$PSScriptRoot/automatic" )
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 $global:au_root = Resolve-Path $Root
@@ -58,12 +58,12 @@ $options = [ordered]@{
         }
     }
 
-    Gist = @{
-        Id     = $Env:gist_id_test                          #Your gist id; leave empty for new private or anonymous gist
-        ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
-        Path   = "$PSScriptRoot\Update-Force-Test-${n}.md"  #List of files to add to the gist
-        Description = "Update Force Test Report #powershell #chocolatey"
-    }
+    #Gist = @{
+    #    Id     = $Env:gist_id_test                          #Your gist id; leave empty for new private or anonymous gist
+    #   ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
+    #    Path   = "$PSScriptRoot\Update-Force-Test-${n}.md"  #List of files to add to the gist
+    #    Description = "Update Force Test Report #powershell #chocolatey"
+    #}
 }
 
 
