@@ -27,3 +27,4 @@ update_vars.ps1
 update_info.xml
 Update-AUPackages.md
 .vscode
+node_modules
