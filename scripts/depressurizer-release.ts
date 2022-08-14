@@ -1,3 +1,4 @@
+import { assert } from "ts-essentials";
 import path from "path";
 import {
   createNupkgAndUpload,
@@ -9,10 +10,10 @@ import {
 } from "./shared/release";
 import fs from "fs";
 
-const owner = "cryptomator";
-const repo = "cryptomator";
-const packageFolder = path.join(__dirname, "..", "packages", "cryptomator");
-const nuspecPath = path.join(packageFolder, "cryptomator.nuspec");
+const owner = "Depressurizer";
+const repo = "Depressurizer";
+const packageFolder = path.join(__dirname, "..", "packages", "depressurizer");
+const nuspecPath = path.join(packageFolder, "depressurizer.nuspec");
 const installPwshPath = path.join(
   packageFolder,
   "tools",
@@ -23,19 +24,13 @@ async function main(): Promise<void> {
   const options = parseOptions();
   const current = getCurrentVersion(nuspecPath);
   const latestRelease = await getGithubReleaseInfo(owner, repo);
-  const latestVersion = latestRelease.data.tag_name;
+  const latestVersion = latestRelease.data.tag_name.replace("v", "");
   console.log("Latest version:", latestVersion);
 
   if (current !== latestVersion) {
     const downloadUrl = getDownloadUrl(latestRelease);
-    if (downloadUrl === null) {
-      console.log(`No .msi release for ${latestVersion}`);
-      return;
-    }
-
     const sha256 = await getSha256(downloadUrl);
     console.log("SHA256:", sha256);
-
     updatePackage(downloadUrl, sha256, latestVersion);
     await createNupkgAndUpload(packageFolder, options.upload);
   } else {
@@ -49,14 +44,8 @@ function updatePackage(
   version: string
 ): void {
   let installPwsh = fs.readFileSync(installPwshPath, "utf8");
-  installPwsh = installPwsh.replace(
-    /\$url64bit \= .*/,
-    `$url64bit = "${downloadUrl}"`
-  );
-  installPwsh = installPwsh.replace(
-    /\$checksum64 \= .*/,
-    `$checksum64 = '${sha}'`
-  );
+  installPwsh = installPwsh.replace(/\$url \= .*/, `$url = "${downloadUrl}"`);
+  installPwsh = installPwsh.replace(/\$checksum \= .*/, `$checksum = '${sha}'`);
   fs.writeFileSync(installPwshPath, installPwsh);
   console.log("Updated chocolateyinstall.ps1");
 
@@ -69,13 +58,11 @@ function updatePackage(
   console.log("Updated nuspec");
 }
 
-function getDownloadUrl(release: GithubReleaseInfo): string | null {
+function getDownloadUrl(release: GithubReleaseInfo): string {
   const asset = release.data.assets.find((asset) =>
-    asset.name.endsWith("-x64.msi")
+    asset.name.endsWith(".exe")
   );
-  if (!asset) {
-    return null;
-  }
+  assert(asset);
   return asset.browser_download_url;
 }
 

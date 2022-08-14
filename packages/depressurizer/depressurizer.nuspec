@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>depressurizer</id>
-    <version>0.7.4.2</version>
+    <version>5.1.0</version>
     <packageSourceUrl>https://github.com/scowalt/chocolatey-packages</packageSourceUrl>
     <owners>scowalt</owners>
 

@@ -17,7 +17,7 @@ export function parseOptions(): {
   return options as any;
 }
 
-async function createNupkgAndUpload(
+export async function createNupkgAndUpload(
   packageFolder: string,
   shouldUpload: boolean
 ) {
