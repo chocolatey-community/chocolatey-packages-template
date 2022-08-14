@@ -5,7 +5,6 @@ import { Octokit } from "@octokit/rest";
 import { assert } from "ts-essentials";
 import crypto from "crypto";
 import fetch from "node-fetch";
-import _ from "lodash";
 import { program } from "commander";
 import { execSync } from "child_process";
 

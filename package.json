@@ -11,7 +11,6 @@
     "@octokit/rest": "^19.0.3",
     "commander": "^9.4.0",
     "fast-xml-parser": "^4.0.9",
-    "lodash": "^4.17.21",
     "node-fetch": "^2.6.7",
     "ts-essentials": "^9.2.0",
     "ts-node": "^10.9.1",

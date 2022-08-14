@@ -1,4 +1,3 @@
-import { Octokit } from "@octokit/rest";
 import path from "path";
 import {
   getCurrentVersion,
@@ -7,6 +6,7 @@ import {
   GithubReleaseInfo,
   parseOptions,
 } from "./shared/release";
+import fs from "fs";
 
 const owner = "cryptomator";
 const repo = "cryptomator";
@@ -34,9 +34,37 @@ async function main(): Promise<void> {
 
     const sha256 = await getSha256(downloadUrl);
     console.log("SHA256:", sha256);
+
+    updatePackage(downloadUrl, sha256, latestVersion);
   } else {
     console.log("No update available");
   }
+}
+
+function updatePackage(
+  downloadUrl: string,
+  sha: string,
+  version: string
+): void {
+  let installPwsh = fs.readFileSync(installPwshPath, "utf8");
+  installPwsh = installPwsh.replace(
+    /\$url64bit \= .*/,
+    `$url64bit = "${downloadUrl}"`
+  );
+  installPwsh = installPwsh.replace(
+    /\$checksum64 \= .*/,
+    `$checksum64 = '${sha}'`
+  );
+  fs.writeFileSync(installPwshPath, installPwsh);
+  console.log("Updated chocolateyinstall.ps1");
+
+  let nuspec = fs.readFileSync(nuspecPath, "utf8");
+  nuspec = nuspec.replace(
+    /<version>.*<\/version>/,
+    `<version>${version}</version>`
+  );
+  fs.writeFileSync(nuspecPath, nuspec);
+  console.log("Updated nuspec");
 }
 
 function getDownloadUrl(release: GithubReleaseInfo): string | null {
