@@ -58,12 +58,12 @@ $options = [ordered]@{
         }
     }
 
-    #Gist = @{
-    #    Id     = $Env:gist_id_test                          #Your gist id; leave empty for new private or anonymous gist
-    #   ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
-    #    Path   = "$PSScriptRoot\Update-Force-Test-${n}.md"  #List of files to add to the gist
-    #    Description = "Update Force Test Report #powershell #chocolatey"
-    #}
+    Gist = @{
+        Id     = $Env:gist_id_test                          #Your gist id; leave empty for new private or anonymous gist
+        ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
+        Path   = "$PSScriptRoot\Update-Force-Test-${n}.md"  #List of files to add to the gist
+        Description = "Update Force Test Report #powershell #chocolatey"
+    }
 }
 
 
