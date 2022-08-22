@@ -10,7 +10,7 @@ $Options = [ordered]@{
     Timeout       = 100                                     #Connection timeout in seconds
     UpdateTimeout = 1200                                    #Update timeout in seconds
     Threads       = 10                                      #Number of background jobs to use
-    Push          = $Env:au_Push -eq 'false'                #Push to chocolatey
+    Push          = $Env:au_Push -eq 'true'                #Push to chocolatey
     PushAll       = $true                                   #Allow to push multiple packages at once
     PluginPath    = ''                                      #Path to user plugins
     IgnoreOn      = @(                                      #Error message parts to set the package ignore status
@@ -107,7 +107,7 @@ $Options = [ordered]@{
 
 if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
 $global:au_Root         = $Root          #Path to the AU packages
-$global:au_GalleryUrl   = 'https://pkgs.dev.azure.com/automateazure/_packaging/wvd-choco-test-feed/nuget/v2'             #URL to package gallery, leave empty for Chocolatey Gallery
+$global:au_GalleryUrl   = 'https://pkgs.dev.azure.com/automateazure/c2fe25e7-4af6-4427-b4ee-22ed05918ec1/_packaging/wvd-choco-feed/nuget/v3/index'             #URL to package gallery, leave empty for Chocolatey Gallery
 $global:info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
