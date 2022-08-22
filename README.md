@@ -1,5 +1,4 @@
-<script src="https://gist.github.com/automateazure/a10db4d96e25cd048cd1ed1ec2a086f4.js"></script>
-
+https://gist.github.com/automateazure/a10db4d96e25cd048cd1ed1ec2a086f4
 
 This repository contains [chocolatey automatic packages](https://chocolatey.org/docs/automatic-packages).  
 
