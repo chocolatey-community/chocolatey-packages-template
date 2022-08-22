@@ -3,13 +3,12 @@ pool:
 steps:
 - powershell: |
    # run update_all.ps1 in c:\github\chocolatey-packages
-
-  Set-ExecutionPolicy Bypass -Scope Process -Force
    
    Set-Location -Path "C:\github\chocolatey-packages"
    
    .\update_all.ps1
    
+  errorActionPreference: continue
   displayName: 'Check for updates'
   continueOnError: true
 
