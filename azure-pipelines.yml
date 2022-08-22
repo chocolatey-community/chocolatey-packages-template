@@ -10,7 +10,6 @@ steps:
    
    .\update_all.ps1
    
-  errorActionPreference continue
   displayName: 'Check for updates'
   continueOnError: true
 
