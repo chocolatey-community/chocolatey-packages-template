@@ -1,0 +1,35 @@
+pool:
+  name: Chocolatey
+steps:
+- powershell: |
+   # run update_all.ps1 in c:\github\chocolatey-packages
+
+   Set-ExecutionPolicy Bypass -Scope Process -Force
+   
+   Set-Location -Path "C:\github\chocolatey-packages"
+   
+   .\update_all.ps1
+   
+  errorActionPreference: continue
+  displayName: 'Check for updates'
+  continueOnError: true
+
+- powershell: |
+   # Copy *nupkg packages to c:\chocolatey\packages
+   
+   Set-Location -Path "C:\github\chocolatey-packages\automatic"
+   
+   Get-ChildItem *.nupkg -Recurse
+   
+   Get-ChildItem -Path ".\*.nupkg" -Recurse | Move-Item -Destination "C:\chocolatey\packages"
+   
+  displayName: 'Move Items to C:\chocolatey\packages'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet Push to Chocolatey Feed'
+  inputs:
+    command: push
+    packagesToPush: 'C:\chocolatey\packages\*nupkg'
+    publishVstsFeed: 'c2fe25e7-4af6-4427-b4ee-22ed05918ec1/b531a309-7f90-48e9-8831-4a0aeea84bcd'
+    allowPackageConflicts: true
+  continueOnError: true
