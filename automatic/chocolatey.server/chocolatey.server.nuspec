@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>chocolatey.server</id>
+    <version>0.0.0</version>
+    <owners>Rob Reynolds</owners>
+    <!--<packageSourceUrl>https://github.com/chocolatey-community/simple-server/tree/master/nuget</packageSourceUrl>-->
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Chocolatey Server (Simple)</title>
+    <authors>Rob Reynolds</authors>
+    <projectUrl>https://github.com/chocolatey-community/simple-server/</projectUrl>
+    <iconUrl>https://github.com/chocolatey/choco/raw/master/docs/logo/chocolateyicon.gif</iconUrl>
+    <copyright>2017 - Present Chocolatey Software, Inc. 2014 - 2017 RealDimensions Software, LLC</copyright>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<projectSourceUrl>https://github.com/chocolatey-community/simple-server/</projectSourceUrl>-->
+    <!--<docsUrl>https://docs.chocolatey.org/en-us/guides/organizations/set-up-chocolatey-server</docsUrl>-->
+    <!--<bugTrackerUrl>https://github.com/chocolatey-community/simple-server/issues</bugTrackerUrl>-->
+    <tags>nuget odata iis repository chocolatey simple-server simple.server</tags>
+    <summary>Chocolatey Server is a simple OData feed built on top of NuGet.Server.</summary>
+    <description>Chocolatey Server is a simple OData feed built on top of NuGet.Server.
+
+Chocolatey Server builds on NuGet.Server with a few minor adjustments:
+
+ * This is a packaged site, ready to deploy.
+ * The apikey is already set.
+ * There is more helpful information on the site when accessing locally:
+   * There is a link to the Elmah logs
+   * The api key is given on the page.
+ * The location of packages defaults to a more secure location.
+
+### Links
+
+* Setup - https://docs.chocolatey.org/en-us/guides/organizations/set-up-chocolatey-server
+* Source Code - https://github.com/chocolatey-community/simple-server/
+* Issues/Requests - https://github.com/chocolatey-community/simple-server/issues
+
+### Notes
+
+This package will NOT give you a local copy of what is available on https://community.chocolatey.org.
+
+Chocolatey.Server is not recommended for most organizational use cases. There are more robust options out there. However
+if you have a very simple use case or are conducting a POC, Chocolatey.Server may be good enough for your needs. If you
+don't find it robust enough, our recommendation is to look to something more robust like Artifactory, Nexus, or ProGet
+(two of which are also free to use).
+    </description>
+    <releaseNotes>
+Full Release notes at https://github.com/chocolatey-community/simple-server/blob/master/CHANGELOG.md
+    </releaseNotes>
+    <!-- ============================== -->
+    <dependencies>
+      <dependency id="dotnet4.6" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

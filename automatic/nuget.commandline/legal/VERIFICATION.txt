@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the software authors
+website located at <https://www.nuget.org/downloads>
+and can be verified by doing the following:
+
+1. Download the following <https://dist.nuget.org/win-x86-commandline/v6.3.0/nuget.exe>
+2. Extract the downloaded nupkg file by using one of the following methods
+  - Use the 7z utility: '7z.exe'
+  - Using the powershell function 'Expand-Archive'
+3. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+4. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 38257F945B3662F5C81D646F2CD940365642E2C4941B34C0E5AE3F4281F9BD2D
+
+The file 'LICENSE.txt' has been obtained from <https://github.com/NuGet/NuGet.Client/blob/bf52f1045992f21eee205dc9a8356a4ce1072b91/LICENSE.txt>

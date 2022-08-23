@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>gotomeeting</id>
+    <version>10.19.19950</version>
+    <title>GoToMeeting by LogMeIn</title>
+    <authors>Citrix Systems</authors>
+    <owners>Mike Cole</owners>
+    <projectUrl>http://www.gotomeeting.com</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/mikecole/chocolatey-packages/3df290ec3a72798bded3ba8b739f4198405490b3/icons/gotomeeting.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>GoToMeeting is a conferencing and online meeting tool.</description>
+    <summary>GotoMeeting - Online Meetings Made Easy</summary>
+    <releaseNotes>https://community.logmein.com/t5/GoToMeeting-News/bg-p/GoToMeeting-Release-Notes/label-name/release%20notes</releaseNotes>
+    <copyright>Citrix Online, LLC</copyright>
+    <tags>gotomeeting conference meeting trial</tags>
+    <packageSourceUrl>https://github.com/mikecole/chocolatey-packages/</packageSourceUrl>
+    <bugTrackerUrl>https://community.logmein.com/t5/GoToMeeting/ct-p/GoToMeeting</bugTrackerUrl>
+    <docsUrl>https://support.logmeininc.com/gotomeeting</docsUrl>
+    <licenseUrl>https://community.logmein.com/t5/GoToMeeting/ct-p/GoToMeeting</licenseUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

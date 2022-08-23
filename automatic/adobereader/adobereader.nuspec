@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. --><package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>adobereader</id>
+    <version>2022.001.20117</version>
+    <packageSourceUrl>https://github.com/open-circle-ltd/chocolatey.adobe-acrobat-reader-dc</packageSourceUrl>
+    <owners>Open Circle AG, Simon Bärlocher</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Adobe Acrobat Reader DC</title>
+    <authors>Adobe</authors>
+    <projectUrl>https://www.adobe.com/products/reader.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/open-circle-ltd/chocolatey.adobe-acrobat-reader-dc@c664e708a2c812f1da6cf3ef26f03fe56341dcc7/icon/adobe-acrobat-reader-dc.png</iconUrl>
+    <copyright>Copyright © 1984-2018 Adobe Systems Incorporated and its licensors</copyright>
+    <licenseUrl>http://www.adobe.com/products/eulas/pdfs/Reader10_combined-20100625_1419.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://helpx.adobe.com/reader.html</docsUrl>
+    <tags>adobereader adobe acrobat reader DC pdf MUI multilanguage</tags>
+    <summary>View, print, sign, and annotate PDF files</summary>
+    <description>
+This package installs/upgrades the Multi-lingual ("MUI") release. In some cases, this package will by default be able to install over the top of a language-specific installation. Otherwise, this package will exit and require either a manual uninstall of the language specific installation or having the parameter '/OverwriteInstallation' set to do this automatically.
+
+## Note
+
+If the package fails on Windows 8.1 or earlier, this might be due to the installation of kb2919355 (which is a dependency of this package) if your system is not up-to-date. This KB requires a reboot of the system before the adobereader package installs successfully.
+
+## Package installation defaults
+
+By default, **installation** of this package:
+
+- Will _NOT_ install a desktop icon.
+- Will _NOT_ install the Adobe Reader and Acrobat Manager ("ARM") service.
+- Will _NOT_ uninstall language-specific installations.
+- Will configure Reader to only **check for updates manually** with confirmation for install.
+
+However, **upgrades** to Adobe Reader via this package:
+
+- Will _NOT_ remove an existing desktop icon or add one when there isn't.
+- Will _NOT_ install the AdobeARM service.
+- Will _NOT_ remove the AdobeARM service (though it will disable it unless enabled by parameters).
+- Will _NOT_ re-enable updates (if disabled via package parameter)
+
+## Package Parameters
+
+- `/DesktopIcon` - The Desktop icon will be installed to the common desktop. (Install only.)
+- `/NoUpdates` - No updates via internal mechanisms (including manual checks). Only downloading from Adobe and running installers or updates (or updating this package) will advance the version of Reader. Once set, only uninstalling this package will remove this update block.
+- `/OverwriteInstallation` - Uninstall a language-specific installation before installing the Multi-lingual ("MUI") release. _Be aware that this will remove all data and features of an existing installation!_
+- `/EnableUpdateService` - Install the AdobeARM service. (Does not override `/NoUpdates`.)
+- `/UpdateMode:#` - Sets the update mode (below). (Does not override `/NoUpdates`.)
+
+### Update Modes
+
+- `0` - Manually check for and install updates. (Default and reset on every update)
+- `1` - Same as `0`.
+- `2` - Download updates for me, but let me choose when to install them. (Appears to be no different than `0`.)
+- `3` - Install updates automatically (via task scheduler or ARM service if enabled).
+- `4` - Notify me, but let me choose when to download and install updates.
+
+These parameters can be passed to the installer with the use of `-params`.
+For example :
+`choco install adobereader -params '"/DesktopIcon /UpdateMode:4"'`
+</description>
+    <releaseNotes>https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotes/index.html</releaseNotes>
+    <dependencies>
+      <dependency id="kb2919355"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools/chocolateyinstall.ps1" target="tools"/>
+    <file src="tools/chocolateyuninstall.ps1" target="tools"/>
+  </files>
+</package>

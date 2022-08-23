@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vlc</id>
+    <title>VLC media player (Install)</title>
+    <version>3.0.17.4</version>
+    <authors>VideoLAN Organization</authors>
+    <owners>chocolatey-community, Rob Reynolds</owners>
+    <summary>VLC Media Player</summary>
+    <licenseUrl>http://www.videolan.org/legal.html</licenseUrl>
+    <description><![CDATA[
+VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVD, Audio CD, VCD, and various streaming protocols.
+
+![Screenshot](https://github.com/chocolatey-community/chocolatey-coreteampackages/blob/master/automatic/vlc/screenshot.png?raw=true)
+
+## Features
+
+- Plays Files, Discs, Webcams, Devices and Streams.
+- Fast - Hardware Decoding.
+- Plays most codecs with no codec packs needed - MPEG-2, MPEG-4, H.264, MKV, WebM, WMV, MP3...
+- Complete feature-set over the video, subtitle synchronisation, video and audio filters.
+- Runs on all platforms - Windows, Linux, Mac OS X, Unix, iOS, Android ...
+- Completely Free - no spyware, no ads and no user tracking.
+
+## Notes
+
+- Related packages: [vlc-skins](https://chocolatey.org/packages/vlc-skins) [vlc-nightly](https://chocolatey.org/packages/vlc-nightly)
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+]]></description>
+    <projectUrl>http://www.videolan.org/vlc/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/vlc</packageSourceUrl>
+    <projectSourceUrl>http://www.videolan.org/vlc/download-sources.html</projectSourceUrl>
+    <bugTrackerUrl>https://code.videolan.org/videolan/vlc/-/issues/</bugTrackerUrl>
+    <docsUrl>https://wiki.videolan.org/Documentation:Documentation/</docsUrl>
+    <mailingListUrl>https://forum.videolan.org/</mailingListUrl>
+    <tags>vlc foss cross-platform multimedia audio video mp3 dvd avi media player admin</tags>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
+    <dependencies>
+      <dependency id="vlc.install" version="[3.0.17.4]" />
+    </dependencies>
+  </metadata>
+</package>
