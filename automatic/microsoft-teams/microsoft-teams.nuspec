@@ -2,16 +2,16 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>microsoft-teams.install</id>
+    <id>microsoft-teams</id>
     <version>1.5.00.21463</version>
     <owners>flcdrg</owners>
-    <title>Microsoft Teams Desktop App (Machine-Wide Install)</title>
+    <title>Microsoft Teams Desktop App</title>
     <authors>Microsoft Corporation</authors>
     <projectUrl>https://products.office.com/en-us/microsoft-teams/group-chat-software</projectUrl>
     <iconUrl>http://raw.githubusercontent.com/flcdrg/au-packages/master/microsoft-teams/icons/teams-logo.png</iconUrl>
     <copyright>2017 Microsoft Corporation</copyright>
     <licenseUrl>https://support.microsoft.com/en-us/office/microsoft-teams-subscription-supplemental-notice-60cc09bf-b02a-4a26-8e4a-ad697194bebf?ui=en-us&amp;rs=en-us&amp;ad=us</licenseUrl>
-    <packageSourceUrl>https://github.com/flcdrg/au-packages/tree/master/microsoft-teams.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/flcdrg/au-packages/tree/master/microsoft-teams</packageSourceUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://support.office.com/en-us/teams</docsUrl>
     <mailingListUrl>https://techcommunity.microsoft.com/t5/microsoft-teams/bd-p/MicrosoftTeams</mailingListUrl>
@@ -26,40 +26,20 @@ Here's why you should use it:
 - Collaboration happens in real time.
 - Everything your team cares about (all your files, docs, contact info, and more) is in once place.
 
-This package installs Microsoft Teams for all users using the MSI installer.
-
-The Teams MSI will place an installer in Program Files. Whenever a user signs into a new Windows User Profile, the installer will be launched and a copy of the Teams app will be installed in that user's AppData folder. If a user already has the Teams app installed in the AppData folder, the MSI installer will skip the process for that user.
-
-See https://docs.microsoft.com/en-us/MicrosoftTeams/msi-deployment for more information about how the MSI installer works (and is different to a regular Teams install).
-
 ### Package Specific
-#### Package Parameters
-The following package parameters can be set:
-
- * `/AllUser` - When you set this parameter, Teams Machine-Wide Installer appears in Programs and Features in Control Panel and in Apps &amp; Machine-wide installer for VDI/WVD sessionhost.
- * `/AllUsers` - When you set this parameter, Teams Machine-Wide Installer appears in Programs and Features in Control Panel and in Apps &amp; features in Windows Settings for all users of the computer. All users can then uninstall Teams if they have admin credentials on the computer.
-  * `/NoAutoStart` - When a user logs in to Windows, Teams is installed with the MSI and a shortcut to start Teams is added to the user's desktop. Teams won't start until the user manually starts Teams. After the user manually starts Teams, Teams automatically starts whenever the user logs in.
-
-To pass parameters, use `--params "''"` (e.g. `choco install packageID [other options] --params="'/ITEM:value /ITEM2:value2 /FLAG_BOOLEAN'"`).
-
-eg.
-
-```
-choco install microsoft-teams.install --params "'/AllUsers /NoAutoStart'"
-```
-
-To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
-
 #### Package updates
 
 New versions of this package are published automatically via the `update.ps1` script (viewable in the package source on GitHub).
 	</description>
     <releaseNotes>https://support.office.com/en-us/article/Release-notes-for-Microsoft-Teams-d7092a6d-c896-424c-b362-a472d5f105de</releaseNotes>
-      <dependencies>
-      <dependency id="DotNet4.5" version="4.5.20120822" />
+    <dependencies>
+      <!-- docs indicate .NET 4.5 is required, but since 1.5.00.14473 the installer depends on System.ValueTuple, Version=4.0.2.0, which seems to be in 4.7.2+ -->
+      <dependency id="netfx-4.7.2 " version="4.7.2.0" />
     </dependencies>
   </metadata>
   <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>

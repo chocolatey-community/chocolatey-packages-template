@@ -1,9 +1,34 @@
-﻿# This runs in 0.9.10+ before upgrade and uninstall.
-# Use this file to do things like stop services prior to upgrade or uninstall.
-# NOTE: It is an anti-pattern to call chocolateyUninstall.ps1 from here. If you
-#  need to uninstall an MSI prior to upgrade, put the functionality in this
-#  file without calling the uninstall script. Make it idempotent in the
-#  uninstall script so that it doesn't fail when it is already uninstalled.
-# NOTE: For upgrades - like the uninstall script, this script always runs from 
-#  the currently installed version, not from the new upgraded package version.
+﻿# To avoid "WARNING: This MSI requires uninstall prior to installing a different version.",
+# we uninstall here
 
+$ErrorActionPreference = 'Stop'; # stop on all errors
+$packageArgs = @{
+  packageName   = $env:ChocolateyPackageName
+  softwareName  = 'Teams Machine-Wide Installer'
+  fileType      = 'MSI' #only one of these: MSI or EXE (ignore MSU for now)
+  # MSI
+  silentArgs    = "/qn /norestart"
+  validExitCodes= @(0, 3010, 1605, 1614, 1641) # https://msdn.microsoft.com/en-us/library/aa376931(v=vs.85).aspx
+}
+
+[array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
+
+if ($key.Count -eq 1) {
+  $key | ForEach-Object { 
+    $packageArgs['file'] = "$($_.UninstallString)"
+    
+    if ($packageArgs['fileType'] -eq 'MSI') {
+      $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
+      $packageArgs['file'] = ''
+    }
+
+    Uninstall-ChocolateyPackage @packageArgs
+  }
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$($key.Count) matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert package maintainer the following keys were matched:"
+  $key | ForEach-Object {Write-Warning "- $($_.DisplayName)"}
+}

@@ -1,139 +1,108 @@
-﻿# IMPORTANT: Before releasing this package, copy/paste the next 2 lines into PowerShell to remove all comments from this file:
-#   $f='c:\path\to\thisFile.ps1'
-#   gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
+﻿$ErrorActionPreference = 'Stop';
 
-# 1. See the _TODO.md that is generated top level and read through that
-# 2. Follow the documentation below to learn how to create a package for the package type you are creating.
-# 3. In Chocolatey scripts, ALWAYS use absolute paths - $toolsDir gets you to the package's tools directory.
-$ErrorActionPreference = 'Stop'; # stop on all errors
+$packageName= 'powershell-core'
+$fileType = 'msi'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-# Internal packages (organizations) or software that has redistribution rights (community repo)
-# - Use `Install-ChocolateyInstallPackage` instead of `Install-ChocolateyPackage`
-#   and put the binaries directly into the tools folder (we call it embedding)
-#$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
-# If embedding binaries increase total nupkg size to over 1GB, use share location or download from urls
-#$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
-# Community Repo: Use official urls for non-redist binaries or redist where total package size is over 200MB
-# Internal/Organization: Download from internal location (internet sources are unreliable)
-$url        = '' # download url, HTTPS preferred
-$url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
-
-$packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
-  url           = $url
-  url64bit      = $url64
-  #file         = $fileLocation
-
-  softwareName  = 'powershell-core*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-
-  # Checksums are now required as of 0.10.0.
-  # To determine checksums, you can get that from the original site if provided.
-  # You can also use checksum.exe (choco install checksum) and use it
-  # e.g. checksum -t sha256 -f path\to\file
-  checksum      = ''
-  checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-  checksum64    = ''
-  checksumType64= 'sha256' #default is checksumType
-
-  # MSI
-  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
-  validExitCodes= @(0, 3010, 1641)
-  # OTHERS
-  # Uncomment matching EXE type (sorted by most to least common)
-  #silentArgs   = '/S'           # NSIS
-  #silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
-  #silentArgs   = '/s'           # InstallShield
-  #silentArgs   = '/s /v"/qn"'   # InstallShield with MSI
-  #silentArgs   = '/s'           # Wise InstallMaster
-  #silentArgs   = '-s'           # Squirrel
-  #silentArgs   = '-q'           # Install4j
-  #silentArgs   = '-s'           # Ghost
-  # Note that some installers, in addition to the silentArgs above, may also need assistance of AHK to achieve silence.
-  #silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
-                                 #       https://community.chocolatey.org/packages/autohotkey.portable
-  #validExitCodes= @(0) #please insert other valid exit codes here
+$Version = '7.0.6'
+Try {
+  [Version]$Version
+  $InstallFolder = "$env:ProgramFiles\PowerShell\$($version.split('.')[0])"
+  If (Test-Path "$InstallFolder\pwsh.exe")
+  {
+    If ((get-command "$InstallFolder\pwsh.exe").version -ge [version]$Version)
+    {
+      Write-output "The version of PowerShell in this package ($Version) is already installed by another means, marking package as installed"
+      Exit 0
+    }
+  }  
+}
+Catch {
+  Write-output "Note: This is a prelease package"
+  $PreleasePackage = $true
+  $InstallFolder = "$env:ProgramFiles\PowerShell\$($version.split('.')[0])-preview"
 }
 
-Install-ChocolateyPackage @packageArgs # https://docs.chocolatey.org/en-us/create/functions/install-chocolateypackage
-#Install-ChocolateyZipPackage @packageArgs # https://docs.chocolatey.org/en-us/create/functions/install-chocolateyzippackage
-## If you are making your own internal packages (organizations), you can embed the installer or
-## put on internal file share and use the following instead (you'll need to add $file to the above)
-#Install-ChocolateyInstallPackage @packageArgs # https://docs.chocolatey.org/en-us/create/functions/install-chocolateyinstallpackage
 
-## Main helper functions - these have error handling tucked into them already
-## see https://docs.chocolatey.org/en-us/create/functions
+$packageArgs = @{
+  packageName   = $packageName
+  unzipLocation = $toolsDir
+  fileType      = $fileType
+  url64      = 'https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/PowerShell-7.0.6-win-x64.msi'
+  checksum64    = '586E3B3D6A706A850C8883FCB1FDEA33C65402F82E3AB8EC8C877E7BF0098327'
+  checksumType64= 'sha256'
+  url           = 'https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/PowerShell-7.0.6-win-x86.msi'
+  checksum      = 'E98924EA4C5C72050D114E2CAF769AD25EF836CB8372CC70DF231FFA0CE9E11C'
+  checksumType  = 'sha256'
+  silentArgs    = '/qn', '/norestart', "/l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
+  validExitCodes= @(0, 3010, 1641)
+  softwareName  = "PowerShell-7.*"
+}
 
-## Install an application, will assert administrative rights
-## - https://docs.chocolatey.org/en-us/create/functions/install-chocolateypackage
-## - https://docs.chocolatey.org/en-us/create/functions/install-chocolateyinstallpackage
-## add additional optional arguments as necessary
-##Install-ChocolateyPackage $packageName $fileType $silentArgs $url [$url64 -validExitCodes $validExitCodes -checksum $checksum -checksumType $checksumType -checksum64 $checksum64 -checksumType64 $checksumType64]
+$pp = Get-PackageParameters
 
-## Download and unpack a zip file - https://docs.chocolatey.org/en-us/create/functions/install-chocolateyzippackage
-##Install-ChocolateyZipPackage $packageName $url $toolsDir [$url64 -checksum $checksum -checksumType $checksumType -checksum64 $checksum64 -checksumType64 $checksumType64]
+$pp.Keys.ForEach({
+switch -RegEx ($_) {
+'^CleanUpPath$'
+  {
+    Write-Host "/CleanUpSystemPath was used, removing all PowerShell Core path entries before installing"
+    & "$toolsDir\Reset-PWSHSystemPath.ps1" -PathScope Machine, User -RemoveAllOccurances
+    break
+  }
 
-## Install Visual Studio Package - https://docs.chocolatey.org/en-us/create/functions/install-chocolateyvsixpackage
-#Install-ChocolateyVsixPackage $packageName $url [$vsVersion] [-checksum $checksum -checksumType $checksumType]
-#Install-ChocolateyVsixPackage @packageArgs
+'^(ADD_PATH)(=0|1)?"?$'
+  { $packageArgs.silentArgs += ,($Matches[1] + @('=1',$Matches[2])[$Matches[2] -ne $null]); break }
 
-## see the full list at https://docs.chocolatey.org/en-us/create/functions
+'^(REGISTER_MANIFEST)(=0|1)?"?$'
+  { $packageArgs.silentArgs += ,($Matches[1] + @('=1',$Matches[2])[$Matches[2] -ne $null]); break }
 
-## downloader that the main helpers use to download items
-## if removing $url64, please remove from here
-## - https://docs.chocolatey.org/en-us/create/functions/get-chocolateywebfile
-#Get-ChocolateyWebFile $packageName 'DOWNLOAD_TO_FILE_FULL_PATH' $url $url64
+'^(ENABLE_PSREMOTING)(=0|1)?"?$'
+  { $packageArgs.silentArgs += ,($Matches[1] + @('=1',$Matches[2])[$Matches[2] -ne $null]); break }
 
-## Installer, will assert administrative rights - used by Install-ChocolateyPackage
-## use this for embedding installers in the package when not going to community feed or when you have distribution rights
-## - https://docs.chocolatey.org/en-us/create/functions/install-chocolateyinstallpackage
-#Install-ChocolateyInstallPackage $packageName $fileType $silentArgs '_FULLFILEPATH_' -validExitCodes $validExitCodes
+'^(ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL)(=0|1)?"?$'
+  { $packageArgs.silentArgs += ,($Matches[1] + @('=1',$Matches[2])[$Matches[2] -ne $null]); break }
 
-## Unzips a file to the specified location - auto overwrites existing content
-## - https://docs.chocolatey.org/en-us/create/functions/get-chocolateyunzipp
-#Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" $toolsDir
+'^(ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL)(=0|1)?"?$'
+  { $packageArgs.silentArgs += ,($Matches[1] + @('=1',$Matches[2])[$Matches[2] -ne $null]); break }
 
-## Runs processes asserting UAC, will assert administrative rights - used by Install-ChocolateyInstallPackage
-## - https://docs.chocolatey.org/en-us/create/functions/start-chocolateyprocessasadmin
-#Start-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell' -validExitCodes $validExitCodes
+'^(USE_MU)(=0|1)?"?$'
+  { $packageArgs.silentArgs += ,($Matches[1] + @('=1',$Matches[2])[$Matches[2] -ne $null]); break }
 
-## To avoid quoting issues, you can also assemble your -Statements in another variable and pass it in
-#$appPath = "$env:ProgramFiles\appname"
-##Will resolve to C:\Program Files\appname
-#$statementsToRun = "/C `"$appPath\bin\installservice.bat`""
-#Start-ChocolateyProcessAsAdmin $statementsToRun cmd -validExitCodes $validExitCodes
+'^(ENABLE_MU)(=0|1)?"?$'
+  { $packageArgs.silentArgs += ,($Matches[1] + @('=1',$Matches[2])[$Matches[2] -ne $null]); break }
 
-## add specific folders to the path - any executables found in the chocolatey package
-## folder will already be on the path. This is used in addition to that or for cases
-## when a native installer doesn't add things to the path.
-## - https://docs.chocolatey.org/en-us/create/functions/install-chocolateypath
-#Install-ChocolateyPath 'LOCATION_TO_ADD_TO_PATH' 'User_OR_Machine' # Machine will assert administrative rights
+default { Write-Error 'Parameter not recognized, halting...' -ErrorAction Stop } 
+}})
 
-## Add specific files as shortcuts to the desktop
-## - https://docs.chocolatey.org/en-us/create/functions/install-chocolateyshortcut
-#$target = Join-Path $toolsDir "$($packageName).exe"
-# Install-ChocolateyShortcut -shortcutFilePath "<path>" -targetPath "<path>" [-workDirectory "C:\" -arguments "C:\test.txt" -iconLocation "C:\test.ico" -description "This is the description"]
+if ($pp.Keys -notlike '*USE_MU*') { $packageArgs.silentArgs += ,"USE_MU=0" }
+if ($pp.Keys -notlike '*ENABLE_MU*') { $packageArgs.silentArgs += ,"ENABLE_MU=0" }
 
-## Outputs the bitness of the OS (either "32" or "64")
-## - https://docs.chocolatey.org/en-us/create/functions/get-osarchitecturewidth
-#$osBitness = Get-ProcessorBits
+Write-Warning "If you started this package under PowerShell core, replacing an in-use version may be unpredictable, require multiple attempts or produce errors."
 
-## Set persistent Environment variables
-## - https://docs.chocolatey.org/en-us/create/functions/install-chocolateyenvironmentvariable
-#Install-ChocolateyEnvironmentVariable -variableName "SOMEVAR" -variableValue "value" [-variableType = 'Machine' #Defaults to 'User']
+Install-ChocolateyPackage @packageArgs
 
-## Set up a file association
-## - https://docs.chocolatey.org/en-us/create/functions/install-chocolateyfileassociation
-#Install-ChocolateyFileAssociation
+Write-Output "************************************************************************************"
+Write-Output "*  INSTRUCTIONS: Your system default WINDOWS PowerShell version has not been changed."
+Write-Output "*   PowerShell CORE $version, was installed to: `"$installfolder`""
+If ($PreleasePackage) {
+Write-Output "*   To start PowerShell Core PRERELEASE $version, at a prompt execute:"
+Write-Output "*      `"$installfolder\pwsh.exe`""
+Write-Output "*   IMPORTANT: Prereleases are not put on your path, nor made the default version of CORE."
+}
+else {
+Write-Output "*   To start PowerShell Core $version, at a prompt or the start menu execute:"
+Write-Output "*      `"pwsh.exe`""
+Write-Output "*   Or start it from the desktop or start menu shortcut installed by this package."
+Write-Output "*   This is your new default version of PowerShell CORE (pwsh.exe)."
+}
+Write-Output "************************************************************************************"
 
-## Adding a shim when not automatically found - Cocolatey automatically shims exe files found in package directory.
-## - https://docs.chocolatey.org/en-us/create/functions/install-binfile
-## - https://docs.chocolatey.org/en-us/create/create-packages#how-do-i-exclude-executables-from-getting-shims
-#Install-BinFile
-
-##PORTABLE EXAMPLE
-#$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-# despite the name "Install-ChocolateyZipPackage" this also works with 7z archives
-#Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
-## END PORTABLE EXAMPLE
+Write-Output "**************************************************************************************"
+Write-Output "*  As of OpenSSH 0.0.22.0 Universal Installer, a script is distributed that allows   *"
+Write-Output "*  setting the default shell for openssh. You could call it with code like this:     *"
+Write-Output "*    If (Test-Path `"$env:programfiles\openssh-win64\Set-SSHDefaultShell.ps1`")         *"
+Write-Output "*      {& `"$env:programfiles\openssh-win64\Set-SSHDefaultShell.ps1`" [PARAMETERS]}     *"
+Write-Output "*  Learn more with this:                                                             *"
+Write-Output "*    Get-Help `"$env:programfiles\openssh-win64\Set-SSHDefaultShell.ps1`"               *"
+Write-Output "*  Or here:                                                                          *"
+Write-Output "*    https://github.com/DarwinJS/ChocoPackages/blob/main/openssh/readme.md         *"
+Write-Output "**************************************************************************************"
