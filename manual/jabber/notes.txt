@@ -1,0 +1,15 @@
+#download msi from https://www.webex.com/downloads/jabber/jabber-vdi.html
+#get version fom msi properties info
+checksum -t sha256 -f CiscoJabberSetup.msi
+
+#INSTALL
+choco pack
+choco install jabber -y -dv -s .
+
+#UPGRADE
+choco install jabber -y
+choco upgrade jabber -y -dv -s .
+
+#UNINSTALL
+choco uninstall jabber -y
+choco push jabber.14.1.2.57135.nupkg -s https://push.chocolatey.org/

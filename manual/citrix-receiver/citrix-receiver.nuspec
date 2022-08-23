@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>citrix-receiver</id>
+    <title>Citrix Receiver</title>
+    <version>4.12</version>
+    <authors>Citrix Systems Inc.</authors>
+    <owners>Iain Brighton</owners>
+    <summary>Citrix Receiver</summary>
+    <description>High performance access to Windows virtual apps and desktops. Configure for anywhere access from your desktop or web access with Chrome, Internet Explorer or Firefox. For domain and non-domain joined PCs, tablets, and thin clients. Provides high performance use of virtualized Microsoft Lync, 3DPro engineering apps, local app access.</description>
+    <projectUrl>http://www.citrix.com/downloads/citrix-receiver/windows/</projectUrl>
+    <copyright>(c) Copyright Citrix Systems, Inc.</copyright>
+    <iconUrl>https://cdn.rawgit.com/iainbrighton/Chocolatey-Packages/4ce105a88aa58e64331e3d99ceb6d4ae7b0821a9/Citrix-Receiver/Citrix-Receiver.png</iconUrl>
+    <licenseUrl>http://www.citrix.com/buy/licensing/agreements.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>Citrix Receiver Admin</tags>
+    <packageSourceUrl>https://github.com/iainbrighton/Chocolatey-Packages/tree/master/Citrix-Receiver</packageSourceUrl>
+    <releaseNotes>The download link points to the latest version - not a specific package version.</releaseNotes>
+  </metadata>
+</package>

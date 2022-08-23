@@ -1,9 +1,0 @@
-# Ignores binary files that is necessary to be stored in the repository
-*.exe
-*.msi
-*.dll
-*.zip
-*.7z
-*.rar
-
-# And probably many more

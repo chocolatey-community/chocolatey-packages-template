@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>docker-desktop</id>
+    <version>4.2.0</version>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
+    <owners>riezebosch</owners>
+    <title>Docker Desktop</title>
+    <authors>Docker Inc.</authors>
+    <projectUrl>https://www.docker.com/products/docker-desktop</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-for-windows/docker.png</iconUrl>
+    <licenseUrl>https://www.docker.com/legal/docker-subscription-service-agreement</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>docker-for-windows docker-desktop docker admin</tags>
+    <summary>The fastest way to containerize applications on your desktop</summary>
+    <description>Developer productivity tools and a local Kubernetes environment.</description>
+    <releaseNotes>https://docs.docker.com/docker-for-windows/release-notes/</releaseNotes>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

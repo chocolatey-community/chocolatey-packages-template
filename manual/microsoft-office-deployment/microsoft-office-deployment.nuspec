@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>microsoft-office-deployment</id>
+    <title>Microsoft Office Deployment</title>
+    <version>16.0.15225.20204</version>
+    <authors>Microsoft</authors>
+    <owners>Open Circle AG, sbaerlocher, bmcatherasoo</owners>
+    <packageSourceUrl>https://github.com/open-circle-ltd/chocolatey.microsoft-office-deployment</packageSourceUrl> 
+    <projectUrl>http://office.com</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/open-circle-ltd/chocolatey.microsoft-office-deployment@master/icon/microsoft-office-deployment.png</iconUrl>
+    <copyright>2022 Microsoft</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/servicesagreement/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://support.office.com/</docsUrl>
+    <tags>office365 Office 365 2019 deployment admin ODT</tags>
+    <summary>Microsoft Office Deployment Tool</summary>
+    <description>Installs Microsoft Office Products.
+
+## Package Parameters
+
+- `/64bit` to install Office 365 ProPlus 64-bit, otherwise it will default to 32-bit.
+- `/DisableUpdate` TRUE, FALSE
+- `/Shared` to install with Shared Computer Licensing for Remote Desktop Services.
+- `/Channel` [Microsoft Docs](https://docs.microsoft.com/en-us/DeployOffice/overview-of-update-channels-for-office-365-proplus?redirectSourcePath=%252fen-us%252farticle%252f9ccf0f13-28ff-4975-9bd2-7e4ea2fefef4)
+- `/Language` default `MatchOS` `MatchOS, ar-sa, bg-bg, zh-cn, zh-tw, hr-hr, cs-cz, da-dk, nl-nl, en-us, et-ee, fi-fi, fr-fr, de-de, el-gr, he-il, hi-in, hu-hu, id-id, it-it, ja-jp, kk-kz, ko-kr, lv-lv, lt-lt, ms-my, nb-no, pl-pl, pt-br, pt-pt, ro-ro, ru-ru, sr-latn-cs, sk-sk, sl-si, es-es, sv-se, th-th, tr-tr, uk-ua, vi-vn`
+- `/Product` default `HomeBusinessRetail` Supported `PersonalRetail, ProPlusRetail, O365SmallBusPremRetail, O365BusinessRetail, O365ProPlusRetail, InfoPathRetail, SPDRetail, ProjectProRetail, VisioProRetail, LyncEntryRetail, LyncRetail, SkypeforBusiness, EntryRetail, SkypeforBusinessRetail, AccessRetail, Access2019Retail, Access2019Volume, Access2021Volume, ExcelRetail, Excel2019Retail, Excel2019Volume, Excel2021Volume, HomeBusinessRetail, HomeBusiness2019Retail, HomeStudentRetail, HomeStudent2019Retail, O365HomePremRetail, OneNoteRetail, OneNote2021Volume, OutlookRetail, Outlook2019Retail, Outlook2019Volume, Outlook2021Volume, Personal2019Retail, PowerPointRetail, PowerPoint2019Retail, PowerPoint2019Volume, PowerPoint2021Volume, ProfessionalRetail, Professional2019Retail, ProjectProXVolume, ProjectPro2019Retail, ProjectPro2019Volume, ProjectPro2021Volume, ProjectStdRetail, ProjectStdXVolume, ProjectStd2019Retail, ProjectStd2019Volume, ProjectStd2021Volume, ProPlus2019Volume, ProPlus2021Volume, ProPlusSPLA2021Volume, PublisherRetail, Publisher2019Retail, Publisher2019Volume, Publisher2021Volume, Standard2019Volume, Standard2021Volume, StandardSPLA2021Volume, VisioProXVolume, VisioPro2019Retail, VisioPro2019Volume, VisioPro2021Volume, VisioStdRetail, VisioStdXVolume, VisioStd2019Retail, VisioStd2019Volume, VisioStd2021Volume, WordRetail, Word2019Retail, Word2019Volume, Word2021Volume`
+- `/Exclude` `Publisher, PowerPoint, OneDrive, Outlook, OneNote, Lync, Groove, Excel, Access, Word`
+</description>
+  </metadata>
+  <files>
+    <file src="tools/**" target="tools"/>
+  </files>
+</package>

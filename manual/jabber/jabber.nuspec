@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>jabber</id>
+    <version>14.1.2.57135</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/jabber</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Cisco Jabber</title>
+    <authors>Cisco</authors>
+    <projectUrl>https://www.cisco.com/c/en/us/products/unified-communications/jabber/index.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/jabber/icon.png</iconUrl>
+    <licenseUrl>https://www.cisco.com/c/en/us/about/legal/cloud-and-software/end_user_license_agreement.html</licenseUrl>
+    <docsUrl>https://www.cisco.com/c/en/us/support/unified-communications/jabber/series.html</docsUrl>
+    <tags>cisco jabber unified communications webex</tags>
+    <summary>Cisco Jabber</summary>
+    <description>Cisco Jabber delivers instant messaging, voice and video calls, voice messaging, desktop sharing, conferencing, and presence.</description>
+    <releaseNotes>https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/jabber/14_1/cjab_b_release-notes-for-jabber-141.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

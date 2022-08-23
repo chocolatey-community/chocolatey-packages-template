@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>citrix-workspace</id>
+    <title>Citrix Workspace</title>
+    <version>22.7.0.24</version>
+    <authors>Citrix Systems Inc.</authors>
+    <owners>Iain Brighton</owners>
+    <summary>Citrix Workspace</summary>
+    <description>High performance access to Windows virtual apps and desktops. Configure for anywhere access from your desktop or web access with Chrome, Internet Explorer or Firefox. For domain and non-domain joined PCs, tablets, and thin clients. Provides high performance use of virtualized Microsoft Lync, 3DPro engineering apps, local app access.</description>
+    <projectUrl>https://www.citrix.com/downloads/workspace-app/windows/</projectUrl>
+    <copyright>(c) Copyright Citrix Systems, Inc.</copyright>
+    <iconUrl>https://github.com/iainbrighton/Chocolatey-Packages/raw/master/Citrix-Workspace/Citrix-Workspace.png</iconUrl>
+    <licenseUrl>https://www.citrix.com/buy/licensing/agreements.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>Citrix Receiver Workspace WorkspaceApp Admin</tags>
+    <dependencies>
+      <dependency id="netfx-4.8" />
+      <dependency id="vcredist140" />
+    </dependencies>
+    <packageSourceUrl>https://github.com/iainbrighton/Chocolatey-Packages/tree/master/Citrix-Workspace</packageSourceUrl>
+  </metadata>
+</package>
