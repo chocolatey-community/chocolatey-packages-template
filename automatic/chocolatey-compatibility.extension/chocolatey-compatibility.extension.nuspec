@@ -26,7 +26,14 @@ The helpers included in this package may not have any logic to handle the functi
 existing, but rather to ensure that packages using the helpers do not stop working.
 
 **WARNING: Do NOT use helpers located in this package for removed functionality, unless absolutely necessary!**]]></description>
-    <releaseNotes>https://github.com/chocolatey-community/chocolatey-extensions/blob/master/src/chocolatey-compatibility.extension/CHANGELOG.md</releaseNotes>
+    <releaseNotes>## 1.0.0
+
+- Add compatibility layer for removed function `Install-ChocolateyDesktopLink`
+- Add compatibility layer for removed function `Write-ChocolateyFailure`
+- Add compatibility layer for removed function `Write-ChocolateySuccess`
+- Add compatibility layer for removed function `Write-FileUpdateLog`
+- Add support for `Get-PackageParameters`.
+- Add support for `Get-UninstallRegistryKey`.</releaseNotes>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
