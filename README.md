@@ -9,7 +9,6 @@ To run locally you will need:
 - Powershell 5+.
 - [Chocolatey Automatic Package Updater Module](https://github.com/majkinetor/au): `Install-Module au` or `cinst au`.
 
-In order to setup AppVeyor update runner please take a look at the AU wiki [AppVeyor section](https://github.com/majkinetor/au/wiki/AppVeyor).
 
 ## Create a package
 
@@ -68,24 +67,3 @@ You can force the update of all or subset of packages to see how they behave whe
 
 
 **Note**: If you run this locally your packages will get updated. Use `git reset --hard` after running this to revert the changes.
-
-## Pushing To Community Repository Via Commit Message
-
-You can force package update and push using git commit message. AppVeyor build is set up to pass arguments from the commit message to the `./update_all.ps1` script.
-
-If commit message includes `[AU <forced_packages>]` message on the first line, the `forced_packages` string will be sent to the updater.
-
-Examples:
-- `[AU pkg1 pkg2]`  
-Force update ONLY packages `pkg1` and `pkg2`.
-- `[AU pkg1:ver1 pkg2 non_existent]`  
-Force `pkg1` and use explicit version `ver1`, force `pkg2` and ignore `non_existent`.
-
-To see how versions behave when package update is forced see the [force documentation](https://github.com/majkinetor/au/blob/master/README.md#force-update).
-
-You can also push manual packages with command `[PUSH pkg1 ... pkgN]`. This works for any package anywhere in the file hierarchy and will not invoke AU updater at all. 
-
-If there are no changes in the repository use `--allow-empty` git parameter:
-
-    git commit -m '[AU copyq less:2.0]' --allow-empty
-    git push
