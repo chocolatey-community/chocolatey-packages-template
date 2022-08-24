@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>wormies-au-helpers</id>
+        <title>Wormies AU Helpers</title>
+        <version>0.0.0</version>
+        <authors>Kim J. Nordmo</authors>
+        <owners>Kim J. Nordmo</owners>
+        <summary>Wormies AU Helpers is a collection of scripts to help packaging using AU even easier.</summary>
+        <description>Wormies AU Helpers is a collection of scripts to help packaging using AU even easier.</description>
+        <projectUrl>https://wormiecorp.github.io/Wormies-AU-Helpers/</projectUrl>
+        <tags>admin powershell module package helpers au</tags>
+        <copyright>Copyright (C) 2017-Present - Kim J. Nordmo</copyright>
+        <licenseUrl>https://github.com/WormieCorp/Wormies-AU-Helpers/blob/master/LICENSE</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes></releaseNotes>
+        <docsUrl>https://wormiecorp.github.io/Wormies-AU-Helpers/docs</docsUrl>
+        <bugTrackerUrl>https://github.com/WormieCorp/Wormies-AU-Helpers/issues</bugTrackerUrl>
+        <projectSourceUrl>https://github.com/WormieCorp/Wormies-AU-Helpers</projectSourceUrl>
+        <packageSourceUrl>https://github.com/WormieCorp/Wormies-AU-Helpers/tree/master/chocolatey</packageSourceUrl>
+        <dependencies>
+          <dependency id="powershell" version="3.0" />
+        </dependencies>
+    </metadata>
+    <files>
+      <file src="tools\**" target="tools" />
+      <file src="legal\**" target="legal" />
+    </files>
+</package>

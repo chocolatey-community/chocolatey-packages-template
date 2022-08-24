@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-windowsupdate.extension</id>
+    <version>1.0.4</version>
+    <title>Chocolatey Windows Update extensions</title>
+    <authors>Jakub Bereżański</authors>
+    <owners>Jakub Bereżański</owners>
+    <licenseUrl>https://cdn.rawgit.com/jberezanski/ChocolateyPackages/8086c84fed16d4150a50ba1e97fd6b75e3c4f511/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jberezanski/ChocolateyPackages/tree/master/chocolatey-windowsupdate.extension</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package provides helper functions useful for developing packages for Windows updates (KBs).</description>
+    <summary>Helper functions useful for developing packages for Windows updates (KBs).</summary>
+    <releaseNotes>[Change log](https://github.com/jberezanski/ChocolateyPackages/tree/master/chocolatey-windowsupdate.extension/CHANGELOG.md)</releaseNotes>
+    <copyright>© 2017 Jakub Bereżański</copyright>
+    <tags>chocolatey extension admin windows update kb</tags>
+    <packageSourceUrl>https://github.com/jberezanski/ChocolateyPackages/tree/master/chocolatey-windowsupdate.extension</packageSourceUrl>
+    <docsUrl>https://github.com/jberezanski/ChocolateyPackages/tree/master/chocolatey-windowsupdate.extension/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/jberezanski/ChocolateyPackages/issues</bugTrackerUrl>
+  </metadata>
+</package>

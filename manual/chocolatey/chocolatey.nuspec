@@ -1,25 +1,16 @@
-<?xml version="1.0"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>chocolatey</id>
-    <version>0.9.10</version>
-    <!--<packageSourceUrl>https://github.com/chocolatey/choco</packageSourceUrl> Need to move build to use choco to pack instead of nuget-->
-    <owners>Rob Reynolds</owners>
+    <version>1.1.0</version>
     <title>Chocolatey</title>
     <authors>Chocolatey Software, Inc</authors>
+    <owners>Rob Reynolds</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/chocolatey/choco/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/chocolatey/choco</projectUrl>
     <iconUrl>https://chocolatey.org/assets/images/nupkg/chocolateyicon.png</iconUrl>
-    <licenseUrl>https://raw.githubusercontent.com/chocolatey/choco/master/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <copyright>2017-2021 Chocolatey Software, Inc, 2011-2017 RealDimensions Software, LLC</copyright>
-    <!--<projectSourceUrl>https://github.com/chocolatey/choco</projectSourceUrl>
-    <docsUrl>https://docs.chocolatey.org/en-us/</docsUrl>
-    <mailingListUrl>https://groups.google.com/forum/#!forum/chocolatey</mailingListUrl>
-    <bugTrackerUrl>https://github.com/chocolatey/choco/issues</bugTrackerUrl>-->
-    <tags>nuget apt-get machine repository chocolatey</tags>
-    <summary>Chocolatey is the package manager for Windows (like apt-get but for Windows)</summary>
-    <description>
-Chocolatey is a package manager for Windows (like apt-get but for Windows). It was designed to be a decentralized framework for quickly installing applications and tools that you need. It is built on the NuGet infrastructure currently using PowerShell as its focus for delivering packages from the distros to your door, err computer.
+    <description>Chocolatey is a package manager for Windows (like apt-get but for Windows). It was designed to be a decentralized framework for quickly installing applications and tools that you need. It is built on the NuGet infrastructure currently using PowerShell as its focus for delivering packages from the distros to your door, err computer.
 
 Chocolatey is brought to you by the work and inspiration of the community, the work and thankless nights of the [Chocolatey Team](https://github.com/orgs/chocolatey/people), with Rob heading up the direction.
 
@@ -58,10 +49,10 @@ For more advanced commands and switches, use `choco -?` or `choco command -h`. Y
 ### Create Packages?
 We have some great guidance on how to do that. Where? I'll give you a hint, it rhymes with socks! [Docs!](https://docs.chocolatey.org/en-us/create/create-packages)
 
-In that mess there is a link to the [PowerShell Chocolatey module reference](https://docs.chocolatey.org/en-us/create/functions).
-</description>
-    <releaseNotes>
-See all - https://docs.chocolatey.org/en-us/choco/release-notes
-    </releaseNotes>
+In that mess there is a link to the [PowerShell Chocolatey module reference](https://docs.chocolatey.org/en-us/create/functions).</description>
+    <summary>Chocolatey is the package manager for Windows (like apt-get but for Windows)</summary>
+    <releaseNotes>See all - https://docs.chocolatey.org/en-us/choco/release-notes</releaseNotes>
+    <copyright>2017-2021 Chocolatey Software, Inc, 2011-2017 RealDimensions Software, LLC</copyright>
+    <tags>nuget apt-get machine repository chocolatey</tags>
   </metadata>
 </package>

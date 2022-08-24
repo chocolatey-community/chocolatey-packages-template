@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+This package is being officially supplied by the software author of these scripts (Kim J. Nordmo)
+
+The included binary file can be downloaded from our releases page located at
+<https://github.com/WormieCorp/Wormies-AU-Helpers/releases/tag/0.4.0-alpha0026>
+
+and should match the following
+sha256 checksum: 4268C0DFD00AA4EF14EBBAC0E7ED6FCD840EB37383055666FCFB73D1ED699916
+
+The file 'License.txt' is also available in the repository at
+<https://github.com/WormieCorp/Wormies-AU-Helpers/blob/develop/LICENSE>

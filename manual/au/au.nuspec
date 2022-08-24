@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>au</id>
+    <title>Chocolatey Automatic Package Updater Module</title>
+    <version>0.0.0</version>
+    <authors>Miodrag Milić</authors>
+    <owners>Miodrag Milić</owners>
+    <summary>AU is Powershell module that helps you to automate Chocolatey package updates</summary>
+    <description>AU is Powershell module that helps you to automate Chocolatey package updates</description>
+    <projectUrl>https://github.com/majkinetor/au</projectUrl>
+    <tags>admin powershell module package chocolatey</tags>
+    <copyright>Miodrag Milić</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://github.com/majkinetor/au/blob/master/CHANGELOG.md</releaseNotes>
+    <docsUrl>https://github.com/majkinetor/au/blob/master/README.md</docsUrl>
+    <mailingListUrl>https://github.com/majkinetor/au/issues</mailingListUrl>
+    <bugTrackerUrl>https://github.com/majkinetor/au/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/majkinetor/au</projectSourceUrl>
+    <packageSourceUrl>https://github.com/majkinetor/au/tree/master/chocolatey</packageSourceUrl>
+    <!--<dependencies>-->
+      <!--<dependency id="powershell" version="5.0" />-->
+    <!--</dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

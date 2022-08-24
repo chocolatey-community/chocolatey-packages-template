@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DotNet4.5.2</id>
+    <version>4.5.2.20140902</version>
+    <title>Dot Net 4.5.2</title>
+    <authors>Microsoft</authors>
+    <owners>Toby Brain</owners>
+    <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
+    <projectUrl>http://www.microsoft.com/en-au/download/details.aspx?id=42642</projectUrl>
+    <iconUrl>https://github.com/mwrock/Chocolatey-Packages/raw/master/DotNet4.5/dotnet.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Microsoft .NET Framework 4.5.2 is a highly compatible, in-place update to the Microsoft .NET Framework 4, Microsoft .NET Framework 4.5 and Microsoft .NET Framework 4.5.1</description>
+    <summary>The Microsoft .NET Framework 4.5.2</summary>
+    <tags>Microsoft .net Framework 4.5.2</tags>
+  </metadata>
+</package>

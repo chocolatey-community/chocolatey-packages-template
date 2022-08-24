@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>PowerShell</id>
+    <version>5.1.14409.20180811</version>
+    <title>Windows Management Framework and PowerShell</title>
+    <authors>Microsoft wrote PowerShell, IntelliTect created the Chocolatey Package</authors>
+    <owners>Mark Michaelis, Darwin Sanoy (CSI-Windows.com)</owners>
+    <licenseUrl>https://raw.githubusercontent.com/IntelliTect/Licenses/master/WindowsManagementFramework.txt</licenseUrl>
+    <projectUrl>http://blogs.msdn.com/b/powershell/archive/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available.aspx</projectUrl>
+    <iconUrl>http://www.rssbus.com/ui/img/logo-powershell.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package is for Windows PowerShell Only, which only goes to version 5.x.
+
+    For PowerShell Core / PowerShell 6, please use the 'powershell-core' package here: https://chocolatey.org/packages/powershell-core
+    
+    Windows Management Framework 5.0 includes updates to Windows PowerShell, Windows PowerShell ISE, Windows PowerShell Web Services (Management OData IIS Extension), Windows Remote Management (WinRM), Windows Management Instrumentation (WMI), the Server Manager WMI provider, and a new feature for 4.0, Windows PowerShell Desired State Configuration (DSC).
+    Windows Management Framework 5.0 includes updates to Windows PowerShell, Windows PowerShell Desired State Configuration (DSC), and Windows PowerShell ISE. It also includes OneGet, PowerShellGet, and Network Switch cmdlets
+
+     Important Product Incompatibility Notes: https://msdn.microsoft.com/en-us/powershell/wmf/5.0/productincompat
+
+      IMPORTANT NOTES for your Operating System:
+
+		  PowerShell 4 and later requires at least .NET 3.5.1.
+			This package will warn you and exit if it is not installed.
+			It is not automatically installed as a dependency so that you
+			maintain complete control over the .NET version in your build.
+
+			WARNING: Review the release notes to learn which software products are not compatible with this upgrade (e.g. SCCM SERVERS.)</description>
+    <summary>Installs Windows Management Framework (with PowerShell) 5.0, Windows Management Framework 4.0 (with PowerShell) 4.0 or PowerShell 3.0 (if 'legacy' OS.)</summary>
+    <releaseNotes>WMF 5.1 Release Notes: https://msdn.microsoft.com/en-us/powershell/wmf/5.1/release-notes
+
+     2018.01.05 
+       WMF Version: 5.1.14409.1005
+       Pkg Version: 5.1.14409.20170510
+       - fix to .NET version too low error message.
+
+     2017.05.10 
+       WMF Version: 5.1.14409.1005
+       Pkg Version: 5.1.14409.20170510
+       - fix to .NET version checking logic for Win7 / Server 2008 R2
+
+     2017.04.02 
+       WMF Version: 5.1.14409.1005
+       Pkg Version: 5.1.14409.20170402
+       - powershell install log files are serialized so that they don't accumulate in the same file across multiple attempts
+       - if an errors occurs, the errors are extracted from the log file and displayed into the chocolatey log
+
+     2017.03.01 
+       WMF Version: 5.1.14409.1005
+       Pkg Version: 5.1.14409.20170301
+       - fixed bug misidentifying the .net version on Server 2012
+
+     2017.02.14 
+       WMF Version: 5.1.14409.1005
+       Pkg Version: 5.1.14409.20170214
+       - fixed bug causing Server 2012 (non-R2) from being detected as windows 8
+
+      2017.01.26  (5.1.14409.1005)
+        -  New: Installs WMF 5.1
+        -  Tested On: Win7 + PSH 2, Win7 + WMF 3, Win 8.1 + WMF 4, 2012 R2 + WMF 5.0, Windows 10
+        -  EXPERIMENTAL: Attempts to Preserve the PSModulePath when WMF 5.1 is 
+                         installed over WMF 3 on Windows 7 or Server 2008.
+
+             How the experimental support works:
+               *) It only takes effect on Windows 7 and Server 2008 R2 and only if WMF 3 is installed
+               *) You must pre-install at least .NET 4.5.1 (required by WMF 4 and later)
+               *) You must use the -force switch on the package
+
+               What steps are taken to preserve PSModulePath:
+                  1) The custom parts of the PSModulePath backed up to BackupPSModulePath
+                  2) A fix up script that appends those values to the PSModulePath is written to:
+                           %WINDIR%\Temp\psmodulepathfixup.ps1
+                  3) A scheduled task is setup for the next reboot that runs the fix up script
+
+               If you find that #3 does not work correctly, then you can use #1 or #2 with some of your 
+               own automation to recover from the PsModulePath overwrite.
+
+      2016.12.01  (5.0.10586.20170115)
+        -  Fixed: Package generates error that you must upgrade to Windows 8.1 on Server 2012 (not-R2) domain controllers.
+
+      2016.12.01  (5.0.10586.20161201)
+        -  IMPORTANT: This package no longer updates a machine to an older version of PowerShell when 5 cannot be applied, the package must
+             be explicitly called with the -version parameter if the system being configured cannot take PowerShell 5.
+        -  Updated to use checksums
+        -  Updated to use re-released MSUs discussed here (old ones getting 404s):
+             https://blogs.msdn.microsoft.com/powershell/2016/02/24/windows-management-framework-wmf-5-0-rtm-packages-has-been-republished/
+        -  Checks and errors if Windows Update service is disabled, the error message suggests enabling it just for the time this package runs
+             (it is a common good practice to disable Windows Update when doing long running orchestration,
+             however, it must be enabled for this package to run)
+    
+    TROUBLESHOOTING GUIDANCE:
+      If you receive the error 'ERROR: Running ["C:\Windows\System32\wusa.exe" ' it generally means the system does not have the prerequisites 
+      required by the .MSU file.  
+      
+      Find the reference to the the log file "PowerShell.Install.evtx" and double-click it to open it in eventvwr.  The reason for the failure
+      should be within the messages in this file.
+
+      Please do this before reporting the error because it will be the first thing you are asked to do in order to establish root cause.</releaseNotes>
+    <copyright>2013 Microsoft Corporation</copyright>
+    <tags>PowerShell admin Reboot Scripting OneGet</tags>
+  </metadata>
+</package>

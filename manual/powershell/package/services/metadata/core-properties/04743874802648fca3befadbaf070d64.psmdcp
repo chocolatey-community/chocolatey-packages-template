@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"><dc:creator>Microsoft wrote PowerShell, IntelliTect created the Chocolatey Package</dc:creator><dc:description>This package is for Windows PowerShell Only, which only goes to version 5.x.
+
+    For PowerShell Core / PowerShell 6, please use the 'powershell-core' package here: https://chocolatey.org/packages/powershell-core
+    
+    Windows Management Framework 5.0 includes updates to Windows PowerShell, Windows PowerShell ISE, Windows PowerShell Web Services (Management OData IIS Extension), Windows Remote Management (WinRM), Windows Management Instrumentation (WMI), the Server Manager WMI provider, and a new feature for 4.0, Windows PowerShell Desired State Configuration (DSC).
+    Windows Management Framework 5.0 includes updates to Windows PowerShell, Windows PowerShell Desired State Configuration (DSC), and Windows PowerShell ISE. It also includes OneGet, PowerShellGet, and Network Switch cmdlets
+
+     Important Product Incompatibility Notes: https://msdn.microsoft.com/en-us/powershell/wmf/5.0/productincompat
+
+      IMPORTANT NOTES for your Operating System:
+
+		  PowerShell 4 and later requires at least .NET 3.5.1.
+			This package will warn you and exit if it is not installed.
+			It is not automatically installed as a dependency so that you
+			maintain complete control over the .NET version in your build.
+
+			WARNING: Review the release notes to learn which software products are not compatible with this upgrade (e.g. SCCM SERVERS.)</dc:description><dc:identifier>PowerShell</dc:identifier><version>5.1.14409.20180811</version><keywords>PowerShell admin Reboot Scripting OneGet</keywords><dc:title>Windows Management Framework and PowerShell</dc:title><lastModifiedBy>choco, Version=0.10.11.0, Culture=neutral, PublicKeyToken=79d02ea9cad655eb;Microsoft Windows NT 10.0.16299.0;.NET Framework 4</lastModifiedBy></coreProperties>
