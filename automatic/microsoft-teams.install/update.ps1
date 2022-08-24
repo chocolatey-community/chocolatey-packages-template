@@ -16,7 +16,7 @@ function global:au_GetLatest {
     
     $url32 = "http://aka.ms/teams32bitmsi"
     for ($i = 0; ($i -lt 4) -and (-not ($url32.EndsWith(".msi"))); $i++) {
-        $response = Invoke-WebRequest -Uri $url32 -Method Head -MaximumRedirection 0 -ErrorAction Ignore
+        $response = Invoke-WebRequest -Uri UseBasicParsing $url32 -Method Head -MaximumRedirection 0 -ErrorAction Ignore
 
         $url32 = $response.Headers.Location
     }
@@ -29,7 +29,7 @@ function global:au_GetLatest {
 
     $url64 = "http://aka.ms/teams64bitmsi"
     for ($i = 0; ($i -lt 4) -and (-not ($url64.EndsWith(".msi"))); $i++) {
-        $response = Invoke-WebRequest -Uri $url64 -Method Head -MaximumRedirection 0 -ErrorAction Ignore
+        $response = Invoke-WebRequest -Uri UseBasicParsing $url64  -Method Head -MaximumRedirection 0 -ErrorAction Ignore
 
         $url64 = $response.Headers.Location
     }
