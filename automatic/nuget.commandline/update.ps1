@@ -17,7 +17,7 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-  $json = Invoke-WebRequest -UseBasicParsing -Uri $releases | ConvertFrom-Json
+  $json = Invoke-WebRequest -UseBasicParsing -Uri $releases -UseBasicParsing | ConvertFrom-Json
 
   $versions = $json."nuget.exe"
 

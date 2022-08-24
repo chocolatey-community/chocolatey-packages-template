@@ -15,7 +15,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     # 32bit
-    $download_page = Invoke-WebRequest -Uri "https://teams.microsoft.com/downloads/DesktopUrl?env=production&plat=windows"
+    $download_page = Invoke-WebRequest -Uri UseBasicParsing "https://teams.microsoft.com/downloads/DesktopUrl?env=production&plat=windows"
 
     #https://statics.teams.cdn.office.net/production-windows/1.4.00.7174/TeamsSetup.exe
     
@@ -25,7 +25,7 @@ function global:au_GetLatest {
 
     $version = $Matches.version
 
-    $download_page = Invoke-WebRequest -Uri "https://teams.microsoft.com/downloads/DesktopUrl?env=production&plat=windows&arch=x64"
+    $download_page = Invoke-WebRequest -Uri UseBasicParsing "https://teams.microsoft.com/downloads/DesktopUrl?env=production&plat=windows&arch=x64"
     
     $url64 = $download_page.Content.Trim()
 

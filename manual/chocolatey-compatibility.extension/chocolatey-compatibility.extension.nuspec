@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-compatibility.extension</id>
+    <version>1.0.0</version>
+    <owners>chocolatey-community</owners>
+    <title>Chocolatey Compatibility Extension</title>
+    <authors>chocolatey-community</authors>
+    <projectUrl>https://github.com/chocolatey-community/chocolatey-extensions</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/chocolatey-coreteampackages/master/icons/chocolatey-common.extension.png</iconUrl>-->
+    <copyright>© 2022 Chocolatey Community Maintainers</copyright>
+    <licenseUrl>https://github.com/chocolatey-community/chocolatey-extensions/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/chocolatey-community/chocolatey-extensions/tree/master/src/chocolatey-compatibility.extension</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/chocolatey-community/chocolatey-extensions/issues</bugTrackerUrl>
+    <tags>chocolatey-compatibility compatibility extension</tags>
+    <summary>Extension package to provide compatibility with older versions of Chocolatey</summary>
+    <description><![CDATA[
+This package provides helper functions that re-introduces helpers that were removed or updated
+in Chocolatey, as well as helpers that are not available in older version of Chocolatey CLI.
+The purpose of the package is to allow older packages to keep functioning even on later versions
+of Chocolatey CLI where certain helpers have been removed.
+
+The helpers included in this package may not have any logic to handle the functionality to keep
+existing, but rather to ensure that packages using the helpers do not stop working.
+
+**WARNING: Do NOT use helpers located in this package for removed functionality, unless absolutely necessary!**]]></description>
+    <releaseNotes>## 1.0.0
+
+- Add compatibility layer for removed function `Install-ChocolateyDesktopLink`
+- Add compatibility layer for removed function `Write-ChocolateyFailure`
+- Add compatibility layer for removed function `Write-ChocolateySuccess`
+- Add compatibility layer for removed function `Write-FileUpdateLog`
+- Add support for `Get-PackageParameters`.
+- Add support for `Get-UninstallRegistryKey`.</releaseNotes>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="extensions\**" target="extensions" />
+  </files>
+</package>
