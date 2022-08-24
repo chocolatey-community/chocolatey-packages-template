@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"><dc:creator>Microsoft</dc:creator><dc:description>[![](https://gitlab.com/guided-explorations/microsoft/chocolatey/powershell-core/badges/main/pipeline.svg)](https://gitlab.com/guided-explorations/microsoft/chocolatey/powershell-core/-/pipelines)
+[Update status](https://gitlab.com/guided-explorations/microsoft/chocolatey/powershell-core/-/jobs)
+[![](http://transparent-favicon.info/favicon.ico)](#)[chocolatey/DarwinJS](https://chocolatey.org/profiles/DarwinJS)
+
+PowerShell Core is the open source multiplatform version of PowerShell
+
+Preview releases are under the package id powershell-preview so that they can be safely installed and maintained side-by-side with the release versions on production systems. Preview versions do not become the default powershell core edition on a system (unless they are the ONLY edition), if you have a preview version installed, access it via pwsh's '-pre' switch.
+
+This package automatically does verbose MSI logging to %temp%\(packagenameandversion).MsiInstall.log
+
+Some helpful install options (any of them can be combined - delimited by space):
+
+* Any MSI Properties the package responds to can be specified in the same way, even if not documented here.
+
+--install-arguments='"ADD\_FILE\_CONTEXT\_MENU\_RUNPOWERSHELL=1"'
+Installs a right click context menu to run .ps1 scripts in PowerShell Core.
+
+--install-arguments='"ADD\_EXPLORER\_CONTEXT\_MENU\_OPENPOWERSHELL=1"'
+Installs a right click context menu to start a PowerShell Core prompt for a specific folder.
+
+--install-arguments='"REGISTER\_MANIFEST=1"'
+Causes PowerShell Core to deliver logs to Windows Event logs.
+
+--install-arguments='"ENABLE\_PSREMOTING=1"'
+Enable PS remoting during installation.
+
+--install-arguments='"USE\_MU=1 ENABLE\_MU=1"'
+Enable powershell to be updated via windows updates - this chocolatey package defaults to disabling these. Available with PWSH MSI Package for 7.2 and later.
+
+--install-arguments='"ADD\_EXPLORER\_CONTEXT\_MENU\_OPENPOWERSHELL=1 REGISTER\_MANIFEST=1 ENABLE\_PSREMOTING=1"'
+Do it all.
+
+--packageparameters '"/CleanUpPath"'
+Removes all powershell core paths before starting install.  Cleans up old paths from old powershell core MSIs.</dc:description><dc:identifier>powershell-core</dc:identifier><version>7.2.6</version><keywords>powershell-core powershell pwsh admin</keywords><dc:title>powershell-core (Install)</dc:title><lastModifiedBy>choco, Version=0.10.15.0, Culture=neutral, PublicKeyToken=79d02ea9cad655eb;Microsoft Windows NT 10.0.17763.0;.NET Framework 4</lastModifiedBy></coreProperties>

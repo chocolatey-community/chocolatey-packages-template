@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>corretto8jdk</id>
+    <version>8.342</version>
+    <title>Corretto 8 JDK</title>
+    <authors>Amazon</authors>
+    <owners>JohanJanssen</owners>
+    <licenseUrl>https://github.com/corretto/corretto-8/blob/develop/LICENSE</licenseUrl>
+    <projectUrl>https://aws.amazon.com/corretto/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Amazon Corretto is a distribution of OpenJDK provided by Amazon.</description>
+    <summary>Amazon Corretto is a distribution of OpenJDK provided by Amazon.</summary>
+    <tags>corretto java jvm</tags>
+    <projectSourceUrl>https://github.com/corretto</projectSourceUrl>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Corretto8JDK</packageSourceUrl>
+    <docsUrl>https://docs.aws.amazon.com/corretto/</docsUrl>
+    <mailingListUrl>https://aws.amazon.com/corretto/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/corretto</bugTrackerUrl>
+  </metadata>
+</package>

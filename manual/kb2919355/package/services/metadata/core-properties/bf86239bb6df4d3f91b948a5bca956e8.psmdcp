@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?><coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"><dc:creator>Microsoft</dc:creator><dc:description>This update is a cumulative update that includes the security updates and the non-security updates for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 that were released before March 2014. In addition to previous updates, it includes features such as improved Internet Explorer 11 compatibility for enterprise applications, usability improvements, extended mobile device management, and improved hardware support.
+
+All future security and nonsecurity updates for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 require this update to be installed.
+
+On systems other than Windows 8.1 or Windows Server 2012 R2, this package installs successfully, but does nothing.
+
+This update is required to install Visual Studio 2015 on Windows 8.1 or Windows Server 2012 R2.</dc:description><dc:identifier>KB2919355</dc:identifier><version>1.0.20160915</version><keywords>Microsoft Visual Studio 2015 Windows Update KB2919355</keywords><dc:title>Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014 (KB2919355)</dc:title><lastModifiedBy>choco, Version=0.9.9.12, Culture=neutral, PublicKeyToken=79d02ea9cad655eb;Microsoft Windows NT 6.3.9600.0;.NET Framework 4</lastModifiedBy></coreProperties>

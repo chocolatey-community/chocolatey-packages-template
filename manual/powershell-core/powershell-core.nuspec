@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>powershell-core</id>
+    <version>7.2.6</version>
+    <title>powershell-core (Install)</title>
+    <authors>Microsoft</authors>
+    <owners>DarwinJS</owners>
+    <licenseUrl>https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/PowerShell/PowerShell</projectUrl>
+    <iconUrl>https://glcdn.githack.com/guided-explorations/microsoft/chocolatey/powershell-core/-/raw/master/powershell-core/appicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>[![](https://gitlab.com/guided-explorations/microsoft/chocolatey/powershell-core/badges/main/pipeline.svg)](https://gitlab.com/guided-explorations/microsoft/chocolatey/powershell-core/-/pipelines)
+[Update status](https://gitlab.com/guided-explorations/microsoft/chocolatey/powershell-core/-/jobs)
+[![](http://transparent-favicon.info/favicon.ico)](#)[chocolatey/DarwinJS](https://chocolatey.org/profiles/DarwinJS)
+
+PowerShell Core is the open source multiplatform version of PowerShell
+
+Preview releases are under the package id powershell-preview so that they can be safely installed and maintained side-by-side with the release versions on production systems. Preview versions do not become the default powershell core edition on a system (unless they are the ONLY edition), if you have a preview version installed, access it via pwsh's '-pre' switch.
+
+This package automatically does verbose MSI logging to %temp%\(packagenameandversion).MsiInstall.log
+
+Some helpful install options (any of them can be combined - delimited by space):
+
+* Any MSI Properties the package responds to can be specified in the same way, even if not documented here.
+
+--install-arguments='"ADD\_FILE\_CONTEXT\_MENU\_RUNPOWERSHELL=1"'
+Installs a right click context menu to run .ps1 scripts in PowerShell Core.
+
+--install-arguments='"ADD\_EXPLORER\_CONTEXT\_MENU\_OPENPOWERSHELL=1"'
+Installs a right click context menu to start a PowerShell Core prompt for a specific folder.
+
+--install-arguments='"REGISTER\_MANIFEST=1"'
+Causes PowerShell Core to deliver logs to Windows Event logs.
+
+--install-arguments='"ENABLE\_PSREMOTING=1"'
+Enable PS remoting during installation.
+
+--install-arguments='"USE\_MU=1 ENABLE\_MU=1"'
+Enable powershell to be updated via windows updates - this chocolatey package defaults to disabling these. Available with PWSH MSI Package for 7.2 and later.
+
+--install-arguments='"ADD\_EXPLORER\_CONTEXT\_MENU\_OPENPOWERSHELL=1 REGISTER\_MANIFEST=1 ENABLE\_PSREMOTING=1"'
+Do it all.
+
+--packageparameters '"/CleanUpPath"'
+Removes all powershell core paths before starting install.  Cleans up old paths from old powershell core MSIs.</description>
+    <summary>PowerShell Core is the open source multiplatform version of PowerShell</summary>
+    <releaseNotes>https://github.com/PowerShell/PowerShell/releases/tag/7.2.6</releaseNotes>
+    <copyright>Microsoft</copyright>
+    <tags>powershell-core powershell pwsh admin</tags>
+    <projectSourceUrl>https://github.com/PowerShell/PowerShell</projectSourceUrl>
+    <packageSourceUrl>https://gitlab.com/guided-explorations/microsoft/chocolatey/powershell-core</packageSourceUrl>
+    <docsUrl>https://github.com/PowerShell/PowerShell-Docs</docsUrl>
+    <bugTrackerUrl>https://github.com/PowerShell/PowerShell/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" />
+      <dependency id="KB3118401" />
+    </dependencies>
+  </metadata>
+</package>
