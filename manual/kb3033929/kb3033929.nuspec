@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>KB3033929</id>
+        <version>1.0.5</version>
+        <packageSourceUrl>https://github.com/jberezanski/ChocolateyPackages/tree/master/KB3033929</packageSourceUrl>
+        <owners>Jakub Bereżański</owners>
+        <title>Microsoft security advisory: Availability of SHA-2 code signing support for Windows 7 and Windows Server 2008 R2: March 10, 2015</title>
+        <authors>Microsoft</authors>
+        <projectUrl>https://support.microsoft.com/en-us/kb/3033929</projectUrl>
+        <iconUrl>https://assets.onestore.ms/cdnfiles/onestorerolling-1509-17011/shell/v1_2/images/logo/microsoft.png</iconUrl>
+        <licenseUrl>https://support.microsoft.com/en-us/kb/3033929</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>microsoft windows update kb3033929 admin visual studio 2017</tags>
+        <summary>The update adds SHA-2 hashing algorithm signing and verification support to Windows 7 and Windows Server 2008 R2</summary>
+        <description>
+Microsoft has released a security advisory for IT professionals about SHA-2 code signing support. The security advisory announces the availability of a security update and contains additional security-related information. To view the security advisory, go to the following Microsoft website: 
+https://technet.microsoft.com/en-us/library/security/3033929
+
+This package requires Service Pack 1 for Windows 7 or Windows Server 2008 R2 to be installed first. The [KB976932 package](https://chocolatey.org/packages/KB976932) may be used to install it.
+
+On systems other than Windows 7 or Windows Server 2008 R2, this package installs successfully, but does nothing.
+
+This update is required to install Visual Studio 2017 on Windows 7 or Windows Server 2008 R2.
+        </description>
+        <releaseNotes>
+1.0.5: update dependencies to fix exit code handling on licensed Chocolatey.
+        </releaseNotes>
+        <dependencies>
+            <dependency id="chocolatey-windowsupdate.extension" version="1.0.4" />
+            <dependency id="KB3035131" version="1.0.3" />
+        </dependencies>
+    </metadata>
+</package>
