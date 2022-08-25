@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -MaximumRedirection 0 -ErrorAction SilentlyContinue
+    $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases -MaximumRedirection 0 -ErrorAction SilentlyContinue
 
     $url32 = $download_page.Headers.Location
     $version = $url32 -split '-|.msi' | Select-Object -Last 1 -Skip 1
