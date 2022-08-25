@@ -2,9 +2,9 @@ Import-module au
 
 function global:au_GetLatest {
    $MainURL = 'https://powerbi.microsoft.com/en-us/desktop/'
-   $MainPage = Invoke-WebRequest -Uri $MainURL
+   $MainPage = Invoke-WebRequest -UseBasicParsing -Uri $MainURL
    $DownloadURL = $MainPage.links | ? {$_.innertext -match 'language options'} | select -ExpandProperty href
-   $DownloadPage = Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing
+   $DownloadPage = Invoke-WebRequest -Uri $DownloadURL 
    $version = $DownloadPage -split '</?p>' | ? {$_ -match '^[0-9.]+$'}
 
    $ID = ($downloadpage.rawcontent.split('"') |? {$_ -match 'confirmation'} |select -first 1) -replace '.*id=(\d+).*','$1'
@@ -13,7 +13,7 @@ function global:au_GetLatest {
 
    $confirmURL = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=$ID&amp;$UID=1"
 
-   $confirmpage = Invoke-WebRequest $confirmURL -UseBasicParsing
+   $confirmpage = Invoke-WebRequest $confirmURL 
 
    $URL32 = $confirmpage.rawcontent.split('"') | ? {$_ -match 'setup.exe$'} | select -first 1
    $url64 = $confirmpage.rawcontent.split('"') | ? {$_ -match 'x64.exe$'} | select -first 1
