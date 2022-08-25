@@ -3,7 +3,7 @@ import-module au
 function global:au_GetLatest {
    # Discover the latest release version
    $VersionURL  = 'https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html'
-   $download_page = Invoke-WebRequest -Uri $VersionURL -UseBasicParsing -DisableKeepAlive
+   $download_page = Invoke-WebRequest -Uri $VersionURL #-UseBasicParsing -DisableKeepAlive
    $ReleaseText = $download_page.links | 
                      Where-Object {$_.innertext -match 'DC.*\([0-9.]+\)'} |
                      Select-Object -ExpandProperty innertext -First 1
