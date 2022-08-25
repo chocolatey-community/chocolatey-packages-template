@@ -107,7 +107,7 @@ $Options = [ordered]@{
 
 if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
 $global:au_Root         = $Root          #Path to the AU packages
-$global:au_GalleryUrl   = 'https://pkgs.dev.azure.com/automateazure/c2fe25e7-4af6-4427-b4ee-22ed05918ec1/_packaging/wvd-choco-feed/nuget/v1'             #URL to package gallery, leave empty for Chocolatey Gallery
+$global:au_GalleryUrl   = 'https://pkgs.dev.azure.com/EnsembleHealth/EHIF-ITOps/_packaging/ITOps-WVD-Patching/nuget/v2'             #URL to package gallery, leave empty for Chocolatey Gallery
 $global:info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
