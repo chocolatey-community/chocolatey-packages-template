@@ -12,7 +12,7 @@
      iwr https://goo.gl/SZ9c3m | iex; cinst-gh furmark --force
 #>
 function cinst-gh {
-    $Repo = "" 
+    $Repo = "https://github.com/automateazure/chocolatey-packages/tree/master" 
 
     $name = $args[0]
     $download_page = iwr $Repo/$name -UseBasicParsing

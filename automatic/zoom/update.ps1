@@ -20,7 +20,7 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-    $homepage_content = Invoke-WebRequest -Uri $download_page_url -UseBasicParsing
+    $homepage_content = Invoke-WebRequest -UseBasicParsing -Uri $download_page_url
 
      # Get Version
     $homepage_content -match 'Version \d+\.\d+\.\d (\(\d+\))'| Out-Null
