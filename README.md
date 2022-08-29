@@ -1,6 +1,5 @@
 # Chocolatey Packages
 
-[![Build Status](https://dev.azure.com/EnsembleHealth/EHIF-ITOps/_apis/build/status/chocolatey-packages?branchName=master)](https://dev.azure.com/EnsembleHealth/EHIF-ITOps/_build/latest?definitionId=684&branchName=master)
 [![Update status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/automateazure/a10db4d96e25cd048cd1ed1ec2a086f4
 
 If you have any issues with one of the packages hosted in this repository, please feel free to open an issue (preferred instead of using `Contact Maintainers` on chocolatey.org).
