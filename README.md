@@ -1,69 +1,65 @@
-https://gist.github.com/automateazure/a10db4d96e25cd048cd1ed1ec2a086f4
+# Chocolatey Packages
 
-This repository contains [chocolatey automatic packages](https://chocolatey.org/docs/automatic-packages).  
+[![Build Status](https://dev.azure.com/EnsembleHealth/EHIF-ITOps/_apis/build/status/chocolatey-packages?branchName=master)](https://dev.azure.com/EnsembleHealth/EHIF-ITOps/_build/latest?definitionId=684&branchName=master)
+[![Update status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/virtualex-itv/113649984d5ef59e0ec2d529dfc28df4)
 
-## Prerequisites
+If you have any issues with one of the packages hosted in this repository, please feel free to open an issue (preferred instead of using `Contact Maintainers` on chocolatey.org).
 
-To run locally you will need:
+This repository contains [chocolatey automatic packages](https://docs.chocolatey.org/en-us/create/automatic-packages).
+The repository is setup so that you can manage your packages entirely from the GitHub web interface (using AppVeyor to update and push packages) and/or using the local repository copy.
 
-- Powershell 5+.
-- [Chocolatey Automatic Package Updater Module](https://github.com/majkinetor/au): `Install-Module au` or `cinst au`.
+## Chocolatey Packages Template
 
+This contains Chocolatey packages, both manually and automatically maintained.
 
-## Create a package
+### Folder Structure
 
-To create a new package see [Creating the package updater script](https://github.com/majkinetor/au#creating-the-package-updater-script).
+* automatic - where automatic packaging and packages are kept. These are packages that are automatically maintained using [AU](https://community.chocolatey.org/packages/au).
+* deprecated - where packages that are deprecated are kept.
+* icons - Where you keep icon files for the packages. This is done to reduce issues when packages themselves move around.
+* manual - where packages that are not automatic are kept.
+* retired - where packages that are retired are kept.
 
-## Testing the package
+For setting up your own automatic package repository, please see [Automatic Packaging](https://docs.chocolatey.org/en-us/create/automatic-packages)
 
-In a package directory run: `Test-Package`. This function can be used to start testing in [chocolatey-test-environment](https://github.com/majkinetor/chocolatey-test-environment) via `Vagrant` parameter or it can test packages locally.
+### Requirements
 
+* Chocolatey (choco.exe)
 
-## Automatic package update
+#### AU
 
-### Single package
+* PowerShell v5+.
+* The [AU module](https://community.chocolatey.org/packages/au).
 
-Run from within the directory of the package to update that package:
-   
-    cd <package_dir>
-    ./update.ps1
- 
-If this script is missing, the package is not automatic.  
-Set `$au_Force = $true` prior to script call to update the package even if no new version is found.
+For daily operations check out the AU packages [template README](https://github.com/majkinetor/au-packages-template/blob/master/README.md).
 
-### Multiple packages
- 
-To update all packages run `./update_all.ps1`. It accepts few options:
+### Getting started
 
-```powershell
-./update_all.ps1 -Name a*                         # Update all packages which name start with letter 'a'
-./update_all.ps1 -ForcedPackages 'cpu-z copyq'    # Update all packages and force cpu-z and copyq
-./update_all.ps1 -ForcedPackages 'copyq:1.2.3'    # Update all packages but force copyq with explicit version
-./update_all.ps1 -ForcedPackages 'libreoffice-streams\fresh:6.1.0]'    # Update all packages but force libreoffice-streams package to update stream `fresh` with explicit version `6.1.0`.
-./update_all.ps1 -Root 'c:\packages'              # Update all packages in the c:\packages folder
-```
-
-The following global variables influence the execution of `update_all.ps1` script if set prior to the call:
-
-```powershell
-$au_NoPlugins = $true        #Do not execute plugins
-$au_Push      = $false       #Do not push to chocolatey
-```
-
-You can also call AU method `Update-AUPackages` (alias `updateall`) on its own in the repository root. This will just run the updater for the each package without any other option from `update_all.ps1` script. For example to force update of all packages with a single command execute:
-
-    updateall -Options ([ordered]@{ Force = $true })
-
-## Testing all packages
-
-You can force the update of all or subset of packages to see how they behave when complete update procedure is done:
+1. Fork this repository and rename it to `chocolatey-packages` (on GitHub - go into Settings, Repository name and rename).
+1. Clone the repository locally.
+1. Head into the `setup` folder and perform the proper steps for your choice of setup (or both if you plan to use both methods).
+1. Edit this README. Update the badges at the top.
 
 
-```powershell
-./test_all.ps1                            # Test force update on all packages
-./test_all.ps1 'cdrtfe','freecad', 'p*'   # Test force update on only given packages
-./test_all.ps1 'random 3'                 # Split packages in 3 groups and randomly select and test 1 of those each time
-```
+### Recommendation on Auto Packaging
 
+AU provides more in the process of being completely automated, sending emails when things go wrong, and providing a nice report at the end.
 
-**Note**: If you run this locally your packages will get updated. Use `git reset --hard` after running this to revert the changes.
+So for best visibility, enjoying the ease of using AppVeyor, and for a nice report of results. AU works directly with the xml/ps1 files to do replacement.
+
+### Adapting your current source repository to this source repository template
+
+You want to bring in all of your packages into the proper folders. We suggest using some sort of diffing tool to look at the differences between your current solution and this solution and then making adjustments to it. Pay special attention to the setup folder.
+
+1. Bring over the following files to your package source repository:
+
+* `automatic\README.md`
+* `deprecated\README.md`
+* `icons\README.md`
+* `manual\README.md`
+* `retired\README.md`
+* `.appveyor.yml`
+
+1. Inspect the following file and add the differences:
+
+* `.gitignore`
