@@ -1,4 +1,12 @@
 *.nupkg
+*.exe
+*.msi
+*.dll
+*.zip
+*.7z
+*.iso
+*.msixbundle
+automatic/_output/
 update_vars.ps1
 Update-AUPackages.md
 Update-History.md
