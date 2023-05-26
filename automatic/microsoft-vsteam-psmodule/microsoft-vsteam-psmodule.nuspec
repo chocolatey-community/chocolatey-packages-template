@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>microsoft-vsteam-psmodule</id>
-    <version>7.13.0</version>
+    <version>7.13.1</version>
     <title>Microsoft Azure DevOps (VSTeam) PowerShell Module (Install)</title>
     <authors>Microsoft</authors>
     <owners>Asif Shaikh</owners>
