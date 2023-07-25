@@ -37,7 +37,7 @@ $packageName     = 'newrelic-infra'
 $softwareName    = 'newrelic-infra*'
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64      = 'https://download.newrelic.com/infrastructure_agent/windows/newrelic-infra.1.44.0.msi'
+$url64      = 'https://download.newrelic.com/infrastructure_agent/windows/newrelic-infra.1.45.0.msi'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -47,7 +47,7 @@ $packageArgs = @{
 
   softwareName  = $softwareName
 
-  checksum64     = '8f0d53c45cf1f9128ef25f316fb2bc1ade75e7765d578f5f92fbd3144745f2bd'
+  checksum64     = '59dedd06853ef3d88587350123ced0dda53d1d3aa746f4f22c34e57e286d845e'
   checksumType64 = 'sha256'
 
   silentArgs    = "/qn $additionalArgs /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
