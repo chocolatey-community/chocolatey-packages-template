@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qsync</id>
-    <version>5.1.2.0928</version>
+    <version>5.1.3.1225</version>
     <packageSourceUrl>https://github.com/Sam13/chocolatey-packages/tree/master/automatic/qsync</packageSourceUrl>
     <owners>HarryH</owners>    
     <title>QSync (Install)</title>
