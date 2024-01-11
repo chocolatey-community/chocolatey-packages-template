@@ -1,5 +1,6 @@
 version: '{build}'
 max_jobs: 1
+image: Visual Studio 2022
 # History plugin requires complete log
 #clone_depth: 5
 branches:
@@ -41,12 +42,31 @@ environment:
   api_key:
     secure: YOUR_CHOCO_API_KEY_HERE_ENCRYPTED_STRING # https://ci.appveyor.com/tools/encrypt
 
+  #Chocolatey version we want to use when checking for updates (usually latest).
+  choco_version: '2.2.2'
+  nupkg_cache_path: C:\packages
+
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
-- git config --global user.name "Chocolatey"
+- git config --global user.name "Chocolatey-AU"
 - git config --global core.safecrlf false
 
 install:
+- ps: |
+    $chocoVersion = $Env:choco_version
+    if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
+    @{
+      'chocolatey' = $chocoVersion
+# Uncomment and input the version if you are using any of these in AU scripts
+#      'wormies-au-helpers' = 'VERSION_HERE'
+#      'chocolatey-core.extension' = 'VERSION_HERE'
+#      'autohotkey.install' = 'VERSION_HERE'
+    }.GetEnumerator() | % {
+      if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
+      if ($_.Key -eq 'chocolatey') { choco upgrade $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade --pre }
+      else { choco install $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
+    }
+    rm "$env:ChocolateyInstall\logs\*.log"
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
@@ -61,9 +81,6 @@ install:
     '  {0,-20} {1}' -f 'FORCED BUILD:'   , ($Env:APPVEYOR_FORCED_BUILD    -eq 'true')
     '  {0,-20} {1}' -f 'RE BUILD:'       , ($Env:APPVEYOR_RE_BUILD        -eq 'true')
 
-# Uncomment the below line if you are using any of the functions from chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension. Ensure you also have it listed in your package's dependencies
-# - cinst chocolatey-core.extension
-    
 build_script:
 - ps: |
     $ErrorActionPreference = 'Continue'
@@ -106,6 +123,9 @@ notifications:
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: true
+
+cache:
+  - '%nupkg_cache_path% -> .appveyor.yml'
 
 #on_finish:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
