@@ -30,7 +30,7 @@ This contains Chocolatey packages, both manually and automatically maintained.
 
 ### Getting started
 
-1. Fork this repository and rename it to `chocolatey-packages` (on GitHub - go into Settings, Repository name and rename).
+1. Click "Use this template" then "Create a new repository". Name it `chocolatey-packages`
 1. Clone the repository locally.
 1. Head into the `setup` folder and perform the steps in the README there.
 1. Edit this README. Update the badges at the top.
