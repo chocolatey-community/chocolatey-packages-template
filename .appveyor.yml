@@ -1,5 +1,3 @@
-# AU template: https://github.com/majkinetor/au-packages-template
-
 version: '{build}'
 max_jobs: 1
 image: WMF 5
@@ -54,7 +52,7 @@ install:
 - ps: $PSVersionTable
 - git --version
 - ps: |
-    git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
+    git clone -q https://github.com/chocolatey-community/chocolatey-au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 
 - ps: |
