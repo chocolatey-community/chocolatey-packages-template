@@ -2,11 +2,11 @@
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName  
-  url            = 'https://oblique-audio.com/downloads/RTL_Utility_1_0_7_Win32.exe'
-  checksum       = '59d1521f1f9c4d5f701134be54e7e9831f7ce021656d9c1c4290db627f79d10f'
+  url            = 'https://oblique-audio.com/downloads/RTL_Utility_1_0_8_Win32.exe'
+  checksum       = '6ab7bf722c7d0186c62a4771f8cb4bdc65d263bef812de572c9c7ad4155ed4fc'
   checksumType   = 'sha256'
-  url64          = 'https://oblique-audio.com/downloads/RTL_Utility_1_0_7_x64.exe'
-  checksum64     = 'ddc2f35078973a86ff3a0c44d09deac23d207f9ad5f68df79381b42d26928391'
+  url64          = 'https://oblique-audio.com/downloads/RTL_Utility_1_0_8_x64.exe'
+  checksum64     = '6ab7bf722c7d0186c62a4771f8cb4bdc65d263bef812de572c9c7ad4155ed4fc'
   checksumType64 = 'sha256'
 }
 
