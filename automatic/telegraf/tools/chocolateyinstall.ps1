@@ -6,8 +6,8 @@ $configDirectory = Join-Path $installFolder 'telegraf.d'
 $packageName     = 'telegraf'
 $softwareName    = 'telegraf*'
 $toolsDir        = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url             = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.29.5_windows_i386.zip '
-$url64           = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.29.5_windows_amd64.zip '
+$url             = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.30.0_windows_i386.zip '
+$url64           = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.30.0_windows_amd64.zip '
 $fileLocation    = Join-Path $installFolder 'telegraf.exe'
 $telegrafRegPath = "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf"
 
@@ -45,9 +45,9 @@ $packageArgs = @{
 
   softwareName  = 'telegraf*'
   
-  checksum       = 'b5aa21ebbbaa564f9eb70f499bfb760d289acedb2c9b32ff0e38b50737e044d3'
+  checksum       = 'a9031c4791e8461d476c4791f4a1dd47aafeb3b1756904945d996e5b1e6e60e7'
   checksumType   = 'sha256'
-  checksum64     = '234c78490f864a8d2a35446153d29342ed3653f35e072f238bf9e5f7028e7aa4'
+  checksum64     = '5fee5b7ec9f47bf85b14f6146b028352dc54041b4854befaed3d8bd50eed7efe'
   checksumType64 = 'sha256'
 
   silentArgs     = "--config-directory `"$configDirectory`" --service install"
