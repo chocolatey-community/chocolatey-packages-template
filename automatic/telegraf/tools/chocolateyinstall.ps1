@@ -1,13 +1,14 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 
-$unzipFolder    = $env:ProgramFiles
-$installFolder  = "$unzipFolder\telegraf"
+$unzipFolder     = $env:ProgramFiles
+$installFolder   = "$unzipFolder\telegraf"
+$baseConfigFile  = Join-Path $installFolder 'telegraf.conf'
 $configDirectory = Join-Path $installFolder 'telegraf.d'
 $packageName     = 'telegraf'
 $softwareName    = 'telegraf*'
 $toolsDir        = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url             = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.31.0_windows_i386.zip '
-$url64           = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.31.0_windows_amd64.zip '
+$url             = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.31.1_windows_i386.zip'
+$url64           = 'https://dl.influxdata.com/telegraf/releases/telegraf-1.31.1_windows_amd64.zip'
 $fileLocation    = Join-Path $installFolder 'telegraf.exe'
 $telegrafRegPath = "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf"
 
@@ -44,13 +45,13 @@ $packageArgs = @{
   file64        = $fileLocation
 
   softwareName  = 'telegraf*'
-  
-  checksum       = 'cf7b0d0aae5421943c5c33dcd25c7565b7097ac2ec8630532fd73e2dfcbbd8be'
+
+  checksum       = '09a0b42ad6cd80db97403ccb51d1bc335c2b8fa5289981ca7fae7b4cf73e100f'
   checksumType   = 'sha256'
-  checksum64     = '2cfd9d9577feb710eca57c5258d121611fb987a51ace2b2adb2f8bc09552dfd4'
+  checksum64     = 'c7e1fc85fa0e13c702b290f16eef46b10e9788df1920650d437788fdad195050'
   checksumType64 = 'sha256'
 
-  silentArgs     = "--config-directory `"$configDirectory`" --service install"
+  silentArgs     = "--config `"$baseConfigFile`" --config-directory `"$configDirectory`" service install"
   validExitCodes= @(0)
 }
 
@@ -65,8 +66,12 @@ If((Test-Path -Path "$installFolder-$version")){
 
 Install-ChocolateyInstallPackage @packageArgs
 
+If (Test-Path $baseConfigFile -ErrorAction SilentlyContinue) {
+  Write-Host "Appending discard output to telegraf.conf so service can start"
+  Add-Content -Path $baseConfigFile -NoNewline -Value "[[outputs.discard]]`n  # no configuration`n"
+}
+
 If (Test-Path "$installFolder\telegraf.backup.conf" -ErrorAction SilentlyContinue) {
   Move-Item -Force -Path "$installFolder\telegraf.backup.conf" -Destination "$installFolder\telegraf.conf"
   Restart-Service -Name "telegraf"
 }
-
