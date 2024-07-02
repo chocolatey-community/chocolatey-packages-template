@@ -5,7 +5,7 @@ $softwareName = 'telegraf*'
 $installerType = 'EXE'
 $install_folder = Join-Path $env:ProgramFiles 'telegraf'
 
-$silentArgs = '--service uninstall'
+$silentArgs = 'service uninstall'
 $validExitCodes = @(0)
 
 $uninstalled = $false
