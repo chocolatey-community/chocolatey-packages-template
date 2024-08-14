@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>telegraf</id>
-    <version>1.31.2</version>
+    <version>1.31.3</version>
     <title>Telegraf (Install)</title>
     <authors>InfluxData</authors>
     <owners>Asif Shaikh</owners>
