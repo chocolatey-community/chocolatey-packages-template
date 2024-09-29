@@ -2634,7 +2634,7 @@ if (varCScript == "2") {
   // find nupkg in pkgPath
   string[] pushPkg = Directory.GetFiles(pkgPath, "*.nupkg", SearchOption.TopDirectoryOnly);
   foreach (String file in pushPkg) {
-    proc3.Arguments = "/c "+"cpush " + file + " -d";
+    proc3.Arguments = "/c "+"choco push " + file + " -d";
   }
   process3.StartInfo = proc3;
   System.Threading.Thread.Sleep(2000);
