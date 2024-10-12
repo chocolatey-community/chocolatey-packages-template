@@ -36,7 +36,7 @@ The SWS extension also relies on TagLib and WDL.
 out of date by more than a day or two, please contact the maintainer(s) and
 let them know the package is no longer updating correctly.]]></description>
     <dependencies>
-      <dependency id="reaper" version="5.965" />      
+      <dependency id="reaper" version="5.982" />      
     </dependencies>
   </metadata>
   <files>
