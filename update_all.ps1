@@ -1,4 +1,4 @@
-param([string[]] $Name, [string] $ForcedPackages, $Root = "$PSScriptRoot\automatic")
+param([string[]] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\automatic")
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 

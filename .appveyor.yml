@@ -11,7 +11,7 @@ branches:
 
 environment:
   # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
-  au_version: master
+  au_version: 1.0.0
   au_push: true
   # Force test: use 1 to test all, or N to split testing into N groups
   au_test_groups: 1
@@ -57,10 +57,10 @@ install:
     if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
     @{
       'chocolatey' = $chocoVersion
-# Uncomment and input the version if you are using any of these in AU scripts
-#      'wormies-au-helpers' = 'VERSION_HERE'
-#      'chocolatey-core.extension' = 'VERSION_HERE'
-#      'autohotkey.install' = 'VERSION_HERE'
+       # Uncomment and input the version if you are using any of these in AU scripts
+       #      'wormies-au-helpers' = 'VERSION_HERE'
+       #      'chocolatey-core.extension' = 'VERSION_HERE'
+       #      'autohotkey.install' = 'VERSION_HERE'
     }.GetEnumerator() | % {
       if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
       if ($_.Key -eq 'chocolatey') { choco upgrade $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade --pre }
@@ -72,8 +72,7 @@ install:
 - git --version
 - choco --version
 - ps: |
-    git clone -q https://github.com/chocolatey-community/chocolatey-au.git $Env:TEMP/au
-    . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
+    choco install chocolatey-au --version $Env:au_version -y
 
 - ps: |
     "Build info"
